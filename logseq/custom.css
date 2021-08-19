@@ -12,18 +12,18 @@
   --white: var(--foreground);
   --white-hover: #80cbc4;
   --red: #ff1744;
-  --blue: #458588;
-  --blue-hover: #83a598;
+  --blue: #304ffe;
+  --blue-hover: #536dfe;
   --orange: #d65d0e;
   --orange-hover: #fe8019;
   --yellow: #d79921;
-  --green: #98971a;
-  --purple: #b16286;
-  --purple-hover: #d3869b;
-  --cyan: #689d6a;
-  --cyan-hover: #8ec07c;
-  --pink: #ff79c6;
-  --pink-hover: #ff79c680;
+  --green: #2e7d32;
+  --purple: #6200ea;
+  --purple-hover: #7c4dff;
+  --cyan: #00b8d4;
+  --cyan-hover: #18ffff;
+  --pink: #ff4081;
+  --pink-hover: #c51162;
   --teal: #00bfa5;
   --teal-hover: #1de9b6;
     
