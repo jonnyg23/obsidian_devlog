@@ -217,11 +217,11 @@ h1.title,
 .ls-block h5,
 .ls-block h6 {
   font-weight: 400;
-  color: var(--blue);
+  color: var(--teal);
 }
 
 h1.title {
-  color: var(--blue);
+  color: var(--teal);
 }
 
 
