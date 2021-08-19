@@ -6,7 +6,7 @@
   --lighter-background: #50586A;
   --dark-background: #1C1E23;
   --darker-background: #161A23;
-  --foreground: #ebdbb2;
+  --foreground: #fff;
   --current-line: #504954;
   --comment: #928374;
   --white: var(--foreground);
