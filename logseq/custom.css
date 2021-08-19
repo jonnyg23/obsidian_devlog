@@ -214,11 +214,11 @@ h1.title,
 .ls-block h5,
 .ls-block h6 {
   font-weight: 400;
-  color: var(--red);
+  color: var(--blue);
 }
 
 h1.title {
-  color: var(--red);
+  color: var(--blue);
 }
 
 
