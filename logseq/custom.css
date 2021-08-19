@@ -26,11 +26,11 @@
   --pink-hover: #c51162;
   --teal: #00bfa5;
   --teal-hover: #1de9b6;
- --light-primary: #ff1744;
-  --light-secondary: #df33;
-  --light-tertiary: #df33;
-  --light-quaternary: #df33;
-  --light-quinary: #df33;
+  --light-primary: #fff;
+  --light-secondary: #eeeeee;
+  --light-tertiary: #bdbdbd;
+  --light-quaternary: #757575;
+  --light-quinary: #424242;
     
 
   --ls-tag-text-opacity: 0.8;
@@ -173,11 +173,11 @@ html[data-theme="light"] {
   --ls-primary-text-color: var(--foreground);
   --ls-secondary-text-color: var(--white-hover);
 
-  --ls-search-background-color: var(--background);
+  --ls-search-background-color: var(--light-primary);
   --ls-border-color: var(--comment);
   --ls-secondary-border-color: var(--ls-border-color);
-  --ls-menu-hover-color: var(--light-background);
-  --ls-table-tr-even-background-color: var(--light-background);
+  --ls-menu-hover-color: var(--light-tertiary);
+  --ls-table-tr-even-background-color: var(--light-tertiary);
 
   --ls-head-text-color: var(--foreground);
   --ls-title-text-color: var(--foreground);
@@ -195,26 +195,26 @@ html[data-theme="light"] {
   --ls-block-bullet-border-color: var(--current-line);
   --ls-block-bullet-color: var(--cyan);
   --ls-block-highlight-color: var(--current-line);
-  --ls-block-properties-background-color: var(--light-background);
+  --ls-block-properties-background-color: var(--light-tertiary);
 
   --ls-page-checkbox-color: transparent;
   --ls-page-checkbox-border-color: var(--comment);
 
   --ls-page-blockquote-color: var(--foreground);
-  --ls-page-blockquote-bg-color: var(--dark-background);
+  --ls-page-blockquote-bg-color: var(--light-quaternary);
   --ls-page-blockquote-border-color: var(--purple);
 
   --ls-page-inline-code-color: var(--orange);
-  --ls-page-inline-code-bg-color: var(--darker-background);
+  --ls-page-inline-code-bg-color: var(--light-quinary);
 
-  --ls-scrollbar-background-color: var(--background);
-  --ls-scrollbar-foreground-color: var(--darker-background);
-  --ls-scrollbar-thumb-hover-color: var(--light-background);
+  --ls-scrollbar-background-color: var(--light-primary);
+  --ls-scrollbar-foreground-color: var(--light-quaternary);
+  --ls-scrollbar-thumb-hover-color: var(--light-secondary);
 
   --ls-icon-color: var(--white-hover);
   --ls-search-icon-color: var(--white-hover);
-  --ls-a-chosen-bg: var(--light-background);
-  --ls-right-sidebar-code-bg-color: var(--light-background);
+  --ls-a-chosen-bg: var(--light-secondary);
+  --ls-right-sidebar-code-bg-color: var(--light-secondary);
   --ls-selection-background-color: var(--comment);
   --ls-slide-background-color: var(--ls-primary-background-color);
   --ls-guideline-color: var(--cyan);
