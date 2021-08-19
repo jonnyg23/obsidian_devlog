@@ -120,8 +120,8 @@ html[data-theme="dark"] {
   --ls-head-text-color: var(--foreground);
   --ls-title-text-color: var(--foreground);
 
-  --ls-link-text-color: var(--purple);
-  --ls-link-text-hover-color: var(--purple-hover);
+  --ls-link-text-color: var(--orange);
+  --ls-link-text-hover-color: var(--orange-hover);
 
   --ls-link-ref-text-color: var(--orange);
   --ls-link-ref-text-hover-color: var(--orange-hover);
