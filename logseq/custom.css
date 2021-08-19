@@ -26,11 +26,11 @@
   --pink-hover: #c51162;
   --teal: #00bfa5;
   --teal-hover: #1de9b6;
-  --light-primary: red;
-  --light-secondary: blue;
-  --light-tertiary: green;
-  --light-quaternary: yellow;
-  --light-quinary: orange;
+ --light-primary: #ff1744;
+  --light-secondary: #df33;
+  --light-tertiary: #df33;
+  --light-quaternary: #df33;
+  --light-quinary: #df33;
     
 
   --ls-tag-text-opacity: 0.8;
