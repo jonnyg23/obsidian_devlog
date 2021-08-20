@@ -1,2 +1,3 @@
 -
-  > Containerizes application
+  > Containerizes application.
+-
