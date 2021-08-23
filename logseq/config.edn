@@ -107,6 +107,6 @@
  
 ;; :default-home {:page "Python"}
 :sidebar ["Contents" "Recent" "TODO" "DOING" "DONE" "Page graph" "Help"]
- :shortcuts {:editor/new-block "alt+enter", :editor/new-line "enter"}
+ :shortcuts {:editor/new-block "meta+enter", :editor/new-line "enter"}
  
  }
