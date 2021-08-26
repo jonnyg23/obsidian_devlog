@@ -8,7 +8,8 @@ tags: language
   >- Paul Dubois
 -
 - **Environment**:
-	- [pyenv]
+	- [[pyenv]]
+		-
 - **Libraries**:
   collapsed:: true
 	-
