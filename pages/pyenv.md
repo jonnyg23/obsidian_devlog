@@ -1,4 +1,4 @@
-- The workflow for managing python environments:
+- **pyenv** is used in the workflow for managing python environments:
 	-
 	  1. Installing latest python version in pyenv:
 	  ```bash
