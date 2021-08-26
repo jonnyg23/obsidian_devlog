@@ -14,4 +14,4 @@ tags: language
 		- [[Flask]] - Used for backend REST API dev
 		- [[gunicorn]] - WSGI HTTP Server for UNIX
 	- **Data Analysis**:
-		-
+		- [[pandas]]
