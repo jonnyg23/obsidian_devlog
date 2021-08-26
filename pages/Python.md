@@ -9,8 +9,10 @@ tags: language
 -
 - **Environment & Workflow**:
 	- [[pyenv]] - Manage python environments
-- **Libraries**:
-  collapsed:: true
-	-
-	-
-	-
+	- **Libraries**:
+	  collapsed:: true
+		-
+		-
+		-
+		-
+		-
