@@ -11,4 +11,4 @@ tags: language
 	- [[pyenv]] - Manage python environments
 - **Libraries**:
 	- **Web Dev**:
-		- [[Flask]]
+		- [[Flask]] - Used for backend REST API dev
