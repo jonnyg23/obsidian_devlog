@@ -8,7 +8,7 @@ tags: language
   >- Paul Dubois
 -
 - **Environment & Workflow**:
-	- [[pyenv]]
+	- [[pyenv]] - Manage python environments
 - **Libraries**:
   collapsed:: true
 	-
