@@ -156,6 +156,7 @@ filters:: {"todo" true, "doing" true}
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
+	  collapsed:: true
 		- ### Info
 			- It mainly provides 5 components: `Motion`, `spring`, `StaggeredMotion`, `TransitionMotion`, and `presets`.
 			- **More complicated than other libraries**
