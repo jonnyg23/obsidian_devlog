@@ -129,6 +129,9 @@ filters:: {"todo" true, "doing" true}
 			- Remotion Player gives you the feeling of a real video editor.
 			- Remotion Player can be used to play and review your video using your browser.
 		- ### Installation
+			- You should install `Node.js` and `FFmpeg` before using Remotion. Then you need to extract `FFmpeg` to any folder and set its path to system variables.
+			- After installing the dependencies above, you can create your first Remotion project by running:
+			  ```bash```
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
