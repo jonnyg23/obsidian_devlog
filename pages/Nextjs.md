@@ -180,7 +180,9 @@ filters:: {"todo" true, "doing" true}
 		- ### Installation
 			-
 			  ```bash
-			  
+			  yarn add react-transition-group
+			  # or run
+			  npm i react-transition-group
 			  ```
 	- [[React-Motion]]:
 	  collapsed:: true
