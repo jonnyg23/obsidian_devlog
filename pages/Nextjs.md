@@ -186,6 +186,7 @@ filters:: {"todo" true, "doing" true}
 			  npm i react-motion
 			  ```
 	- [[React Move]]:
+	  collapsed:: true
 		- ### Info
 			- Supports [[React]], [[React Native]], and [[React-VR]].
 			- Has fine-grained control of delay, duration, and easing.
