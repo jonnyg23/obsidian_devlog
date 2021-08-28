@@ -105,7 +105,7 @@ filters:: {"todo" true}
 		  ```
 	- [[next-auth]]:
 - **Styling**:
-	- **Material-ui**:
+	- [[Material-ui]]:
 		- Preventing Server side rendering [[SSR]] components
 			- Import the `NoSsr` hook from material-ui as such:
 			  ```jsx
