@@ -122,7 +122,8 @@ filters:: {"todo" true, "doing" true}
 - **Content Animation**:
 	- [[Framer Motion]]:
 		- ### Info
-			-
+			- This library is a combination of two APIs (the Framer API & Motion API)
+			- It probid
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
