@@ -131,7 +131,11 @@ filters:: {"todo" true, "doing" true}
 		- ### Installation
 			- You should install `Node.js` and `FFmpeg` before using Remotion. Then you need to extract `FFmpeg` to any folder and set its path to system variables.
 			- After installing the dependencies above, you can create your first Remotion project by running:
-			  ```bash```
+			  ```bash
+			  yarn create video
+			  # or run
+			  npm init video
+			  ```
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
