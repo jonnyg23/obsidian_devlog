@@ -154,6 +154,7 @@ filters:: {"todo" true, "doing" true}
 			  npm init video
 			  ```
 	- [[React-Spring]]:
+	  collapsed:: true
 		- ### Info
 			- A spring-physics-based animation library.
 			- This library gives a very realistic spring-like motion to objects.
