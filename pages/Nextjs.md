@@ -168,7 +168,7 @@ filters:: {"todo" true, "doing" true}
 			- `TransitionMotion`
 				- Component used for animating the mount and unmount of components
 			- `StaggeredMotion`
-				-
+				- A components used for animating components whose animations depend on each other.
 	- [[React Move]]:
 		- ### Info
 			- Supports [[React]], [[React Native]], and [[React-VR]].
