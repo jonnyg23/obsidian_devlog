@@ -125,5 +125,5 @@ filters:: {"todo" true, "doing" true}
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
 	- [[React Move]]:
-		- Supports [[React]], [[React Native]],
+		- Supports [[React]], [[React Native]], and [[React-VR]].
 	-
