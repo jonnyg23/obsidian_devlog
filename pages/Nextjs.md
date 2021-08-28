@@ -172,7 +172,7 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	- [[React Transition Group]]:
 		- ### Info
-			-
+			- Simple components for defining animations, unlike
 	- [[React-Motion]]:
 	  collapsed:: true
 		- ### Info
