@@ -120,4 +120,4 @@ filters:: {"todo" true, "doing" true}
 			  </NoSsr>
 			  ```
 - **Content Animation**:
-	-
+	- [[Framer Motion]]:
