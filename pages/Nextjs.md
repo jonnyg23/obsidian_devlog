@@ -128,6 +128,7 @@ filters:: {"todo" true, "doing" true}
 			- No additional knowledge about video editing is required.
 			- Remotion Player gives you the feeling of a real video editor.
 			- Remotion Player can be used to play and review your video using your browser.
+		- ### Installation
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
