@@ -100,4 +100,6 @@
 		  export default withPageAuthRequired(Profile);
 		  ```
 	- **Next-Auth**:
--
+- **Styling**:
+	- **Material-ui**:
+		-
