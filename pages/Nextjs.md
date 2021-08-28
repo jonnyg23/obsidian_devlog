@@ -1,7 +1,7 @@
 ## A [[Javascript]] Framework for user-friendly static websites.
 - **Folder Structure**:
 	- Basic folder structure of a Nextjs project [medium article](https://medium.com/@pablo.delvalle.cr/an-opinionated-basic-next-js-files-and-directories-structure-88fefa2aa759).
-- **SEO with Nextjs**:
+- **SEO**:
 	- Setting SEO tags in the *Head* component
 	  collapsed:: true
 	  Nextjs gives us a `Head` tag where we can specify page title, description, open graph tag, and icon links. This is inserted as such:
@@ -83,4 +83,17 @@
 		  }
 		  ```
 - **Dockerizing Nextjs**:
--
+- **Authentication**:
+	-
+	  Common used functions from the nextjs-auth0 library:
+	  ```js
+	  import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
+	  - const Profile = () => {
+	    const { user, error, isLoading } = useUser();
+	  - if (isLoading) return <div>Loading...</div>;
+	    if (error) return <div>{error.message}</div>;
+	    if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
+	    return <div>Hello {user.name}, <Link href="/api/auth/logout"><a>Logout</a></Link>< /link 
+	  // Then wrap exported function as such
+	  export default withPageAuthRequired(Profile);
+	  ```
