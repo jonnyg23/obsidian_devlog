@@ -176,6 +176,7 @@ filters:: {"todo" true, "doing" true}
 			- Library does not define styles, but instead manipulates the DOM.
 			- Very straightforward approach
 			- Uses built in components such as `Transition` to set animations and transitions to elements, thereby separating your elements from your animations.
+			- Supports TypeScript
 		- ### Installation
 			-
 			  ```bash
