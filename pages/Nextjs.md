@@ -104,7 +104,7 @@ filters:: {"todo" true, "doing" true}
 		  export default withPageAuthRequired(Profile);
 		  ```
 	- [[next-auth]]:
-		- Next open source auth library [Next-auth](https://next-auth.js.org/)
+		- Nextjs Open Source Auth Library [Next-auth](https://next-auth.js.org/)
 - **Styling**:
 	- [[Material-ui]]:
 		- Preventing Server side rendering [[SSR]] components
