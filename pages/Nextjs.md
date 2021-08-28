@@ -162,6 +162,13 @@ filters:: {"todo" true, "doing" true}
 			- **Beginner-friendly documentation**
 			- Ability to add animations without relying on React rendering updates frame-by-frame.
 			- Supports both web and [[React Native]]  applications.
+		- ### Installation
+			-
+			  ```bash
+			  yarn add react-spring
+			  # or run
+			  npm install react-spring
+			  ```
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
 	  collapsed:: true
