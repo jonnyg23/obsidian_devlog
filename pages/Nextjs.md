@@ -123,6 +123,7 @@ filters:: {"todo" true, "doing" true}
 	- [[Framer Motion]]:
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
-	- [[React-Motion]]
+	- [[React-Motion]]:
 	- [[React Move]]:
+		- Supports [[React]], [[React Native]],
 	-
