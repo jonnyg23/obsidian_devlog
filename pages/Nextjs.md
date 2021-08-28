@@ -139,7 +139,7 @@ filters:: {"todo" true, "doing" true}
 			  npm install framer-motion
 			  ```
 		- ### Examples
-			- Vercel
+			- [vercel/nextjs Github](https://github.com/vercel/next.js/tree/canary/examples/with-framer-motion)
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
