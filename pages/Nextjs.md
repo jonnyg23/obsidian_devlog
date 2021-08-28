@@ -138,6 +138,7 @@ filters:: {"todo" true, "doing" true}
 			  # or run
 			  npm install framer-motion
 			  ```
+		- ### Examples
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
