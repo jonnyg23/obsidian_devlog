@@ -24,4 +24,5 @@
 	    )
 	  }
 	  ```
-	- Dynamic SEO Meta Tags
+	- Dynamic SEO Meta Tags [Tutorial](https://www.youtube.com/watch?v=8BrZeaw3sLQ&t=163s)
+		-
