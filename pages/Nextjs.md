@@ -138,6 +138,7 @@ filters:: {"todo" true, "doing" true}
 			  npm install framer-motion
 			  ```
 	- [[Remotion]]:
+	  collapsed:: true
 		- ### Info
 			- Introduced at the beginning of 2021.
 			- Allows you to create animations using common web technologies like HTML, CSS, JavaScript, TypeScript, etc.
