@@ -131,6 +131,7 @@ filters:: {"todo" true, "doing" true}
 			- **Easy to Learn**
 			- Supports TypeScript
 		- ### Installation
+		  collapsed:: true
 			-
 			  ```bash 
 			  yarn add framer-motion
