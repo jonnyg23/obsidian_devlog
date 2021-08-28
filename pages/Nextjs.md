@@ -173,6 +173,15 @@ filters:: {"todo" true, "doing" true}
 	- [[React Transition Group]]:
 		- ### Info
 			- Simple components for defining animations, unlike react-spring.
+			- Library does not define styles, but instead manipulates the DOM.
+			- Very straightforward approach
+		- ### Installation
+			-
+			  ```bash
+			  yarn add react-transition-group
+			  # or run
+			  npm i react-transition-group
+			  ```
 	- [[React-Motion]]:
 	  collapsed:: true
 		- ### Info
