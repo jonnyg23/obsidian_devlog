@@ -129,6 +129,8 @@ filters:: {"todo" true, "doing" true}
 			- Easy to manipulate and alter colors.
 			- **Easy to Learn**
 			- Supports TypeScript
+		- ### Installation
+			- ```bash```
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
