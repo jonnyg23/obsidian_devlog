@@ -126,7 +126,8 @@ filters:: {"todo" true, "doing" true}
 			- Introduced at the beginning of 2021.
 			- Allows you to create animations using common web technologies like HTML, CSS, JavaScript, TypeScript, etc.
 			- No additional knowledge about video editing is required.
-			-
+			- Remotion Player gives you the feeling of a real video editor.
+			- Remotion Player can be used to play and review your video using your browser.
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
