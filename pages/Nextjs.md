@@ -147,7 +147,7 @@ filters:: {"todo" true, "doing" true}
 			- **Simpler than React Motion**
 		- ### Installation
 			-
-			  ```jsx
+			  ```bash
 			  npm install react-move
 			  ```
 	-
