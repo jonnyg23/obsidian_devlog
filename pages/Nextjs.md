@@ -128,5 +128,6 @@ filters:: {"todo" true, "doing" true}
 		- ### Info
 			- Supports [[React]], [[React Native]], and [[React-VR]].
 			- Has fine-grained control of delay, duration, and easing.
-			- Supports
+			- Supports [[TypeScript]]
+			- **Simpler than React Motion**
 	-
