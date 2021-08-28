@@ -225,3 +225,4 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	-
 - **Analytics**:
+	- [[Google Analytics]]
