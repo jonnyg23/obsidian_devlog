@@ -159,7 +159,8 @@ filters:: {"todo" true, "doing" true}
 		- ### Info
 			- It mainly provides 5 components: `Motion`, `spring`, `StaggeredMotion`, `TransitionMotion`, and `presets`.
 			- **More complicated than other libraries**
-			-
+			- `spring`
+				-
 	- [[React Move]]:
 		- ### Info
 			- Supports [[React]], [[React Native]], and [[React-VR]].
