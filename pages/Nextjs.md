@@ -84,16 +84,17 @@
 		  ```
 - **Dockerizing Nextjs**:
 - **Authentication**:
-	-
-	  Common used functions from the nextjs-auth0 library:
-	  ```js
-	  import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
-	  - const Profile = () => {
-	    const { user, error, isLoading } = useUser();
-	  - if (isLoading) return <div>Loading...</div>;
-	    if (error) return <div>{error.message}</div>;
-	    if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
-	    return <div>Hello {user.name}, <Link href="/api/auth/logout"><a>Logout</a></Link>< /link 
-	  // Then wrap exported function as such
-	  export default withPageAuthRequired(Profile);
-	  ```
+	- **Auth0**:
+		-
+		  Common used functions from the nextjs-auth0 library:
+		  ```js
+		  import { useUser, withPageAuthRequired } from "@auth0/nextjs-auth0";
+		  - const Profile = () => {
+		    const { user, error, isLoading } = useUser();
+		  - if (isLoading) return <div>Loading...</div>;
+		    if (error) return <div>{error.message}</div>;
+		    if (!user) return <Link href="/api/auth/login"><a>Login</a></Link>;
+		    return <div>Hello {user.name}, <Link href="/api/auth/logout"><a>Logout</a></Link>< /link 
+		  // Then wrap exported function as such
+		  export default withPageAuthRequired(Profile);
+		  ```
