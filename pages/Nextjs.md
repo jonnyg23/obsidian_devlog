@@ -123,7 +123,9 @@ filters:: {"todo" true, "doing" true}
 	- [[Framer Motion]]:
 		- ### Info
 			- This library is a combination of two APIs (the Framer API & Motion API)
-			- It probid
+			- Provides helpers for advanced physics-based animation.
+			- Motion API generates automatic animations. You only need to set up the correct settings values.
+			-
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
