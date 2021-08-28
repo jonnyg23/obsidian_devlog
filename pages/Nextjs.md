@@ -157,7 +157,7 @@ filters:: {"todo" true, "doing" true}
 		- ### Info
 			- A spring-physics-based animation library.
 			- This library gives a very realistic spring-like motion to objects.
-			- Provides Hooks for handling
+			- Provides Hooks for handling (`useTrail`, `useChain`, `useSpring`, `useTransition`)
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
 	  collapsed:: true
