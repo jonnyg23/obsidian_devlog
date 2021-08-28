@@ -85,6 +85,7 @@
 - **Dockerizing Nextjs**:
 - **Authentication**:
 	- **Auth0**:
+	  collapsed:: true
 		-
 		  Common used functions from the nextjs-auth0 library:
 		  ```js
@@ -98,3 +99,4 @@
 		  // Then wrap exported function as such
 		  export default withPageAuthRequired(Profile);
 		  ```
+	- **Next-Auth**:
