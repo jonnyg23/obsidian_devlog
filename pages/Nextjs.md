@@ -8,20 +8,19 @@
 	  import Head from 'next/head';
 	  import Image from 'next/image';
 	  import styles from '../styles/Home.module.css';
-	  - export default function Home() {
-	  return (
-	    <div className={styles.container}>
-	      <Head>
-	        <title>My Clothing Store</title>
-	        <meta name="description" content="Buy things at my store!" />
-	        <meta property="og:title" content="My Clothing Store" />
-	        <link rel="icon" href="/favicon.ico" />
-	      </Head>
-	      
-	      <main></main>
-	      
-	      <footer></footer>
-	    </div>
-	  )
+	  
+	  export default function Home() {
+	    return (
+	      <div className={styles.container}>
+	        <Head>
+	          <title>My Clothing Store</title>
+	          <meta name="description" content="Buy things at my store!" />
+	          <meta property="og:title" content="My Clothing Store" />
+	          <link rel="icon" href="/favicon.ico" />
+	        </Head>
+	        <main></main>
+	        <footer></footer>
+	      </div>
+	    )
 	  }
 	  ```
