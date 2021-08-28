@@ -121,7 +121,7 @@ filters:: {"todo" true, "doing" true}
 			  ```
 - **Content Animation**:
 	- [[Framer Motion]]:
-	- [[react-spring]]:
+	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [React-Motion]]:
 	-
