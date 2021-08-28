@@ -102,4 +102,5 @@
 	- **Next-Auth**:
 - **Styling**:
 	- **Material-ui**:
-		-
+		- Preventing Server side rendering components
+			-
