@@ -130,4 +130,9 @@ filters:: {"todo" true, "doing" true}
 			- Has fine-grained control of delay, duration, and easing.
 			- Supports [[TypeScript]]
 			- **Simpler than React Motion**
+		- ### Installation
+			-
+			  ```jsx
+			  npm install react-move
+			  ```
 	-
