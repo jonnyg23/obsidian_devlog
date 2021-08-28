@@ -160,6 +160,14 @@ filters:: {"todo" true, "doing" true}
 			- It mainly provides 5 components: `Motion`, `spring`, `StaggeredMotion`, `TransitionMotion`, and `presets`.
 			- **More complicated than other libraries**
 			- `spring`
+				- Helper function that guides how components animate
+			- `Motion`
+				- Components used to animate a component
+			- `presets`
+				- Predefined animation object
+			- `TransitionMotion`
+				- Component used for animating the mount and unmount of components
+			- `StaggeredMotion`
 				-
 	- [[React Move]]:
 		- ### Info
