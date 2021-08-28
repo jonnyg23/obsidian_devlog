@@ -175,7 +175,7 @@ filters:: {"todo" true, "doing" true}
 			- Simple components for defining animations, unlike react-spring.
 			- Library does not define styles, but instead manipulates the DOM.
 			- Very straightforward approach
-			- Uses built in components such as `Transition` to set animations and trasnitions
+			- Uses built in components such as `Transition` to set animations and transitions to elements, thereby separating your elements from your animations.
 		- ### Installation
 			-
 			  ```bash
