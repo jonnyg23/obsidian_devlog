@@ -2,7 +2,7 @@ filters:: {"todo" true}
 
 ## A [[Javascript]] Framework for user-friendly static websites.
 ### Vercel Nextjs Examples
-	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
+	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
 	- Basic folder structure of a Nextjs project [medium article](https://medium.com/@pablo.delvalle.cr/an-opinionated-basic-next-js-files-and-directories-structure-88fefa2aa759).
 - **SEO**:
