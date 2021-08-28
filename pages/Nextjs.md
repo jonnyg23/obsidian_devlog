@@ -24,4 +24,4 @@
 	    )
 	  }
 	  ```
-	-
+	- Dynamic SEO Meta Tags
