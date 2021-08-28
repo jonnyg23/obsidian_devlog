@@ -88,7 +88,7 @@ filters:: {"todo" true}
 		  ```
 - **Dockerizing Nextjs**:
 - **Authentication**:
-	- **Auth0**:
+	- [[Auth0]]:
 	  collapsed:: true
 		-
 		  Common used functions from the nextjs-auth0 library:
