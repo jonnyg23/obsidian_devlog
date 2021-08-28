@@ -125,7 +125,7 @@ filters:: {"todo" true, "doing" true}
 			- This library is a combination of two APIs (the Framer API & Motion API)
 			- Provides helpers for advanced physics-based animation.
 			- Motion API generates automatic animations. You only need to set up the correct settings values.
-			-
+			- Supports SSR & gesture recognizers like `hover`, `tap`, `pan`, and `drag`
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
