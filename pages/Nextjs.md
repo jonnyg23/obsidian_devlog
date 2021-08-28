@@ -1,1 +1,1 @@
-## A [[Javascript]] Framework for
+## A [[Javascript]] Framework for user-friendly static websites.
