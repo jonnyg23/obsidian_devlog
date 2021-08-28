@@ -172,7 +172,9 @@ filters:: {"todo" true, "doing" true}
 		- ### Installation
 			-
 			  ```bash
-			  
+			  yarn add react-motion
+			  # or run
+			  npm i react-motion
 			  ```
 	- [[React Move]]:
 		- ### Info
