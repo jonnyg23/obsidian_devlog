@@ -102,5 +102,14 @@
 	- **Next-Auth**:
 - **Styling**:
 	- **Material-ui**:
-		- Preventing Server side rendering components
-			-
+		- Preventing Server side rendering [[SSR]] components
+			- Import the `NoSsr` hook from material-ui as such:
+			  ```js
+			  import { NoSsr } from "@material-ui/core";
+			  ```
+			  And then wrap the component that you want to prevent from SSR with this tag:
+			  ```js
+			  <NoSsr>
+			    {YOUR_COMPONENT}
+			  </NoSsr>
+			  ```
