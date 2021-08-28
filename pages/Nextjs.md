@@ -157,7 +157,11 @@ filters:: {"todo" true, "doing" true}
 		- ### Info
 			- A spring-physics-based animation library.
 			- This library gives a very realistic spring-like motion to objects.
-			- Provides Hooks for handling (`useTrail`, `useChain`, `useSpring`, `useTransition`)
+			- Provides Hooks for handling (`useTrail`, `useChain`, `useSpring`, `useTransition`, `useSprings`)
+			- Testings is supported with Jest
+			- **Beginner-friendly documentation**
+			- Ability to add animations without relying on React rendering updates frame-by-frame.
+			- Supports both web and [[React Native]]  applications.
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
 	  collapsed:: true
