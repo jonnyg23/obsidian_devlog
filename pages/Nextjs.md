@@ -119,7 +119,7 @@ filters:: {"todo" true, "doing" true}
 			    {YOUR_COMPONENT}
 			  </NoSsr>
 			  ```
-- **Content Animation**:
+- **Content Animation Libraries**:
 	- [[Framer Motion]]:
 	  collapsed:: true
 		- ### Info
@@ -171,6 +171,7 @@ filters:: {"todo" true, "doing" true}
 			  npm install react-spring
 			  ```
 	- [[React Transition Group]]:
+	  collapsed:: true
 		- ### Info
 			- Simple components for defining animations, unlike react-spring.
 			- Library does not define styles, but instead manipulates the DOM.
