@@ -155,7 +155,8 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	- [[React-Spring]]:
 		- ### Info
-			-
+			- A spring-physics-based animation library.
+			- This library gives a very realistic spring-like motion to objects.
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
 	  collapsed:: true
