@@ -103,7 +103,7 @@ filters:: {"todo" true}
 		  // Then wrap exported function as such
 		  export default withPageAuthRequired(Profile);
 		  ```
-	- ** [[next-auth]] **:
+	- **[[next-auth]]**:
 - **Styling**:
 	- **Material-ui**:
 		- Preventing Server side rendering [[SSR]] components
