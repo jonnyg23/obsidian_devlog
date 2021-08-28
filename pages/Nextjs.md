@@ -139,6 +139,7 @@ filters:: {"todo" true, "doing" true}
 			  npm install framer-motion
 			  ```
 		- ### Examples
+			- Vercel
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
