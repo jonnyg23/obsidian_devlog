@@ -25,7 +25,7 @@
 	  }
 	  ```
 	- Dynamic SEO Meta Tags [Tutorial](https://www.youtube.com/watch?v=8BrZeaw3sLQ&t=163s)
-		- ## This is a sample productsID page. 
+		- ### This is a sample productsID page. 
 		  The folder structure is:
 		- `pages`
 			- `products`
