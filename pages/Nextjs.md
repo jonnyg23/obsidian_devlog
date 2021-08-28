@@ -126,7 +126,9 @@ filters:: {"todo" true, "doing" true}
 			- Provides helpers for advanced physics-based animation.
 			- Motion API generates automatic animations. You only need to set up the correct settings values.
 			- Supports SSR & gesture recognizers like `hover`, `tap`, `pan`, and `drag`.
-			- Easy to
+			- Easy to manipulate and alter colors.
+			- **Easy to Learn**
+			- Supports TypeScript
 	- [[Remotion]]:
 	  collapsed:: true
 		- ### Info
