@@ -156,6 +156,8 @@ filters:: {"todo" true, "doing" true}
 	- [[React-Spring]]:
 	- [[React Transition Group]]:
 	- [[React-Motion]]:
+		- ### Info
+			- It mainly provides 5 components: `Motion`, `spring`, `StaggeredMotion`
 	- [[React Move]]:
 		- ### Info
 			- Supports [[React]], [[React Native]], and [[React-VR]].
