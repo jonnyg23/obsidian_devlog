@@ -2,7 +2,7 @@
 - **Folder Structure**:
 	- Basic folder structure of a Nextjs project [medium article](https://medium.com/@pablo.delvalle.cr/an-opinionated-basic-next-js-files-and-directories-structure-88fefa2aa759).
 - **SEO with Nextjs**:
-	- Setting SEO tags in the Head component
+	- Setting SEO tags in the *Head* component
 	  Nextjs gives us a `Head` tag where we can specify page title, description, open graph tag, and icon links. This is inserted as such:
 	  ```jsx
 	  import Head from 'next/head';
