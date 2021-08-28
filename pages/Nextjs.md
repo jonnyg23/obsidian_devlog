@@ -1,4 +1,4 @@
-filters:: {"todo" true}
+filters:: {"todo" true, "doing" true}
 
 ## A [[Javascript]] Framework for user-friendly static websites.
 ### Vercel Nextjs Examples
