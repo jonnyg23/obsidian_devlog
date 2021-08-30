@@ -74,8 +74,8 @@ filters:: {"todo" true, "doing" true}
 			  .next
 			  ```
 	-
-	  3. Build & Run Docker image
-		- Build Docker Image
+	  3. Building & Running & Stopping Docker image
+		- 3a. Build Docker Image
 			-
 			  ```bash
 			  docker build -t NAME_OF_APP .
