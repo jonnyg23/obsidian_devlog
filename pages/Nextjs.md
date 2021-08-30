@@ -65,6 +65,15 @@ filters:: {"todo" true, "doing" true}
 			  ```
 		- 2b. Add `.dockerignore` to root directory
 			-
+			  ```docker
+			  Dockerfile
+			  .dockerignore
+			  node_modules
+			  npm-debug.log
+			  README.md
+			  .next
+			  ```
+	-
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
