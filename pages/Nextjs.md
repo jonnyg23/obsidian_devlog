@@ -51,7 +51,19 @@ filters:: {"todo" true, "doing" true}
 			  COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
 			  COPY --from=builder /app/node_modules ./node_modules
 			  COPY --from=builder /app/package.json ./package.json
+			  
+			  USER nextjs
+			  
+			  EXPOSE 3000
+			  
+			  # Next.js collects completely anonymous telemetry data about general usage.
+			  # Learn more here: https://nextjs.org/telemetry
+			  # Uncomment the following line in case you want to disable telemetry.
+			  ENV NEXT_TELEMETRY_DISABLED 1
+			  
+			  CMD ["yarn", "start"]
 			  ```
+		- 2b.
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
