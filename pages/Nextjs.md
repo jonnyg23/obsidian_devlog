@@ -74,7 +74,8 @@ filters:: {"todo" true, "doing" true}
 			  .next
 			  ```
 	-
-	  3. Build Docker image
+	  3. Build & Run Docker image
+		- Build Image
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
