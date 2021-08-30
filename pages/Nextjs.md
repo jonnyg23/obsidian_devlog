@@ -76,7 +76,7 @@ filters:: {"todo" true, "doing" true}
 			  .next
 			  ```
 	-
-	  3. Building & Running & Stopping Docker image
+	  3. Building, Running, & Stopping Docker image
 	  collapsed:: true
 		- 3a. Build Docker Image
 			-
