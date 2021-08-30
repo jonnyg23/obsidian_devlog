@@ -89,7 +89,8 @@ filters:: {"todo" true, "doing" true}
 			  ```
 		- 3c. **View** Dockerized Next App locally at `localhost:3000`
 		- 3d. **Stopping** Docker Image
-			- In the docker app,
+			- In the docker app, under `Containers/Apps`, press Stop on running image.
+			- OR
 			-
 			  1. Execute Command `docker ps` in terminal
 			-
