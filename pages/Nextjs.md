@@ -17,7 +17,7 @@ filters:: {"todo" true, "doing" true}
 		  yarn create next-app --typescript
 		  ```
 	-
-	  2. Init docker with Next App
+	  2. Init [[Docker]] with Next App
 		- 2a. Add `Dockerfile` to root directory
 			-
 			  ```docker
@@ -73,7 +73,8 @@ filters:: {"todo" true, "doing" true}
 			  README.md
 			  .next
 			  ```
-		-
+	-
+	  3. Build Docker image
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
