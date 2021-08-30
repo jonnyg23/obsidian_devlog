@@ -99,7 +99,8 @@ filters:: {"todo" true, "doing" true}
 			-
 			  3. Execute command `docker stop container id` in terminal
 	-
-	  4. Running dev
+	  4. Running Next app with yarn in dev mode
+		-
 	-
 	  collapsed:: true
 	  4. Adding `PORT` to `package.json`
