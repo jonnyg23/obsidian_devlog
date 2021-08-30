@@ -74,6 +74,7 @@ filters:: {"todo" true, "doing" true}
 			  .next
 			  ```
 	-
+	  collapsed:: true
 	  3. Building & Running & Stopping Docker image
 		- 3a. Build Docker Image
 			-
@@ -86,13 +87,13 @@ filters:: {"todo" true, "doing" true}
 			  docker run -p 3000:3000 NAME_OF_APP
 			  ```
 		- 3c. View Dockerized Next App locally at `localhost:3000`
-	- Stopping Docker Image
-		-
-		  1. Execute Command `docker ps` in terminal
-		-
-		  2. Copy the container id
-		-
-		  3. Execute command `docker stop container id` in terminal
+		- 3d. Stopping Docker Image
+			-
+			  1. Execute Command `docker ps` in terminal
+			-
+			  2. Copy the container id
+			-
+			  3. Execute command `docker stop container id` in terminal
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
