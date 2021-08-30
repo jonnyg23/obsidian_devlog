@@ -82,12 +82,12 @@ filters:: {"todo" true, "doing" true}
 			  ```bash
 			  docker build -t NAME_OF_APP .
 			  ```
-		- 3b. Run Docker Image
+		- 3b. **Run** Docker Image
 			-
 			  ```bash
 			  docker run -p 3000:3000 NAME_OF_APP
 			  ```
-		- 3c. View Dockerized Next App locally at `localhost:3000`
+		- 3c. **View** Dockerized Next App locally at `localhost:3000`
 		- 3d. Stopping Docker Image
 			-
 			  1. Execute Command `docker ps` in terminal
