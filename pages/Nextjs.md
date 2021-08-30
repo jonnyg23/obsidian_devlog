@@ -5,17 +5,17 @@ filters:: {"todo" true, "doing" true}
 ## Starting New Project
 	-
 	  1. Init project with yarn
-	-
-	  ```bash
-	  # Ensure latest version of yarn
-	  yarn -version
-	  
-	  # Initialize New Next App
-	  yarn create next-app
-	  
-	  # or for typescript
-	  yarn create next-app --typescript
-	  ```
+		-
+		  ```bash
+		  # Ensure latest version of yarn
+		  yarn -version
+		  
+		  # Initialize New Next App
+		  yarn create next-app
+		  
+		  # or for typescript
+		  yarn create next-app --typescript
+		  ```
 	- 2.
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
