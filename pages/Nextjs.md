@@ -85,7 +85,8 @@ filters:: {"todo" true, "doing" true}
 			  ```bash
 			  docker run -p 3000:3000 NAME_OF_APP
 			  ```
--
+	-
+	  4. View Dockerized Next App locally at `localhost:3000`
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
