@@ -101,9 +101,12 @@ filters:: {"todo" true, "doing" true}
 	-
 	  4. Running Next app with yarn in dev mode
 		-
+		  ```bash
+		  yarn run dev
+		  ```
 	-
+	  5. Adding `PORT` to `package.json`
 	  collapsed:: true
-	  4. Adding `PORT` to `package.json`
 		- In the `scripts` object, at this to `start`:
 			-
 			  ```json
