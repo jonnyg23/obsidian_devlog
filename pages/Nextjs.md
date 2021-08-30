@@ -77,7 +77,6 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	-
 	  3. Building, Running, & Stopping Docker image
-	  collapsed:: true
 		- 3a. Build Docker Image
 			-
 			  ```bash
