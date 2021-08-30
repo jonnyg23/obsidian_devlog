@@ -16,7 +16,9 @@ filters:: {"todo" true, "doing" true}
 		  # or for typescript
 		  yarn create next-app --typescript
 		  ```
-	- 2.
+	-
+	  2. Init docker with Next App
+		-
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
