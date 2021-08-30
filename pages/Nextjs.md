@@ -88,7 +88,7 @@ filters:: {"todo" true, "doing" true}
 			  docker run -p 3000:3000 NAME_OF_APP
 			  ```
 		- 3c. **View** Dockerized Next App locally at `localhost:3000`
-		- 3d. Stopping Docker Image
+		- 3d. **Stop**ping Docker Image
 			-
 			  1. Execute Command `docker ps` in terminal
 			-
