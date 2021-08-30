@@ -5,6 +5,7 @@ filters:: {"todo" true, "doing" true}
 ## Starting New Project
 	-
 	  ```bash
+	  yarn
 	  ```
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
