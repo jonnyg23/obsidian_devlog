@@ -97,7 +97,6 @@ filters:: {"todo" true, "doing" true}
 			-
 			  3. Execute command `docker stop container id` in terminal
 	-
-	  collapsed:: true
 	  4. Adding `PORT` to `package.json`
 		- In the `scripts` object, at this to `start`:
 			-
