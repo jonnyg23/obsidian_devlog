@@ -96,7 +96,8 @@ filters:: {"todo" true, "doing" true}
 			  3. Execute command `docker stop container id` in terminal
 	-
 	  4. Adding `PORT` to `package.json`
-		- In the `scripts` object,
+		- In the `scripts` object, at this to `start`:
+		-
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
