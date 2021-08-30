@@ -87,6 +87,14 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	-
 	  4. View Dockerized Next App locally at `localhost:3000`
+	-
+	  5. Stopping Docker Image
+		-
+		  1. Execute Command `docker ps` in terminal
+		-
+		  2. Copy the container id
+		-
+		  3. Execute command `docker stop container id`
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
