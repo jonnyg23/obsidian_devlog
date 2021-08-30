@@ -77,6 +77,7 @@ filters:: {"todo" true, "doing" true}
 			  ```
 	-
 	  3. Building, Running, & Stopping Docker image
+	  collapsed:: true
 		- 3a. **Build** Docker Image
 			-
 			  ```bash
@@ -98,6 +99,9 @@ filters:: {"todo" true, "doing" true}
 			-
 			  3. Execute command `docker stop container id` in terminal
 	-
+	  4. Running dev
+	-
+	  collapsed:: true
 	  4. Adding `PORT` to `package.json`
 		- In the `scripts` object, at this to `start`:
 			-
