@@ -6,13 +6,7 @@ filters:: {"todo" true, "doing" true}
 	-
 	  ```bash
 	  # Ensure latest version of yarn
-	  yarn -version
 	  
-	  # Initialize New Nextjs App
-	  yarn create next-app
-	  
-	  # or for typescript
-	  yarn create next-app --typescript
 	  ```
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
