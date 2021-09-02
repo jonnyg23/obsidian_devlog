@@ -1,7 +1,7 @@
 -
   > WSGI HTTP Server for UNIX
 ## Using with [[Python]]
-	- Running a Flask Python backend server: (Activate your pyenv before running the following)
+	- Running a [[Flask]] Python backend server: (Activate your pyenv before running the following)
 		-
 		  ```bash
 		  # activate with 
