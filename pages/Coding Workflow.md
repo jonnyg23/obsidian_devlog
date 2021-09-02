@@ -3,3 +3,5 @@
 ## [[Nextjs]]+[[Flask]]+[[Python]]+[[Material-ui]]+[[Google Analytics]]
 	- **Flask-Ecommerce Project**
 		- **Deployment**
+			- Frontend: Netlify
+			- Backend: Heroku
