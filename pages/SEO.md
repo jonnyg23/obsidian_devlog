@@ -11,4 +11,4 @@ filters:: {"todo" true}
 		- [Which Open Graph tags should you use](https://ahrefs.com/blog/open-graph-meta-tags)
 ## Tools for Testing the Site's Current SEO Performance
 	- Google Search and find any potential site crawling errors use [Google Search Console](https://search.google.com/search-console/about)
-	-
+	- [web.dev](https://www.web.dev/measure/) will give you a full report of your site where it measures:
