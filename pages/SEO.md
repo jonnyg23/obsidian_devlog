@@ -15,4 +15,4 @@ filters:: {"todo" true}
 	- Google Search and find any potential site crawling errors use [Google Search Console](https://search.google.com/search-console/about)
 	- [web.dev](https://www.web.dev/measure/) will give you a full report of your site where it measures:
 	- [Moz](https://moz.com/) uses MozRank & MozTrust to assess the health and relevance of your website.
-	- [SEMrush](https://www.semrush.com/) is similar to Moz
+	- [SEMrush](https://www.semrush.com/) is similar to Moz with optimizing client's websites.
