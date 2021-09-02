@@ -1,2 +1,2 @@
 -
-  > This is a step-by-step process for setting up different types of coding projects.
+  > Step-by-step processes for setting up different types of coding projects with
