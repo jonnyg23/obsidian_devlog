@@ -16,5 +16,5 @@ filters:: {"todo" true}
 	- [web.dev](https://www.web.dev/measure/) will give you a full report of your site where it measures:
 	- [Moz](https://moz.com/) uses MozRank & MozTrust to assess the health and relevance of your website.
 	- [SEMrush](https://www.semrush.com/) is similar to Moz with optimizing SEO on websites.
-## SEO examples in Nextjs
+## SEO examples in [[Nextjs]]
 	-
