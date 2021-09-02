@@ -14,4 +14,5 @@ filters:: {"todo" true}
 ## Tools for Testing the Site's Current SEO Performance
 	- Google Search and find any potential site crawling errors use [Google Search Console](https://search.google.com/search-console/about)
 	- [web.dev](https://www.web.dev/measure/) will give you a full report of your site where it measures:
-	- [Moz]
+	- [Moz](https://moz.com/) uses MozRank & MozTrust to assess the health and relevance of your website.
+	-
