@@ -6,6 +6,10 @@ filters:: {"todo" true}
 	  **Quantity of Traffic**: More traffic to your website is better.
 	  **Organic Results**: Adds make up most search engine results pages (SERPs). Organic traffic is traffic which you don't pay for.
 ## On-Page Optimization
-	- Me
+	- Section 1:
 ## Off-Page Optimization
-	-
+	- Section 2:
+## Research to Practice
+	- Section 3:
+## SEO Glossary
+	- Section 4:
