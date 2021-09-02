@@ -7,4 +7,4 @@ filters:: {"todo" true}
 	  **Organic Results**: Adds make up most search engine results pages (SERPs). Organic traffic is traffic which you don't pay for.
 ## Improving Meta Tags for Social Media
 	- Examples for useful website tags that improve how your site is displayed when shared on social media.
-	-
+		-
