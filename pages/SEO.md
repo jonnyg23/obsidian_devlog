@@ -4,6 +4,6 @@ filters:: {"todo" true}
   > Search Engine Optimization (SEO) is a practice which increases the quality and quantity of website traffic through organic search results.
 	- **Quality of Traffic**: Attracting visitors to your website that are genuinely interested in what you have to offer.
 	  **Quantity of Traffic**: More traffic to your website is better.
-	  **Organic Results**: Adds make up most search engine results pages (SERPs),
+	  **Organic Results**: Adds make up most search engine results pages (SERPs), Organic
 ## Meta Tags
 	- Meta
