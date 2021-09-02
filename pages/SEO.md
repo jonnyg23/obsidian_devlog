@@ -5,11 +5,5 @@ filters:: {"todo" true}
 	- **Quality of Traffic**: Attracting visitors to your website that are genuinely interested in what you have to offer.
 	  **Quantity of Traffic**: More traffic to your website is better.
 	  **Organic Results**: Adds make up most search engine results pages (SERPs). Organic traffic is traffic which you don't pay for.
-## On-Page Optimization
-	- Section 1:
-## Off-Page Optimization
-	- Section 2:
-## Research to Practice
-	- Section 3:
-## SEO Glossary
-	- Section 4:
+## Improving Meta Tags for Social Media
+	- Example
