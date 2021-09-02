@@ -14,6 +14,7 @@ filters: {"todo" true}
 	- **Web Dev**:
 		- [[Flask]] - Used for backend REST API dev
 		- [[gunicorn]] - WSGI HTTP Server for UNIX
-			- Bash commands to run a Flask Python backend server:
+			- Bash commands to run a Flask Python backend server: (Activate your pyenv before running the following)
+				-
 	- **Data Analysis**:
 		- [[pandas]] - Powerful data structures for data analysis, time series, and statistics.
