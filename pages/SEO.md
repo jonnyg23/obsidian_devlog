@@ -6,7 +6,7 @@ filters:: {"todo" true}
 	  **Quantity of Traffic**: More traffic to your website is better.
 	  **Organic Results**: Adds make up most search engine results pages (SERPs). Organic traffic is traffic which you don't pay for.
 ## Improving Meta Tags for Social Media
-	- Examples for useful website tags that improve how your site is displayed when shared on social media.
+	- **Examples** for useful website tags that improve how your site is displayed when shared on social media.
 		- [Facebook Dev website for all OG meta tag types](https://developers.facebook.com/docs/sharing/webmasters)
 		- [Which Open Graph tags should you use](https://ahrefs.com/blog/open-graph-meta-tags)
 	-
