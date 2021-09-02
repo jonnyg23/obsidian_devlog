@@ -10,4 +10,5 @@ filters:: {"todo" true}
 		- [Facebook Dev website for all OG meta tag types](https://developers.facebook.com/docs/sharing/webmasters)
 		- [Which Open Graph tags should you use](https://ahrefs.com/blog/open-graph-meta-tags)
 ## Tools for Testing the Site's Current SEO Performance
+	- Google Search and find any potential site crawling errors use [Google Search Console](https://search.google.com/search-console/about)
 	-
