@@ -11,7 +11,13 @@
 			- **Goal**:
 				- Traverse the tree navigating from left to right & store all of the nodes' names in the input array, and return it.
 			- **Conceptualize**:
+				- Each variable in the graph is called a node & those lower in the tree are referred to as children nodes.
 				-
+				  1. The algorithm traverses through the leftmost side of the tree down through all of the children nodes until it hits the bottom where there are no more children nodes.
+				-
+				  2. It will then step back and traverse other leaf/children nodes until all the left side of the tree has been iterated through.
+				-
+				  3. It will then repeat this process through all of the initial children nodes from the
 			- **Complexity**:
 			- **Implementation**:
 	- #### Greedy Algorithms
