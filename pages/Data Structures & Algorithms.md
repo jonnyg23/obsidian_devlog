@@ -2,6 +2,7 @@
 	- [[AlgoExpert]] - [Website](https://www.algoexpert.io)
 ### [[Python]]
 	- #### Sorting
+	  collapsed:: true
 		- **Bubble Sort**
 		  collapsed:: true
 			- **Goal**:
