@@ -13,7 +13,7 @@
 			- **Conceptualize**:
 				- Each variable in the graph is called a node & those lower in the tree are referred to as children nodes.
 				-
-				  1. The algorithm traverses through the leftmost side of the tree down through all of the children nodes until it hits the bottom where there are no more children nodes. It will iteratively add these node names to a
+				  1. The algorithm traverses through the leftmost side of the tree down through all of the children nodes until it hits the bottom where there are no more children nodes. It will iteratively add these node names to an array which will later be returned.
 				-
 				  2. It will then step back and traverse other leaf/children nodes until all the left side of the tree has been iterated through.
 				-
