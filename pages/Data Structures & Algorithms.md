@@ -5,7 +5,7 @@
 		- **Bubble Sort**
 			- **Goal**:
 				- The goal is to sort a list of numbers from least to greatest.
-			- Conceptualize:
+			- **Conceptualize**:
 				-
 				  1. Start with the first pair of numbers and compare them.
 				-
@@ -16,7 +16,7 @@
 				  4. Iteratively do this until you reach of the end list. The largest number shall now be in the last position within the list.
 				-
 				  5. Return to Step 1 and restart the process. Continually perform these steps until all numbers are sorted in the list.
-			- Complexity:
+			- **Complexity**:
 				- Worst: (Where N is the length of the input array)
 					- Time - O(N^2)
 					- Space - O(1)
