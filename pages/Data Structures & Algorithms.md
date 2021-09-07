@@ -19,6 +19,8 @@
 				-
 				  3. It will then repeat this process through all of the initial children nodes from the top of the graph/tree.
 			- **Complexity**:
+				- Worst:
+					- Time - O(v + e)
 			- **Implementation**:
 	- #### Greedy Algorithms
 	- #### Heaps
