@@ -3,7 +3,7 @@
 ### [[Python]]
 	- #### Sorting
 		- **Bubble Sort**
-			- Goal:
+			- **Goal**:
 				- The goal is to sort a list of numbers from least to greatest.
 			- Conceptualize:
 				-
