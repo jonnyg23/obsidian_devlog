@@ -9,7 +9,6 @@
 	- #### Graphs
 	- #### Greedy Algorithms
 	- #### Sorting
-	  collapsed:: true
 		- **Bubble Sort**
 		  collapsed:: true
 			- **Goal**:
