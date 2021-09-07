@@ -13,6 +13,7 @@
 	- #### Recursion
 	- #### Searching
 	- #### Sorting
+	  collapsed:: true
 		- **Bubble Sort**
 		  collapsed:: true
 			- **Goal**:
@@ -51,3 +52,6 @@
 				  	return array
 				  ```
 		-
+	- #### Stacks
+	- #### Strings
+	- #### Tries
