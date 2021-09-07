@@ -18,8 +18,8 @@
 				  5. Return to Step 1 and restart the process. Continually perform these steps until all numbers are sorted in the list.
 			- **Complexity**:
 				- Worst: (Where N is the length of the input array)
-					- Time - O(N^2)
-					- Space - O(1)
+					- **Time - O(N^2)**
+					- **Space - O(1)**
 				- Best:
 					- Time - O(N)
 					- Space - O(1)
