@@ -7,14 +7,14 @@
 	- #### Dynamic Programming
 	- #### Famous Algorithms
 	- #### Graphs
-		- **
+		- **Depth-first Search**
+			-
 	- #### Greedy Algorithms
 	- #### Heaps
 	- #### Linked Lists
 	- #### Recursion
 	- #### Searching
 	- #### Sorting
-	  collapsed:: true
 		- **Bubble Sort**
 		  collapsed:: true
 			- **Goal**:
