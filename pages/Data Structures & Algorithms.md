@@ -16,7 +16,6 @@
 	- #### Searching
 	- #### Sorting
 		- **Bubble Sort**
-		  collapsed:: true
 			- **Goal**:
 				- The goal is to sort a list of numbers from least to greatest.
 			- **Conceptualize**:
