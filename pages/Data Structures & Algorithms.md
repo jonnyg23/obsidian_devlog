@@ -17,7 +17,7 @@
 				-
 				  2. It will then step back and traverse other leaf/children nodes until all the left side of the tree has been iterated through.
 				-
-				  3. It will then repeat this process through all of the initial children nodes from the
+				  3. It will then repeat this process through all of the initial children nodes from the top of the graph/tree.
 			- **Complexity**:
 			- **Implementation**:
 	- #### Greedy Algorithms
