@@ -23,7 +23,6 @@
 				- Best:
 					- Time - O(N)
 					- Space - O(1)
-				-
 			- **Implementation**:
 				-
 				  ```python
