@@ -1,3 +1,3 @@
 ## Courses / Info
-	- [[AlgoExpert.io]] - [Website](https://www.algoexpert.io)
+	- [[AlgoExpert]] - [Website](https://www.algoexpert.io)
 -
