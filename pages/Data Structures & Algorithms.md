@@ -8,6 +8,10 @@
 	- #### Famous Algorithms
 	- #### Graphs
 	- #### Greedy Algorithms
+	- #### Heaps
+	- #### Linked Lists
+	- #### Recursion
+	- #### Searching
 	- #### Sorting
 		- **Bubble Sort**
 		  collapsed:: true
