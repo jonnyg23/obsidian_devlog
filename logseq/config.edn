@@ -108,6 +108,6 @@
 ;; :default-home {:page "Python"}
 :sidebar ["Contents" "Recent" "TODO" "DOING" "DONE" "Page graph" "Help"]
  :shortcuts {:editor/new-block "meta+enter", :editor/new-line "enter", :editor/cycle-todo "alt+enter"}
- :graph/settings {:builtin-pages? false, :journal? true}
+ :graph/settings {:builtin-pages? false, :journal? false}
  
  }
