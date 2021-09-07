@@ -9,6 +9,7 @@
 	- #### Graphs
 		- **Depth-first Search**
 			- **Goal**:
+				-
 			- **Conceptualize**:
 			- **Complexity**:
 			- **Implementation**:
