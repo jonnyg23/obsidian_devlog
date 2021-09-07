@@ -2,6 +2,8 @@
 	- [[AlgoExpert]] - [Website](https://www.algoexpert.io)
 ### [[Python]]
 	- #### Arrays
+	-
+	  ####
 	- #### Sorting
 	  collapsed:: true
 		- **Bubble Sort**
