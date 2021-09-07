@@ -9,7 +9,7 @@
 	- #### Graphs
 		- **Depth-first Search**
 			- **Goal**:
-				-
+				- A graph is a tree-like structure with
 			- **Conceptualize**:
 			- **Complexity**:
 			- **Implementation**:
