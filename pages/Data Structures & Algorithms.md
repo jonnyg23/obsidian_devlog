@@ -24,7 +24,7 @@
 					- Time - O(N)
 					- Space - O(1)
 				-
-			- Python Implementation:
+			- Implementation:
 				-
 				  ```python
 				  def bubbleSort(array):
