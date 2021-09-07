@@ -8,7 +8,10 @@
 	- #### Famous Algorithms
 	- #### Graphs
 		- **Depth-first Search**
-			-
+			- **Goal**:
+			- **Conceptualize**:
+			- **Complexity**:
+			- **Implementation**:
 	- #### Greedy Algorithms
 	- #### Heaps
 	- #### Linked Lists
