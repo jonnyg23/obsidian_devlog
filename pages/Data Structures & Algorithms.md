@@ -9,7 +9,7 @@
 	- #### Graphs
 		- **Depth-first Search**
 			- **Goal**:
-				- A graph is a tree-like structure & in the case of a Depth-First Search, will store all of the nodes' names in the input array
+				- Traverse the tree navigating from left to right & store all of the nodes' names in the input array, and return it.
 			- **Conceptualize**:
 			- **Complexity**:
 			- **Implementation**:
