@@ -2,6 +2,7 @@
 	- [[AlgoExpert]] - [Website](https://www.algoexpert.io)
 ### [[Python]]
 	- #### Arrays
+	- #### Binary Search Trees
 	-
 	  ####
 	- #### Sorting
