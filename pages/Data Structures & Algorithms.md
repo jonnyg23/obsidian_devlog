@@ -3,8 +3,11 @@
 ### [[Python]]
 	- #### Arrays
 	- #### Binary Search Trees
-	-
-	  ####
+	- #### Binary Trees
+	- #### Dynamic Programming
+	- #### Famous Algorithms
+	- #### Graphs
+	- #### Greedy Algorithms
 	- #### Sorting
 	  collapsed:: true
 		- **Bubble Sort**
