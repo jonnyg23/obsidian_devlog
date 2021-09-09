@@ -1,5 +1,6 @@
 -
   > A popular React UI framwork
+-
 ## Installation
 	- ### Core mui
 		-
@@ -12,6 +13,10 @@
 	- ### Icons
 		-
 		  ```bash
+		  // with npm
+		  npm install @mui/icons-material@next
 		  
+		  // with yarn
+		  yarn add @mui/icons-material@next
 		  ```
 	-
