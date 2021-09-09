@@ -19,7 +19,7 @@
 		  // with yarn
 		  yarn add @mui/icons-material@next
 		  ```
-## Components
+## Import Components
 	- ### Box
 		-
 		  ```jsx
