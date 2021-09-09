@@ -218,7 +218,6 @@ filters:: {"todo" true, "doing" true}
 	- [[next-auth]]:
 		- Nextjs Open Source Auth Library [Next-auth](https://next-auth.js.org/)
 - **Styling**:
-  collapsed:: true
 	- [[Material-ui]]:
 		- Preventing Server side rendering [[SSR]] components
 			- Import the `NoSsr` hook from material-ui as such:
