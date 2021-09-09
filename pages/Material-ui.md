@@ -1,6 +1,6 @@
 -
   > A popular React UI framwork
-## Below is Info for V5 mui
+## Below is Info for v5 of mui 🎉
 ## Installation
 	- ### Core mui
 		-
