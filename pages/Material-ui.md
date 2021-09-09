@@ -21,9 +21,9 @@
 		  ```
 ## Components
 	- ### Box
-		- Import
+		- **Import**
 			-
 			  ```jsx
 			  import { Box } from "@mui/material";
 			  ```
-		-
+		- **
