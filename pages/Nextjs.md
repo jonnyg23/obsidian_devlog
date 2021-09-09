@@ -222,7 +222,7 @@ filters:: {"todo" true, "doing" true}
 		- Preventing Server side rendering [[SSR]] components
 			- Import the `NoSsr` hook from material-ui as such:
 			  ```jsx
-			  import { NoSsr } from "@material-ui/core";
+			  import { NoSsr } from '@mui/core';
 			  ```
 			  And then wrap the component that you want to prevent from SSR with this tag:
 			  ```jsx
