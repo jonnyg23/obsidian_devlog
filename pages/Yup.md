@@ -1,6 +1,7 @@
 -
   >A JavaScript schema builder for value parsing and validation.
-- [yup Github Docs](https://github.com/jquense/yup)
+## Docs
+	- [yup Github Docs](https://github.com/jquense/yup)
 ## Installation
 	-
 	  ```bash
