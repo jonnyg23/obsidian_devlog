@@ -5,5 +5,7 @@
 	-
 	  ```bash
 	  npm install -S yup
-	  
+	  # or
+	  yarn add yup
 	  ```
+	-
