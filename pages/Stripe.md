@@ -10,9 +10,9 @@
 	-
 	  >Get up and running with our client libraries and start developing your Stripe integration.
 	-
-	  1. [Obtain your API keys](Obtain your API keys) so Stripe can authenticate your integration's API requests.
+	  1. [Obtain your API keys](https://stripe.com/docs/development/quickstart#api-keys) so Stripe can authenticate your integration's API requests.
 	-
-	  2. Install a client library so your integration can interact with the Stripe API.
+	  2. [Install a client library](https://stripe.com/docs/development/quickstart#api-library) so your integration can interact with the Stripe API.
 	-
 	  3. Make a test API request to confirm everything is up and running.
 ## Tutorial
