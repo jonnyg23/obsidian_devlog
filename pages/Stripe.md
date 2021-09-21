@@ -4,6 +4,7 @@
 ## Installation
 	-
 	  ```bash
+	  d
 	  ```
 ## Tutorial
 	- [Getting Started with [[Nextjs]], [[TypeScript]], and Stripe](https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe)
