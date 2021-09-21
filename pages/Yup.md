@@ -42,4 +42,5 @@
 	  });
 	  // => { name: 'jimmy', age: 24, createdOn: Date }
 	  ```
-	-
+	- ## Tutorial
+		- [YouTube: Next.js API Routes Validation using YUP: Share frontend and backend validation using YUP schemas](https://www.youtube.com/watch?v=ZG7sLbI8kL8)
