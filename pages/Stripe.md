@@ -14,6 +14,6 @@
 	-
 	  2. [Install a client library](https://stripe.com/docs/development/quickstart#api-library) so your integration can interact with the Stripe API.
 	-
-	  3. Make a test API request to confirm everything is up and running.
+	  3. [Make a test API request](https://stripe.com/docs/development/quickstart#test-api-request) to confirm everything is up and running.
 ## Tutorial
 	- [Getting Started with [[Nextjs]], [[TypeScript]], and Stripe](https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe)
