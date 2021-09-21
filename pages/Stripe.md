@@ -4,7 +4,13 @@
 ## Installation
 	-
 	  ```bash
-	  d
+	  
 	  ```
+## Quick Start
+	-
+	  >Get up and running with our client libraries and start developing your Stripe integration.
+	-
+	  1. Obtain your API keys so Stripe can authenticate your integration's API requests.
+	- 2.
 ## Tutorial
 	- [Getting Started with [[Nextjs]], [[TypeScript]], and Stripe](https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe)
