@@ -16,4 +16,4 @@
 	-
 	  3. [Make a test API request](https://stripe.com/docs/development/quickstart#test-api-request) to confirm everything is up and running.
 ## Tutorial
-	- [Getting Started with [[Nextjs]], [[TypeScript]], and Stripe](https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe)
+	- [Vercel.com - Getting Started with [[Nextjs]], [[TypeScript]], and Stripe](https://vercel.com/guides/getting-started-with-nextjs-typescript-stripe)
