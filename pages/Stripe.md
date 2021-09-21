@@ -4,7 +4,9 @@
 ## Installation
 	-
 	  ```bash
-	  
+	  npm install --save stripe @stripe/stripe-js
+	  # or
+	  yarn add stripe @stripe/stripe-js
 	  ```
 ## Quick Start
 	-
