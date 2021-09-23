@@ -6,5 +6,6 @@
 	- **Example use for simple Email/Password form & Submit button with [[Yup]] validation**
 		-
 		  ```jsx
+		  import TextField from '@material-ui/core/TextField';
 		  
 		  ```
