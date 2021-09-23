@@ -135,7 +135,28 @@ filters:: {"todo" true, "doing" true}
 		      }
 		    }, []);
 		  
-		   
+		    return (
+		      <>
+		        <Head>
+		          <meta
+		            name="viewport"
+		            content="minimum-scale=1, initial-scale=1, width=device-width"
+		          />
+		        </Head>
+		        {/* <StyledEngineProvider injectFirst> */}
+		          <ThemeProvider theme={megTheme}>
+		            <CssBaseline />
+		            <Component {...pageProps} />
+		          </ThemeProvider>
+		        {/* </StyledEngineProvider> */}
+		      </>
+		    );
+		  }
+		  
+		  App.propTypes = {
+		    Component: PropTypes.elementType.isRequired,
+		    pageProps: PropTypes.object.isRequired,
+		  };
 		  ```
 -
 ### Vercel Nextjs Examples
