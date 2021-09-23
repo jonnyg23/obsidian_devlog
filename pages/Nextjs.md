@@ -118,6 +118,14 @@ filters:: {"todo" true, "doing" true}
 		-
 		  ```jsx
 		  import "../styles/globals.css";
+		  import React, { useEffect } from "react";
+		  import PropTypes from "prop-types";
+		  import Head from "next/head";
+		  import CssBaseline from "@mui/material/CssBaseline";
+		  import { ThemeProvider } from "@mui/material";
+		  // import { StyledEngineProvider } from "@mui/material/styles";
+		  import megTheme from "../themes/megTheme";
+		  
 		  
 		  ```
 -
