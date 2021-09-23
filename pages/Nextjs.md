@@ -195,6 +195,7 @@ filters:: {"todo" true, "doing" true}
 			  // `getInitialProps` belongs to `_document` (instead of `_app`),
 			  // it's compatible with server-side generation (SSG).
 			  MyDocument.getInitialProps = async (ctx) => {
+			    // Resolution order
 			  
 			  ```
 -
