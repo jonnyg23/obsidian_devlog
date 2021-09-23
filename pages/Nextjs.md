@@ -117,7 +117,7 @@ filters:: {"todo" true, "doing" true}
 	- ### Setting up Material-ui theme with `_app.js`
 		-
 		  ```jsx
-		  
+		  import "../styles/globals.css";
 		  ```
 -
 ### Vercel Nextjs Examples
