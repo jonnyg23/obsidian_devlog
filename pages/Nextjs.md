@@ -114,8 +114,9 @@ filters:: {"todo" true, "doing" true}
 			  ```json
 			  "start": "next start -p ${PORT:=3000}"
 			  ```
-	- ### Setting up Material-ui theme with `_app.js`
+	- ### Setting up Material-ui with `_app.js`
 		- **Example from MegSewsThings**:
+		  collapsed:: true
 			-
 			  ```jsx
 			  import "../styles/globals.css";
