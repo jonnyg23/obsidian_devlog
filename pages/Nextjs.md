@@ -162,7 +162,15 @@ filters:: {"todo" true, "doing" true}
 				  };
 				  ```
 		- `_document.js` in root folder
-		-
+			-
+			  ```jsx
+			  import React from "react";
+			  import Document, { Html, Head, Main, NextScript } from "next/document";
+			  import { ServerStyleSheets } from "@mui/styles";
+			  import theme from "../themes/megTheme";
+			  
+			  
+			  ```
 -
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
