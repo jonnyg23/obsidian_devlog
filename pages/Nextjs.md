@@ -119,43 +119,6 @@ filters:: {"todo" true, "doing" true}
 		  ```jsx
 		  
 		  ```
-		- import "../styles/globals.css";
-		  import React, { useEffect } from "react";
-		  import PropTypes from "prop-types";
-		  import Head from "next/head";
-		  import CssBaseline from "@mui/material/CssBaseline";
-		  import { ThemeProvider } from "@mui/material";
-		  // import { StyledEngineProvider } from "@mui/material/styles";
-		  import megTheme from "../themes/megTheme";
-		- export default function App({ Component, pageProps }) {
-		  useEffect(() => {
-		    // Remove the server-side injected CSS.
-		    const jssStyles = document.querySelector("#jss-server-side");
-		    if (jssStyles) {
-		      jssStyles.parentElement.removeChild(jssStyles);
-		    }
-		  }, []);
-		- return (
-		    <>
-		      <Head>
-		        <meta
-		          name="viewport"
-		          content="minimum-scale=1, initial-scale=1, width=device-width"
-		        />
-		      </Head>
-		      {/* <StyledEngineProvider injectFirst> */}
-		        <ThemeProvider theme={megTheme}>
-		          <CssBaseline />
-		          <Component {...pageProps} />
-		        </ThemeProvider>
-		      {/* </StyledEngineProvider> */}
-		    </>
-		  );
-		  }
-		- App.propTypes = {
-		  Component: PropTypes.elementType.isRequired,
-		  pageProps: PropTypes.object.isRequired,
-		  };
 -
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
