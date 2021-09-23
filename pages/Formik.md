@@ -30,5 +30,9 @@
 		        email: 'foobar@example.com',
 		        password: 'foobar',
 		      },
-		      
+		      validationSchema: validationSchema,
+		      onSubmit: (values) => {
+		        alert(JSON.stringify(values, null, 2));
+		      },
+		    });
 		  ```
