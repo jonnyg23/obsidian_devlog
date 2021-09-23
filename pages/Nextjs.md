@@ -4,7 +4,6 @@ filters:: {"todo" true, "doing" true}
 	- ### Helps developer create static generation [[SSG]] and server-side rendering [[SSR]] websites.
 ## Starting New Project
 	-
-	  collapsed:: true
 	  1. Init project with yarn
 		-
 		  ```bash
@@ -17,8 +16,8 @@ filters:: {"todo" true, "doing" true}
 		  # or for typescript
 		  yarn create next-app --typescript
 		  ```
+		-
 	-
-	  collapsed:: true
 	  2. Init [[Docker]] with Next App
 		- 2a. Add `Dockerfile` to root directory
 			-
