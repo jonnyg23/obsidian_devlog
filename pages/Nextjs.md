@@ -196,7 +196,6 @@ filters:: {"todo" true, "doing" true}
 			  // it's compatible with server-side generation (SSG).
 			  MyDocument.getInitialProps = async (ctx) => {
 			    // Resolution order
-			  
 			  ```
 -
 ### Vercel Nextjs Examples
