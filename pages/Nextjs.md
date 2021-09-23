@@ -118,6 +118,7 @@ filters:: {"todo" true, "doing" true}
 		-
 		  ```jsx
 		  import "../styles/globals.css";
+		  
 		  ```
 -
 ### Vercel Nextjs Examples
