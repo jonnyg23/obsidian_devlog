@@ -1,4 +1,4 @@
 -
--
   > Can be integrated with [[Material-ui]] in [[Nextjs]] to create [[forms]]
-- [Formik docs for setting up with Material-UI](https://formik.org/docs/examples/with-material-ui)
+## Docs
+	- [Formik docs for setting up with Material-UI] (https://formik.org/docs/examples/with-material-ui)
