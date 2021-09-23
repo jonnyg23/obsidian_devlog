@@ -162,6 +162,7 @@ filters:: {"todo" true, "doing" true}
 				  };
 				  ```
 		- `_document.js` in root folder
+		  collapsed:: true
 			-
 			  ```jsx
 			  import React from "react";
@@ -195,7 +196,25 @@ filters:: {"todo" true, "doing" true}
 			  // `getInitialProps` belongs to `_document` (instead of `_app`),
 			  // it's compatible with server-side generation (SSG).
 			  MyDocument.getInitialProps = async (ctx) => {
-			    // Resolution order
+			    const sheets = new ServerStyleSheets();
+			    const originalRenderPage = ctx.renderPage;
+			    
+			    ctx.renderPage = () =>
+			    	originalRenderPage({
+			      	enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+			    });
+			    
+			    const initialProps = await Document.getInitialProps(ctx);
+			    
+			    return {
+			      ...initialProps,
+			      // Styles fragment is rendered after the app and page rendering finish.
+			      styles: [
+			        ...React.Children.toArray(initialProps.styles),
+			        sheets.getStyleElement(),
+			      ],
+			    };
+			  };
 			  ```
 -
 ### Vercel Nextjs Examples
