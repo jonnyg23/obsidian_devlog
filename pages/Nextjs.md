@@ -106,7 +106,8 @@ filters:: {"todo" true, "doing" true}
 		  yarn run dev
 		  ```
 	-
-	  5. Adding `PORT` to `package.json`
+	  collapsed:: true
+	  	  5. Adding `PORT` to `package.json`
 	  collapsed:: true
 		- In the `scripts` object, at this to `start`:
 			-
@@ -114,6 +115,8 @@ filters:: {"todo" true, "doing" true}
 			  "start": "next start -p ${PORT:=3000}"
 			  ```
 	-
+	  ###
+-
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)
 - **Folder Structure**:
