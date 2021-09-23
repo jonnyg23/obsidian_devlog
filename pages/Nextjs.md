@@ -2,7 +2,7 @@ filters:: {"todo" true, "doing" true}
 
 ## A [[Javascript]] Framework for user-friendly static websites.
 	- ### Helps developer create static generation [[SSG]] and server-side rendering [[SSR]] websites.
-## Jumptarting New Project
+## Jump-starting New Project
 	-
 	  collapsed:: true
 	  1. Init project with yarn
