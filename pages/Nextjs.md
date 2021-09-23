@@ -169,6 +169,28 @@ filters:: {"todo" true, "doing" true}
 			  import { ServerStyleSheets } from "@mui/styles";
 			  import theme from "../themes/megTheme";
 			  
+			  export default class MyDocument extends Document {
+			    render() {
+			      return (
+			        <Html lang="en">
+			          <Head>
+			            <meta charSet="utf-8" />
+			            {/* PWA primary color */}
+			            <meta name="theme-color" content={"primary.main"} />
+			            <link
+			              rel="stylesheet"
+			              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+			            />
+			            <link rel="icon" href="/public/favicon.ico" />
+			          </Head>
+			          <body>
+			            <Main />
+			            <NextScript />
+			          </body>
+			        </Html>
+			      );
+			    }
+			  }
 			  
 			  ```
 -
