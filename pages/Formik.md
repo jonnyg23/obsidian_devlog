@@ -3,9 +3,7 @@
 ## Installation
 	-
 	  ```bash
-	  npm install formik
-	  # or
-	  yarn add formik
+	  npm install 
 	  ```
 ## Docs
 	- [Formik docs for setting up with Material-UI](https://formik.org/docs/examples/with-material-ui)
