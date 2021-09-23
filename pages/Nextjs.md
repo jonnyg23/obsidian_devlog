@@ -117,7 +117,6 @@ filters:: {"todo" true, "doing" true}
 	- ### Setting up Material-ui
 		- #### `_app.js` in root folder
 			- **Example from MegSewsThings**:
-			  collapsed:: true
 				-
 				  ```jsx
 				  import "../styles/globals.css";
