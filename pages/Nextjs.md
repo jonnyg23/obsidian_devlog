@@ -19,6 +19,7 @@ filters:: {"todo" true, "doing" true}
 		  ```
 		-
 	-
+	  collapsed:: true
 	  2. Init [[Docker]] with Next App
 		- 2a. Add `Dockerfile` to root directory
 			-
