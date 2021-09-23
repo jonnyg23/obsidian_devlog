@@ -161,6 +161,7 @@ filters:: {"todo" true, "doing" true}
 				    pageProps: PropTypes.object.isRequired,
 				  };
 				  ```
+		- `_document.js` in root folder
 		-
 -
 ### Vercel Nextjs Examples
