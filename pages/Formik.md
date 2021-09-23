@@ -1,5 +1,12 @@
 -
   > Can be integrated with [[Material-ui]] in [[Nextjs]] to create [[forms]]
+## Installation
+	-
+	  ```bash
+	  npm install formik
+	  # or
+	  yarn add formik
+	  ```
 ## Docs
 	- [Formik docs for setting up with Material-UI](https://formik.org/docs/examples/with-material-ui)
 ## Nextjs-MaterialUI Examples
