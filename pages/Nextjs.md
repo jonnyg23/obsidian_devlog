@@ -164,7 +164,7 @@ filters:: {"todo" true, "doing" true}
 		- `_document.js` in root folder
 			- **Example from MegSewsThings**:
 				-
-				  ```jsx``
+				  ```jsx
 				  import React from "react";
 				  import Document, { Html, Head, Main, NextScript } from "next/document";
 				  import { ServerStyleSheets } from "@mui/styles";
