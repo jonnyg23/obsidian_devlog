@@ -340,6 +340,7 @@ filters:: {"todo" true, "doing" true}
 - **Forms with Material-ui**:
 	- [[Formik]]
 		- **Example use for simple Email/Password form & Submit button with [[Yup]] validation**
+		  collapsed:: true
 		  ```jsx
 		  import React from 'react';
 		  import ReactDOM from 'react-dom';
