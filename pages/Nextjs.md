@@ -77,7 +77,8 @@ filters:: {"todo" true, "doing" true}
 			  .next
 			  ```
 	-
-	  3. Building, Running, & Stopping Docker image
+	  collapsed:: true
+	  	  3. Building, Running, & Stopping Docker image
 	  collapsed:: true
 		- 3a. **Build** Docker Image
 			-
@@ -117,6 +118,7 @@ filters:: {"todo" true, "doing" true}
 	- ### Setting up Material-ui
 		- #### `_app.js` in root folder
 			- **Example from MegSewsThings**:
+			  collapsed:: true
 				-
 				  ```jsx
 				  import "../styles/globals.css";
@@ -162,6 +164,7 @@ filters:: {"todo" true, "doing" true}
 				  ```
 		- `_document.js` in root folder
 			- **Example from MegSewsThings**:
+			  collapsed:: true
 				-
 				  ```jsx
 				  import React from "react";
