@@ -337,7 +337,6 @@ filters:: {"todo" true, "doing" true}
 			  </NoSsr>
 			  ```
 - **Content Animation Libraries**:
-  collapsed:: true
 	- [[Framer Motion]]:
 		- ### Info
 			- This library is a combination of two APIs (the Framer API & Motion API)
