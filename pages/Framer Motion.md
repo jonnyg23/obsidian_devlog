@@ -1,2 +1,3 @@
 -
-  > A production-ready
+  > A production-ready motion library for React.
+-
