@@ -3,4 +3,10 @@
 ## Examples
 	- [Docs](https://www.framer.com/docs/examples/)
 ## Installation
-	- ```jsx```
+	-
+	  ```jsx
+	  npm install framer-motion
+	  # or
+	  yarn add framer-motion
+	  ```
+	-
