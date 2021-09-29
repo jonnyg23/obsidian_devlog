@@ -3,4 +3,4 @@
 ## Examples
 	- [Docs](https://www.framer.com/docs/examples/)
 ## Installation
-	-
+	- ```jsx```
