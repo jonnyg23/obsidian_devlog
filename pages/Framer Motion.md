@@ -19,7 +19,7 @@
 		- [Utilities](https://www.framer.com/docs/utilities/)
 	- ### Components
 		- [Motion components](https://www.framer.com/docs/component/)
-		- [AnimateSharedLayout]()
-		- [AnimatePresence]()
+		- [AnimateSharedLayout](https://www.framer.com/docs/animate-shared-layout/)
+		- [AnimatePresence](https://www.framer.com/docs/animate-presence/)
 		- [LazyMotion]()
 		- [MotionConfig]()
