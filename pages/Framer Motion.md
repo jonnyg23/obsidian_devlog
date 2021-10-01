@@ -13,7 +13,7 @@
 ## Docs
 	- ### API
 		- [Animation](https://www.framer.com/docs/animation/)
-		- [Transition]()
+		- [Transition](https://www.framer.com/docs/transition/)
 		- [Gestures](https://www.framer.com/docs/transition/)
 		- [MotionValue]()
 		- [Utilities]()
