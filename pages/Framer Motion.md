@@ -16,9 +16,9 @@
 		- [Transition](https://www.framer.com/docs/transition/)
 		- [Gestures](https://www.framer.com/docs/gestures/)
 		- [MotionValue](https://www.framer.com/docs/motionvalue/)
-		- [Utilities]()
+		- [Utilities](https://www.framer.com/docs/utilities/)
 	- ### Components
-		- [Motion components]()
+		- [Motion components](https://www.framer.com/docs/component/)
 		- [AnimateSharedLayout]()
 		- [AnimatePresence]()
 		- [LazyMotion]()
