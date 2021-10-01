@@ -19,4 +19,7 @@
 		- [Utilities]()
 	- ### Components
 		- [Motion components]()
-		-
+		- [AnimateSharedLayout]()
+		- [AnimatePresence]()
+		- [LazyMotion]()
+		- [MotionConfig]()
