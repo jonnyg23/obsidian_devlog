@@ -11,4 +11,9 @@
 	  yarn add framer-motion
 	  ```
 ## Docs
-	-
+	- ### API
+		- [Animation]()
+		- [Transition]()
+		- [Gestures]()
+		- [MotionValue]()
+		- [Utilities]()
