@@ -22,4 +22,4 @@
 		- [AnimateSharedLayout](https://www.framer.com/docs/animate-shared-layout/)
 		- [AnimatePresence](https://www.framer.com/docs/animate-presence/)
 		- [LazyMotion](https://www.framer.com/docs/lazy-motion/)
-		- [MotionConfig]()
+		- [MotionConfig](https://www.framer.com/docs/motion-config/)
