@@ -12,9 +12,9 @@
 	  ```
 ## Docs
 	- ### API
-		- [Animation]()
+		- [Animation](https://www.framer.com/docs/animation/)
 		- [Transition]()
-		- [Gestures]()
+		- [Gestures](https://www.framer.com/docs/transition/)
 		- [MotionValue]()
 		- [Utilities]()
 	- ### Components
