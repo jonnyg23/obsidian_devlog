@@ -21,5 +21,5 @@
 		- [Motion components](https://www.framer.com/docs/component/)
 		- [AnimateSharedLayout](https://www.framer.com/docs/animate-shared-layout/)
 		- [AnimatePresence](https://www.framer.com/docs/animate-presence/)
-		- [LazyMotion]()
+		- [LazyMotion](https://www.framer.com/docs/lazy-motion/)
 		- [MotionConfig]()
