@@ -15,7 +15,7 @@
 		- [Animation](https://www.framer.com/docs/animation/)
 		- [Transition](https://www.framer.com/docs/transition/)
 		- [Gestures](https://www.framer.com/docs/gestures/)
-		- [MotionValue]()
+		- [MotionValue](https://www.framer.com/docs/motionvalue/)
 		- [Utilities]()
 	- ### Components
 		- [Motion components]()
