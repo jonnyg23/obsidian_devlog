@@ -10,5 +10,5 @@
 	  # or
 	  yarn add framer-motion
 	  ```
-## Features Showcase
-	- [Intro to Framer Motion](https://www.framer.com/blog/posts/introducing-framer-motion/)
+## Docs
+	-
