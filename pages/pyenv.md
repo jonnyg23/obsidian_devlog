@@ -28,5 +28,16 @@
 	  which python3.7
 	  # /Users/THEJAGSTER/.pyenv/shims/python3.7
 	  
+	  # The following will create a virtual python environment in project directory
+	  virtualenv -p /Users/THEJAGSTER/.pyenv/shims/python3.7 env
 	  
+	  # Switch to using & activating the environment within terminal
+	  source env/bin/activate
+	  
+	  # See if python version has changed
+	  python --version
+	  # Python 3.7.9
+	  
+	  # Stop the venv by using the following command
+	  deactivate
 	  ```
