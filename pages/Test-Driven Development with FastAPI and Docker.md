@@ -28,7 +28,7 @@
 			  ```
 			- That's all you need to get a basic route up and running!
 			- You should now have:
-			- └── project
-			      └── app
-			          ├── __init__.py
-			          └── main.py
+				- └── project
+				      └── app
+				          ├── __init__.py
+				          └── main.py
