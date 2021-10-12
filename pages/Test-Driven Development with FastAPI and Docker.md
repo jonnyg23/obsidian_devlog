@@ -43,4 +43,6 @@
 					    "ping": "pong!"
 					  }
 					  ```
-				- >
+				- > Why did we use Uvicorn to serve up FastAPI rather than a development server?
+				  > Unlike Django or Flask, FastAPI does not have a built-in development server.
+				-
