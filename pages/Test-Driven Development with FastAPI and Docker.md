@@ -34,6 +34,6 @@
 			         |__ `main.py`
 			- Run the server from the "project" directory:
 				- ```bash
-				  
+				  uvicorn app.main:app
 				  ```
 				-
