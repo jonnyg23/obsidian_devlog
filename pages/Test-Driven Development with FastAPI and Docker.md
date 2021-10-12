@@ -45,5 +45,5 @@
 					  ```
 				- > Why did we use Uvicorn to serve up FastAPI rather than a development server?
 				  > Unlike Django or Flask, FastAPI does not have a built-in development server. 
-				  > New to ASGI? Read through the excellent [Introduction to ASGI: Emergence of an Async Python Web Ecosystem]()
-				-
+				  > New to ASGI? Read through the excellent [Introduction to ASGI: Emergence of an Async Python Web Ecosystem](https://florimond.dev/blog/articles/2019/08/introduction-to-asgi-async-python-web/)
+				- FastAPI
