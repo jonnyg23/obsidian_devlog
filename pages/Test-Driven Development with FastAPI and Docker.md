@@ -36,4 +36,11 @@
 				- ```bash
 				  uvicorn app.main:app
 				  ```
-				-
+				- `app.main:app` tells Uvicorn where it can find the FastAPI application --e.g., "within the 'app' module, you'll find the app, `app = FastAPI()`, in the 'main.py' file.
+				- Navigate to http://localhost:8000/ping in your browser. You should see:
+					- ```json
+					  {
+					    "ping": "pong!"
+					  }
+					  ```
+					-
