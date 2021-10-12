@@ -19,4 +19,7 @@
 	- ```bash
 	  pyenv global <VersionNumber>
 	  ```
-	-
+	- To set up pyenv correctly, you can run the following in Bash or zsh: (I had to use this command because `pyenv global` would not change my `python -V` version)
+		- ```bash
+		  PATH=$(pyenv root)/shims:$PATH
+		  ```
