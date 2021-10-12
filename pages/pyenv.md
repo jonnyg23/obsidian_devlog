@@ -25,6 +25,8 @@
 		  ```
 ## Initializing a new virtual python environment in project
 	- ```bash
+	  which python3.7
+	  # /Users/THEJAGSTER/.pyenv/shims/python3.7
 	  
 	  
 	  ```
