@@ -28,8 +28,8 @@
 			  ```
 			- That's all you need to get a basic route up and running!
 			- You should now have:
-				- asdf
-				  |__ project  
-				      |__ app
-				         |__ `__init__.py`
-				         |__ `main.py`
+			- You should now have:
+			  |__ project  
+			      |__ app
+			         |__ `__init__.py`
+			         |__ `main.py`
