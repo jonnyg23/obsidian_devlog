@@ -32,3 +32,4 @@
 			      |__ app
 			         |__ `__init__.py`
 			         |__ `main.py`
+			- Run the server from the "project" directory:
