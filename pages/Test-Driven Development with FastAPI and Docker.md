@@ -46,4 +46,5 @@
 				- > Why did we use Uvicorn to serve up FastAPI rather than a development server?
 				  > Unlike Django or Flask, FastAPI does not have a built-in development server. 
 				  > New to ASGI? Read through the excellent [Introduction to ASGI: Emergence of an Async Python Web Ecosystem](https://florimond.dev/blog/articles/2019/08/introduction-to-asgi-async-python-web/)
-				- FastAPI automatically generates a schema based on the [OpenAPI](https://swagger.io/docs/specification/about/) standard. You can view the raw JSON at http://localhost:8000/openapi.json. This can be used to automatically generate client-side code for a front-end or mobile application. FastAPI uses it along with [Swagger UI]() to create interactive API documentation, which can be viewed at http://localhost:8000/docs:
+				- FastAPI automatically generates a schema based on the [OpenAPI](https://swagger.io/docs/specification/about/) standard. You can view the raw JSON at http://localhost:8000/openapi.json. This can be used to automatically generate client-side code for a front-end or mobile application. FastAPI uses it along with [Swagger UI](https://github.com/swagger-api/swagger-ui) to create interactive API documentation, which can be viewed at http://localhost:8000/docs:
+				-
