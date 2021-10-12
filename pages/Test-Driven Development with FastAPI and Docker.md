@@ -58,4 +58,4 @@
 			- Now when you make changes to the code, the app will automatically reload. Try this out.
 		- ### Config
 			- Add a new file called `config.py` to the "app" directory, where we'll define environment-specific [configuration](https://fastapi.tiangolo.com/advanced/settings/) variables:
-				-
+				- ```py```
