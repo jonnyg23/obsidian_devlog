@@ -1,5 +1,5 @@
 - > **pyenv** is used in the workflow for managing python environments:
-###
+## Installing new python versions in pyenv
 	-
 	  1. Installing latest python version in pyenv:
 	  ```bash
@@ -14,3 +14,5 @@
 	  # If versions not found, try updating pyenv with 
 	  brew update && brew upgrade pyenv
 	  ```
+## Switching global python version
+	-
