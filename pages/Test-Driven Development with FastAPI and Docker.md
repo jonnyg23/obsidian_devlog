@@ -11,4 +11,5 @@
 		  (env)$ pip install fastapi==0.65.3
 		  (env)$ pip install uvicorn==0.14.0
 		  ```
-		- > Feel free to swap out vitualenv and Pip for [Poetry](https://python-poetry.org/m) and Pipenv. For more, review [Modern Python Environments](https://testdriven.io/blog/python-environments/)
+		- > Feel free to swap out vitualenv and Pip for [Poetry](https://python-poetry.org/) and [Pipenv](https://pipenv.pypa.io/). For more, review [Modern Python Environments](https://testdriven.io/blog/python-environments/)
+		-
