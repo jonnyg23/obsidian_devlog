@@ -28,7 +28,6 @@
 			  ```
 			- That's all you need to get a basic route up and running!
 			- You should now have:
-			- You should now have:
 			  |__ project  
 			      |__ app
 			         |__ `__init__.py`
