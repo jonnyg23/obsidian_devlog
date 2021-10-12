@@ -58,4 +58,25 @@
 			- Now when you make changes to the code, the app will automatically reload. Try this out.
 		- ### Config
 			- Add a new file called `config.py` to the "app" directory, where we'll define environment-specific [configuration](https://fastapi.tiangolo.com/advanced/settings/) variables:
-				- ```py```
+				- ```py
+				  # project/app/config.py
+				  
+				  
+				  import logging
+				  import os
+				  
+				  from pydantic import BaseSettings
+				  
+				  
+				  log = logging.getLogger("uvicorn")
+				  
+				  
+				  class Settings(BaseSettings):
+				      environment: str = os.getenv("ENVIRONMENT", "dev")
+				      testing: bool = os.getenv("TESTING", 0)
+				  
+				  
+				  def get_settings() -> BaseSettings:
+				      log.info("Loading config settings from the environment...")
+				      return Settings()
+				  ```
