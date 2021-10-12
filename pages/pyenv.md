@@ -23,4 +23,8 @@
 		- ```bash
 		  PATH=$(pyenv root)/shims:$PATH
 		  ```
-## Initializing a new virtual python environment
+## Initializing a new virtual python environment in project
+	- ```bash
+	  
+	  
+	  ```
