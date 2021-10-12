@@ -33,3 +33,6 @@
 			         |__ `__init__.py`
 			         |__ `main.py`
 			- Run the server from the "project" directory:
+				- ```bash
+				  
+				  ```
