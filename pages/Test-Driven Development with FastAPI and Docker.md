@@ -80,4 +80,31 @@
 				      log.info("Loading config settings from the environment...")
 				      return Settings()
 				  ```
+			- Here we defined a `Settings` class with two attributes:
+				-
+				  1. `environment` - defines the environment (i.e., dev, stage, prod)
+				-
+				  2. `testing` - defines whether or not we're in test mode
+			- [BaseSettings](https://pydantic-docs.helpmanual.io/usage/settings/), from Pydantic, validates the data so that when we create an instance of `Settings`, `environment` and `testing` will have types of `str` and `bool`, respectively.
+			- Update `main.py` like so:
+				- ```py
+				  # project/app/main.py
+				  
+				  
+				  from fastapi import FastAPI, Depends
+				  
+				  from app.config import get_settings, Settings
+				  
+				  
+				  app = FastAPI()
+				  
+				  
+				  @app.get("/ping")
+				  def pong(settings: Settings = Depends(get_settings)):
+				      return {
+				          "ping": "pong!",
+				          "environment": settings.environment,
+				          "testing": settings.testing
+				      }
+				  ```
 				-
