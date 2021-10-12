@@ -15,4 +15,8 @@
 	  brew update && brew upgrade pyenv
 	  ```
 ## Switching global python version
+	- You can find the pyenv versions installed on your computer with the `pyenv versions` command.
+	- ```bash
+	  pyenv global <VersionNumber>
+	  ```
 	-
