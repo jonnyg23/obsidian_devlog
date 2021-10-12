@@ -50,5 +50,11 @@
 				-
 				  -
 				- kill the server
-		-
-		  -
+		- ### Auto-reload
+			- Let's run the app again. This time, we'll enable auto-reload mode so that the server will restart after changes are made to the code base:
+				- ```bash
+				  uvicorn app.main:app --reload
+				  ```
+			- Now when you make changes to the code, the app will automatically reload. Try this out.
+		- ### Config
+			- Add a new file called `config.py` to the "app" directory, where we'll define environment-specific [configuration]
