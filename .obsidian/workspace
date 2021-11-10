@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "0afe8c86476894ec",
+    "type": "split",
+    "children": [
+      {
+        "id": "48b5721854123d23",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "294ecf5bebea87bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "db3899da44c8eb01",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a461c81d1078278c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "76931d742a8e6151",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3591b99627909f97",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "bed83e3c00c1432a",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 264
+  },
+  "right": {
+    "id": "68e8b961231b2368",
+    "type": "split",
+    "children": [
+      {
+        "id": "e103ca086d4fa8bd",
+        "type": "tabs",
+        "dimension": 55.88526211671613,
+        "children": [
+          {
+            "id": "412ff8af5f7fccac",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "7367f2248ec190da",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e5b2b32ee1a84f4f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "{ The Pentagram, Freemasonry, and the Goat.md"
+              }
+            }
+          },
+          {
+            "id": "527b0b2b25474191",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "cd9c445e4b0b162d",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
+              "state": {}
+            }
+          },
+          {
+            "id": "897731d4cec9ca8a",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": true,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.1029488891070454,
+                  "close": true
+                }
+              }
+            }
+          }
+        ],
+        "currentTab": 5
+      },
+      {
+        "id": "43145511ed8f7a14",
+        "type": "tabs",
+        "dimension": 44.11473788328388,
+        "children": [
+          {
+            "id": "a75715954d4e1995",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 372,
+    "collapsed": true
+  },
+  "active": "48b5721854123d23",
+  "lastOpenFiles": [
+    "{ The Pentagram, Freemasonry, and the Goat.md",
+    "Untitled.md",
+    "Templates/Quick Adds/Code Snippets/jsx code block.md",
+    "Templates/Quick Adds/Code Snippets/sql code block.md",
+    "Templates/Quick Adds/Code Snippets/bash code block.md",
+    "Templates/Quick Adds/Code Snippets/js code block.md",
+    "Templates/Quick Adds/Code Snippets/html code block.md",
+    "Templates/Quick Adds/cursor.md",
+    "Templates/Quick Adds/b tag.md",
+    "Templates/Quick Adds/Code Snippets/py code block.md"
+  ]
+}
