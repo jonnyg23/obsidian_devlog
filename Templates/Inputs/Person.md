@@ -24,7 +24,6 @@ status: 🟧
 
 * **Born:** 
 * **Died:**
-* **Religion:**
 
 #### Personal
 
