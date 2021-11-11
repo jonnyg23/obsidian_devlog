@@ -1,16 +1,16 @@
 {
   "main": {
-    "id": "0afe8c86476894ec",
+    "id": "9bd1fd630842c721",
     "type": "split",
     "children": [
       {
-        "id": "48b5721854123d23",
+        "id": "a4829422f7e66fb8",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-            "mode": "source"
+            "file": "Nextjs.md",
+            "mode": "preview"
           }
         }
       }
@@ -18,15 +18,23 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "294ecf5bebea87bf",
+    "id": "ad73a638908a627a",
     "type": "split",
     "children": [
       {
-        "id": "db3899da44c8eb01",
+        "id": "8f5442edc948fcfb",
         "type": "tabs",
         "children": [
           {
-            "id": "a461c81d1078278c",
+            "id": "9bdb6e06e5e43b54",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "160ade923f84144c",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,13 +42,13 @@
             }
           },
           {
-            "id": "76931d742a8e6151",
+            "id": "47120fefa0dd4154",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -49,77 +57,31 @@
             }
           },
           {
-            "id": "3591b99627909f97",
+            "id": "019b39c671f40cee",
             "type": "leaf",
             "state": {
               "type": "starred",
               "state": {}
             }
-          },
-          {
-            "id": "bed83e3c00c1432a",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 264
+    "width": 220
   },
   "right": {
-    "id": "68e8b961231b2368",
+    "id": "202de2eaf0ff0f11",
     "type": "split",
     "children": [
       {
-        "id": "e103ca086d4fa8bd",
+        "id": "86f6df99400c700b",
         "type": "tabs",
-        "dimension": 55.88526211671613,
+        "dimension": 73.14172447968286,
         "children": [
           {
-            "id": "412ff8af5f7fccac",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "7367f2248ec190da",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "e5b2b32ee1a84f4f",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "{ The Pentagram, Freemasonry, and the Goat.md"
-              }
-            }
-          },
-          {
-            "id": "527b0b2b25474191",
+            "id": "9120bd1d968e42f1",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -127,7 +89,46 @@
             }
           },
           {
-            "id": "cd9c445e4b0b162d",
+            "id": "597be3f49efc3f4c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Nextjs.md"
+              }
+            }
+          },
+          {
+            "id": "e62a78844128e6fb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Nextjs.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "edca7acd6bfce815",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Nextjs.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2cab6d5b630653a3",
             "type": "leaf",
             "state": {
               "type": "todo",
@@ -135,35 +136,35 @@
             }
           },
           {
-            "id": "897731d4cec9ca8a",
+            "id": "5ce4f2455953b33b",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+                "file": "Nextjs.md",
                 "options": {
-                  "collapse-filter": true,
+                  "collapse-filter": false,
                   "search": "",
-                  "localJumps": 1,
+                  "localJumps": 5,
                   "localBacklinks": true,
                   "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
+                  "localInterlinks": true,
+                  "showTags": true,
+                  "showAttachments": true,
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
                   "colorGroups": [],
-                  "collapse-display": true,
+                  "collapse-display": false,
                   "showArrow": true,
                   "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
+                  "nodeSizeMultiplier": 0.921920955882353,
+                  "lineSizeMultiplier": 0.855266544117647,
                   "collapse-forces": true,
                   "centerStrength": 0.518713248970312,
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.1029488891070454,
+                  "scale": 0.7814079356225249,
                   "close": true
                 }
               }
@@ -173,12 +174,12 @@
         "currentTab": 5
       },
       {
-        "id": "43145511ed8f7a14",
+        "id": "109b48d01d39b7e5",
         "type": "tabs",
-        "dimension": 44.11473788328388,
+        "dimension": 26.858275520317143,
         "children": [
           {
-            "id": "a75715954d4e1995",
+            "id": "87acec133b41e0b9",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -192,20 +193,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372,
-    "collapsed": true
+    "width": 507
   },
-  "active": "48b5721854123d23",
+  "active": "a4829422f7e66fb8",
   "lastOpenFiles": [
-    "{ The Pentagram, Freemasonry, and the Goat.md",
-    "Untitled.md",
-    "Templates/Quick Adds/Code Snippets/jsx code block.md",
-    "Templates/Quick Adds/Code Snippets/sql code block.md",
-    "Templates/Quick Adds/Code Snippets/bash code block.md",
-    "Templates/Quick Adds/Code Snippets/js code block.md",
-    "Templates/Quick Adds/Code Snippets/html code block.md",
-    "Templates/Quick Adds/cursor.md",
-    "Templates/Quick Adds/b tag.md",
-    "Templates/Quick Adds/Code Snippets/py code block.md"
+    "Nextjs.md",
+    "Templates/Inputs/Library-Dependency.md",
+    "Templates/Inputs/Language.md",
+    "Programming Languages.md",
+    "Python.md",
+    "INDEX.md",
+    "Templates/Inputs/New.md",
+    "Templates/Inputs/Article.md",
+    "2021_08_20.md",
+    "2021_08_19.md"
   ]
 }

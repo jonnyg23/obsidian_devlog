@@ -20,6 +20,22 @@
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;
   --text-error-hover: #c9626a;
+
+  /**ADDED BY JONNY FROM PUBLISH.css**/
+  --text-title-h1: rgb(252, 246, 1, 0.75);
+  --text-title-h2: #b9adff; 
+  --text-title-h3: #52c1da;
+  --text-title-h4: #8ebe8e;
+  --text-title-h5: #d8d8d8;
+  --text-title-h6: #afafaf;
+  --text-link: #99ff99;
+  --text-a: #d669bc;
+  --text-a-hover: #b3a14b;
+  --text-mark: rgb(252, 246, 1, 0.45); /* SEE HIGHLIGHTER */
+  --font-family-editor: Avenir, Avenir Next, var(--default-font), sans-serif;
+  --font-family-preview: Avenir, Avenir Next, var(--default-font), sans-serif;
+  /**END OF JONNY ADDITIONS**/
+
   --text-highlight-bg: rgba(255, 255, 0, 0.4);
   --text-selection: rgba(0, 122, 255, 0.2);
   --text-on-accent: #dcddde;
@@ -87,6 +103,238 @@
   --yellow: #e35649;
   --orange: #986800;
 }
+
+/***JONNY ADDED THIS FROM PUBLISH.css ***/
+
+
+#graph-view-canvas .links
+{
+  stroke: var(--interactive-accent-rgb) !important;
+}
+
+
+/**********************/
+/* Obsidian Publish Stuff */
+/**********************/
+.page-header{ display: none}
+.site-footer{ display: none}
+
+/**********************/
+/* NEW SUPER GRAPH WITH FILTER */
+/**********************/
+
+.theme-dark .graph-view.color-fill-tag {
+  color: #5dbcd2;
+}
+
+.theme-dark .graph-view.color-fill-attachment {
+  color: #d669bc;
+}
+
+.theme-dark .graph-view.color-fill-unresolved {
+  color: #9e8aff;
+  Opacity:1;
+}
+
+.theme-dark .graph-view.color-arrow {
+  color: #d669bc;
+}
+
+/**********************/
+/* Graph View */
+/**********************/
+
+.graph-view.color-fill {
+    color: #fcf601;
+}
+.graph-view.color-circle {
+    color: #26798c;
+}
+.graph-view.color-line {
+    color:  #26798c;
+}
+
+.graph-view.color-text {
+    color: #cccccc;
+}
+
+.graph-view.color-fill-highlight {
+    color: #26798c;
+}
+.graph-view.color-line-highlight {
+    color: #5dbcd2;
+}
+
+
+
+/**********************/
+/* BOLD AND ITALTICS */
+/**********************/
+
+
+strong {
+  color: rgb(179, 153, 255, 0.95);
+  font-weight: 700;
+}
+
+
+em {
+  color: #b8b894;
+}
+
+
+/**********************/
+/* HIGHLIGHTER */
+/**********************/
+
+
+mark
+{
+  background-color: var(--text-mark) !important;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+
+.cm-s-obsidian span.cm-highlight {
+    color: #0c0c0e;
+    font-weight: 500;
+    background-color: rgb(252, 246, 1, 0.49);
+}
+
+.markdown-preview-view mark {
+    color: #0c0c0e;
+    font-weight: 500;
+    }
+
+
+
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(252, 246, 1, 0.1);
+}
+
+/**********************/
+/* links and brackets */
+/**********************/
+.cm-s-obsidian span.cm-formatting-link {
+    color: #d669bc !important;
+}
+
+
+/***************************************/
+/*             Blockquote              */
+/***************************************/
+
+/* for preview */
+.markdown-preview-view blockquote {
+    background-color: #1A1B24;
+    border: 0px solid;
+    border-color: rgb(252, 246, 1, 0.70) !important;
+    border-left-width: 2px !important;
+    border-radius: 0 0px 0px 0;
+    /* font-family: merriwether, georgia, serif; */
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0 10px;
+    }
+
+
+/***************************************/
+/* link */
+/***************************************/
+
+
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link
+{
+  color: var(--text-a) !important;
+  text-decoration: none !important;
+  font-family: var(--font-family-preview) !important;
+}
+
+/* link hover color */
+a:hover,
+.internal-link:hover
+{
+  color: var(--text-a-hover) !important;
+  text-decoration: none !important;
+}
+
+/* make external links italics to differentiate */
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+/* blockquote */
+.cm-quote /* for editor */
+{
+  color: var(--text-normal) !important;
+}
+
+blockquote /* for preview */
+{
+  border-color: var(--blockquote-border) !important;
+}
+
+/* icons at top of panes*/
+.file-view-actions a
+{
+  color: var(--text-muted) !important;
+}
+
+.file-view-actions a:hover
+{
+  color: var(--text-a) !important;
+}
+
+/* html tags in editor */
+.cm-tag
+{
+  color: var(--text-accent) !important;
+}
+
+/* code blocks in preview */
+pre code
+{
+  padding: 6px !important;
+  line-height: normal;
+  display: block;
+  background-color: var(--pre-code) !important;
+}
+
+.markdown-preview-view pre
+{
+  padding: 0px !important;
+}
+
+/* in-line code for editor and preview and code block for editor*/
+/* code,
+.cm-inline-code
+{
+  background-color: var(--pre-code) !important;
+  color: var(--text-muted) !important;
+  bottom: 0px !important;
+} */
+
+/* code and code blocks for preview */
+.markdown-preview-view code
+{
+  font-size: 13.5px;
+}
+
+
+/*********END OF JONNY ADDITIONS*********/
 
 body {
   -webkit-font-smoothing: auto;
@@ -256,17 +504,17 @@ mjx-container[jax='CHTML'] {
   word-break: break-word;
 }
 
-.markdown-preview-section:not(:first-child) h1, .markdown-preview-section:not(:first-child) h2, .markdown-preview-section:not(:first-child) h3, .markdown-preview-section:not(:first-child) h4, .markdown-preview-section:not(:first-child) h5, .markdown-preview-section:not(:first-child) h6 {
+/* .markdown-preview-section:not(:first-child) h1, .markdown-preview-section:not(:first-child) h2, .markdown-preview-section:not(:first-child) h3, .markdown-preview-section:not(:first-child) h4, .markdown-preview-section:not(:first-child) h5, .markdown-preview-section:not(:first-child) h6 {
   margin-top: 40px !important;
-}
+} */
 
-.markdown-preview-section h1, .markdown-preview-section h2, .markdown-preview-section h3, .markdown-preview-section h4, .markdown-preview-section h5, .markdown-preview-section h6 {
+/* .markdown-preview-section h1, .markdown-preview-section h2, .markdown-preview-section h3, .markdown-preview-section h4, .markdown-preview-section h5, .markdown-preview-section h6 {
   line-height: 1.2;
 }
 
 h1, h2, h3, h4, h5, h6, strong, b, .view-header-title {
   font-weight: 600;
-}
+} */
 
 .workspace>.workspace-split>.workspace-leaf:first-of-type:last-of-type .view-header {
   border: none;
@@ -470,3 +718,372 @@ pre.line-numbers>code {
   padding-right: 0.8em !important;
   text-align: right !important;
 }
+
+
+/********JONNY ADDED FROM PUBLISH*******/
+
+/******************/
+/* editor section */
+/******************/
+
+
+
+
+/* EDITOR Text (outside of headings and code) */
+
+.cm-s-obsidian
+{
+  font-family: var(--font-family-editor);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 8% !important;
+  padding-right: 4% !important;
+}
+
+.mod-single-child .cm-s-obsidian
+{
+  font-family: var(--font-family-editor);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 8% !important;
+  padding-right: 4% !important;
+}
+
+
+
+/* EDITOR headings */
+
+
+.cm-header-1
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.cm-header-2
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.cm-header-3
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.cm-header-4
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.cm-header-5
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.cm-header-6
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-title-h6);
+}
+
+.cm-strong {
+  color: rgb(179, 153, 255, 0.95);
+  font-weight: 700;
+}
+
+.cm-em {
+  color: #b8b894;
+}
+
+.cm-s-obsidian span.cm-hashtag {
+    color: #d669bc;
+    text-decoration: underline;
+}
+
+
+
+/* This is the dashes in bullets. Color does not work, 
+but font weight does. */
+.cm-formatting-list {
+  color: #fcf601;
+  font-weight: 700;
+} 
+
+.cm-formatting  /* This is the color of header hashtags. Don't change. */
+.cm-formatting-list-ul
+.cm-list-1 /* This is the color of text in lists. Don't change. */
+
+/* This does not work */
+.cm-hashtag {
+  color: #fcf601;
+}
+.cm-meta cm-hashtag-end {
+  color: #fcf601;
+}
+
+.cm-meta cm-hashtag-end {
+  color: #fcf601;
+}
+
+
+
+
+/******************/
+/* PREVIEW section */
+/******************/
+
+
+
+
+/* PREVIEW - normal text (outside of headings and code) */
+
+
+.markdown-preview-view
+{
+  font-family: var(--font-family-preview);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+.mod-single-child .markdown-preview-view
+{
+  font-family: var(--font-family-preview);
+  font-size: 15px;
+  color: var(--text-normal);
+  padding-left: 10% !important;
+  padding-right: 10% !important;
+}
+
+
+/* PREVIEW headings */
+
+
+.markdown-preview-view h1
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.markdown-preview-view h2
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.markdown-preview-view h3
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.markdown-preview-view h4
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.markdown-preview-view h5
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.markdown-preview-view h6
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-title-h6);
+  
+}
+
+/***************************************/
+/*             Presentation Mode              */
+/***************************************/
+
+
+.reveal h1 {
+  color: rgb(252, 246, 1, 0.70);
+}
+
+.reveal h2 {
+  color: rgb(252, 246, 1, 0.5);
+}
+
+.reveal h3 {
+  color: #52c1da;
+}
+
+.reveal h4 {
+  color: #bfbfbf;
+}
+
+.reveal h5 {
+  color: #52c1da;
+}
+
+.reveal h6 {
+  color: #bfbfbf;
+}
+
+
+.cm-s-obsidian pre.HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end), .markdown-preview-view code {
+  /* fix `` tag color */
+  color: #98c379;
+}
+
+.cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder {
+  /* fix tag size */
+  font-weight: 100;
+  font-style: normal;
+}
+/* Code blocks */
+
+pre[class*='language-'] {
+  padding: 1em !important;
+  margin: .5em 0 !important;
+  overflow: auto !important;
+}
+
+/* Inline code */
+
+:not(pre)>code[class*='language-'] {
+  padding: .1em !important;
+  border-radius: .3em !important;
+  white-space: normal !important;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: var(--gray-1) !important;
+}
+
+.token.punctuation {
+  color: var(--gray-2) !important;
+}
+
+.token.selector, .token.tag {
+  color: var(--red) !important;
+}
+
+.token.property, .token.boolean, .token.number, .token.constant, .token.symbol, .token.attr-name, .token.deleted {
+  color: var(--orange) !important;
+}
+
+.token.string, .token.char, .token.attr-value, .token.builtin, .token.inserted {
+  color: var(--green) !important;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: var(--aqua) !important;
+}
+
+.token.atrule, .token.keyword {
+  color: var(--purple) !important;
+}
+
+.token.function, .token.macro.property {
+  color: var(--blue) !important;
+}
+
+.token.class-name {
+  color: var(--yellow) !important;
+}
+
+.token.regex, .token.important, .token.variable {
+  color: var(--purple) !important;
+}
+
+.token.important, .token.bold {
+  font-weight: bold !important;
+}
+
+.token.italic {
+  font-style: italic !important;
+}
+
+.token.entity {
+  cursor: help !important;
+}
+
+pre.line-numbers {
+  position: relative !important;
+  padding-left: 3.8em !important;
+  counter-reset: linenumber !important;
+}
+
+pre.line-numbers>code {
+  position: relative !important;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute !important;
+  pointer-events: none !important;
+  top: 0 !important;
+  font-size: 100% !important;
+  left: -3.8em !important;
+  width: 3em !important;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px !important;
+  border-right: 0 !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+.line-numbers-rows>span {
+  pointer-events: none !important;
+  display: block !important;
+  counter-increment: linenumber !important;
+}
+
+.line-numbers-rows>span:before {
+  content: counter(linenumber) !important;
+  color: var(--syntax-gray-1) !important;
+  display: block !important;
+  padding-right: 0.8em !important;
+  text-align: right !important;
+}
+
+
+/********END OF JONNY ADDITIONS*******/

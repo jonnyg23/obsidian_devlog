@@ -15,7 +15,7 @@
 <%* } else if (tp.file.title.charAt(0) == "=") { %>
 <%-tp.file.include("[[Thought]]")%>
 <%* } else if (tp.file.title.charAt(0) == "}") { %>
-<%-tp.file.include("[[Bible-Reflection-Connections]]")%>
+<%-tp.file.include("[[Something-Can-Go-Here]]")%>
 <%* } else { %>
 <%-tp.file.include("[[New]]")%>
 <%* } _%>

@@ -1,223 +1,452 @@
-filters:: {"todo" true, "doing" true}
+---
+tags: 💽
+aliases:
+  - 
+cssclass:
+---
 
-## A [[Javascript]] Framework for user-friendly static websites.
-	- ### Helps developer create static generation [[SSG]] and server-side rendering [[SSR]] websites.
+# [[Nextjs]]
+
+> A Javascript Framework for user-friendly static websites.
+
+> Helps developer create static generation [[SSG]] and server-side rendering [[SSR]] websites.
+
+
 ## Jump-starting New Project
-	-
-	  collapsed:: true
-	  1. Init project with yarn
+
+- 1. Init project with yarn
+
+```bash
+# Ensure latest version of yarn
+yarn -version
+
+# Initialize New Next App
+yarn create next-app
+
+# or for typescript
+yarn create next-app --typescript
+```
+
+- 2. Init [[Docker]] with Next App
+	- 2a. Add `Dockerfile` to root directory
+
+```docker
+# Install dependencies only when needed
+FROM node:14-alpine AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Rebuild the source code only when needed
+FROM node:14-alpine AS builder
+WORKDIR /app
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+RUN yarn build
+
+# Production image, copy all the files and run next
+FROM node:14-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# You only need to copy next.config.js if you are NOT using the default configuration
+# COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+
+USER nextjs
+
+EXPOSE 3000
+
+# Next.js collects completely anonymous telemetry data about general usage.
+# Learn more here: https://nextjs.org/telemetry
+# Uncomment the following line in case you want to disable telemetry.
+ENV NEXT_TELEMETRY_DISABLED 1
+
+CMD ["yarn", "start"]
+```
+	- 2b. Add `.dockerignore` to root directory
+		-
+		  ```docker
+		  Dockerfile
+		  .dockerignore
+		  node_modules
+		  npm-debug.log
+		  README.md
+		  .next
+		  ```
+-
+  collapsed:: true
+	  3. Building, Running, & Stopping Docker image
+  collapsed:: true
+	- 3a. **Build** Docker Image
 		-
 		  ```bash
-		  # Ensure latest version of yarn
-		  yarn -version
-		  
-		  # Initialize New Next App
-		  yarn create next-app
-		  
-		  # or for typescript
-		  yarn create next-app --typescript
+		  docker build -t NAME_OF_APP .
 		  ```
-		-
-	-
-	  collapsed:: true
-	  2. Init [[Docker]] with Next App
-		- 2a. Add `Dockerfile` to root directory
-			-
-			  ```docker
-			  # Install dependencies only when needed
-			  FROM node:14-alpine AS deps
-			  # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-			  RUN apk add --no-cache libc6-compat
-			  WORKDIR /app
-			  COPY package.json yarn.lock ./
-			  RUN yarn install --frozen-lockfile
-			  
-			  # Rebuild the source code only when needed
-			  FROM node:14-alpine AS builder
-			  WORKDIR /app
-			  COPY . .
-			  COPY --from=deps /app/node_modules ./node_modules
-			  RUN yarn build
-			  
-			  # Production image, copy all the files and run next
-			  FROM node:14-alpine AS runner
-			  WORKDIR /app
-			  
-			  ENV NODE_ENV production
-			  
-			  RUN addgroup -g 1001 -S nodejs
-			  RUN adduser -S nextjs -u 1001
-			  
-			  # You only need to copy next.config.js if you are NOT using the default configuration
-			  # COPY --from=builder /app/next.config.js ./
-			  COPY --from=builder /app/public ./public
-			  COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-			  COPY --from=builder /app/node_modules ./node_modules
-			  COPY --from=builder /app/package.json ./package.json
-			  
-			  USER nextjs
-			  
-			  EXPOSE 3000
-			  
-			  # Next.js collects completely anonymous telemetry data about general usage.
-			  # Learn more here: https://nextjs.org/telemetry
-			  # Uncomment the following line in case you want to disable telemetry.
-			  ENV NEXT_TELEMETRY_DISABLED 1
-			  
-			  CMD ["yarn", "start"]
-			  ```
-		- 2b. Add `.dockerignore` to root directory
-			-
-			  ```docker
-			  Dockerfile
-			  .dockerignore
-			  node_modules
-			  npm-debug.log
-			  README.md
-			  .next
-			  ```
-	-
-	  collapsed:: true
-	  	  3. Building, Running, & Stopping Docker image
-	  collapsed:: true
-		- 3a. **Build** Docker Image
-			-
-			  ```bash
-			  docker build -t NAME_OF_APP .
-			  ```
-		- 3b. **Run** Docker Image
-			-
-			  ```bash
-			  docker run -p 3000:3000 NAME_OF_APP
-			  ```
-		- 3c. **View** Dockerized Next App locally at `localhost:3000`
-		- 3d. **Stopping** Docker Image
-			- In the docker app, under `Containers/Apps`, press Stop on running image.
-			- -OR-
-			-
-			  1. Execute Command `docker ps` in terminal
-			-
-			  2. Copy the container id
-			-
-			  3. Execute command `docker stop container id` in terminal
-	-
-	  4. Running Next app with yarn in dev mode
+	- 3b. **Run** Docker Image
 		-
 		  ```bash
-		  yarn run dev
+		  docker run -p 3000:3000 NAME_OF_APP
 		  ```
+	- 3c. **View** Dockerized Next App locally at `localhost:3000`
+	- 3d. **Stopping** Docker Image
+		- In the docker app, under `Containers/Apps`, press Stop on running image.
+		- -OR-
+		-
+		  1. Execute Command `docker ps` in terminal
+		-
+		  2. Copy the container id
+		-
+		  3. Execute command `docker stop container id` in terminal
+-
+  4. Running Next app with yarn in dev mode
 	-
-	  collapsed:: true
-	  	  5. Adding `PORT` to `package.json`
-	  collapsed:: true
-		- In the `scripts` object, at this to `start`:
+	  ```bash
+	  yarn run dev
+	  ```
+-
+  collapsed:: true
+	  5. Adding `PORT` to `package.json`
+  collapsed:: true
+	- In the `scripts` object, at this to `start`:
+		-
+		  ```json
+		  "start": "next start -p ${PORT:=3000}"
+		  ```
+- ### Setting up Material-ui
+	- #### `_app.js` in root folder
+		- **Example from MegSewsThings**:
+		  collapsed:: true
 			-
-			  ```json
-			  "start": "next start -p ${PORT:=3000}"
+			  ```jsx
+			  import "../styles/globals.css";
+			  import React, { useEffect } from "react";
+			  import PropTypes from "prop-types";
+			  import Head from "next/head";
+			  import CssBaseline from "@mui/material/CssBaseline";
+			  import { ThemeProvider } from "@mui/material";
+			  // import { StyledEngineProvider } from "@mui/material/styles";
+			  import megTheme from "../themes/megTheme";
+
+			  export default function App({ Component, pageProps }) {
+				useEffect(() => {
+				  // Remove the server-side injected CSS.
+				  const jssStyles = document.querySelector("#jss-server-side");
+				  if (jssStyles) {
+					jssStyles.parentElement.removeChild(jssStyles);
+				  }
+				}, []);
+
+				return (
+				  <>
+					<Head>
+					  <meta
+						name="viewport"
+						content="minimum-scale=1, initial-scale=1, width=device-width"
+					  />
+					</Head>
+					{/* <StyledEngineProvider injectFirst> */}
+					  <ThemeProvider theme={megTheme}>
+						<CssBaseline />
+						<Component {...pageProps} />
+					  </ThemeProvider>
+					{/* </StyledEngineProvider> */}
+				  </>
+				);
+			  }
+
+			  App.propTypes = {
+				Component: PropTypes.elementType.isRequired,
+				pageProps: PropTypes.object.isRequired,
+			  };
 			  ```
-	- ### Setting up Material-ui
-		- #### `_app.js` in root folder
-			- **Example from MegSewsThings**:
-			  collapsed:: true
-				-
-				  ```jsx
-				  import "../styles/globals.css";
-				  import React, { useEffect } from "react";
-				  import PropTypes from "prop-types";
-				  import Head from "next/head";
-				  import CssBaseline from "@mui/material/CssBaseline";
-				  import { ThemeProvider } from "@mui/material";
-				  // import { StyledEngineProvider } from "@mui/material/styles";
-				  import megTheme from "../themes/megTheme";
-				  
-				  export default function App({ Component, pageProps }) {
-				    useEffect(() => {
-				      // Remove the server-side injected CSS.
-				      const jssStyles = document.querySelector("#jss-server-side");
-				      if (jssStyles) {
-				        jssStyles.parentElement.removeChild(jssStyles);
-				      }
-				    }, []);
-				  
-				    return (
-				      <>
-				        <Head>
-				          <meta
-				            name="viewport"
-				            content="minimum-scale=1, initial-scale=1, width=device-width"
-				          />
-				        </Head>
-				        {/* <StyledEngineProvider injectFirst> */}
-				          <ThemeProvider theme={megTheme}>
-				            <CssBaseline />
-				            <Component {...pageProps} />
-				          </ThemeProvider>
-				        {/* </StyledEngineProvider> */}
-				      </>
-				    );
+	- `_document.js` in root folder
+		- **Example from MegSewsThings**:
+		  collapsed:: true
+			-
+			  ```jsx
+			  import React from "react";
+			  import Document, { Html, Head, Main, NextScript } from "next/document";
+			  import { ServerStyleSheets } from "@mui/styles";
+			  import theme from "../themes/megTheme";
+
+			  export default class MyDocument extends Document {
+				render() {
+				  return (
+					<Html lang="en">
+					  <Head>
+						<meta charSet="utf-8" />
+						{/* PWA primary color */}
+						<meta name="theme-color" content={"primary.main"} />
+						<link
+						  rel="stylesheet"
+						  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+						/>
+						<link rel="icon" href="/public/favicon.ico" />
+					  </Head>
+					  <body>
+						<Main />
+						<NextScript />
+					  </body>
+					</Html>
+				  );
+				}
+			  }
+
+			  // `getInitialProps` belongs to `_document` (instead of `_app`),
+			  // it's compatible with server-side generation (SSG).
+			  MyDocument.getInitialProps = async (ctx) => {
+				const sheets = new ServerStyleSheets();
+				const originalRenderPage = ctx.renderPage;
+
+				ctx.renderPage = () =>
+					originalRenderPage({
+					enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+				});
+
+				const initialProps = await Document.getInitialProps(ctx);
+
+				return {
+				  ...initialProps,
+				  // Styles fragment is rendered after the app and page rendering finish.
+				  styles: [
+					...React.Children.toArray(initialProps.styles),
+					sheets.getStyleElement(),
+				  ],
+				};
+			  };
+			  ```
+
+
+
+🔗 Links to this page:
+[[Javascript]]
+
+## Jump-starting New Project
+-
+  collapsed:: true
+  1. Init project with yarn
+	-
+	  ```bash
+	  # Ensure latest version of yarn
+	  yarn -version
+
+	  # Initialize New Next App
+	  yarn create next-app
+
+	  # or for typescript
+	  yarn create next-app --typescript
+	  ```
+	-
+-
+  collapsed:: true
+  2. Init [[Docker]] with Next App
+	- 2a. Add `Dockerfile` to root directory
+		-
+		  ```docker
+		  # Install dependencies only when needed
+		  FROM node:14-alpine AS deps
+		  # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+		  RUN apk add --no-cache libc6-compat
+		  WORKDIR /app
+		  COPY package.json yarn.lock ./
+		  RUN yarn install --frozen-lockfile
+
+		  # Rebuild the source code only when needed
+		  FROM node:14-alpine AS builder
+		  WORKDIR /app
+		  COPY . .
+		  COPY --from=deps /app/node_modules ./node_modules
+		  RUN yarn build
+
+		  # Production image, copy all the files and run next
+		  FROM node:14-alpine AS runner
+		  WORKDIR /app
+
+		  ENV NODE_ENV production
+
+		  RUN addgroup -g 1001 -S nodejs
+		  RUN adduser -S nextjs -u 1001
+
+		  # You only need to copy next.config.js if you are NOT using the default configuration
+		  # COPY --from=builder /app/next.config.js ./
+		  COPY --from=builder /app/public ./public
+		  COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+		  COPY --from=builder /app/node_modules ./node_modules
+		  COPY --from=builder /app/package.json ./package.json
+
+		  USER nextjs
+
+		  EXPOSE 3000
+
+		  # Next.js collects completely anonymous telemetry data about general usage.
+		  # Learn more here: https://nextjs.org/telemetry
+		  # Uncomment the following line in case you want to disable telemetry.
+		  ENV NEXT_TELEMETRY_DISABLED 1
+
+		  CMD ["yarn", "start"]
+		  ```
+	- 2b. Add `.dockerignore` to root directory
+		-
+		  ```docker
+		  Dockerfile
+		  .dockerignore
+		  node_modules
+		  npm-debug.log
+		  README.md
+		  .next
+		  ```
+-
+  collapsed:: true
+	  3. Building, Running, & Stopping Docker image
+  collapsed:: true
+	- 3a. **Build** Docker Image
+		-
+		  ```bash
+		  docker build -t NAME_OF_APP .
+		  ```
+	- 3b. **Run** Docker Image
+		-
+		  ```bash
+		  docker run -p 3000:3000 NAME_OF_APP
+		  ```
+	- 3c. **View** Dockerized Next App locally at `localhost:3000`
+	- 3d. **Stopping** Docker Image
+		- In the docker app, under `Containers/Apps`, press Stop on running image.
+		- -OR-
+		-
+		  1. Execute Command `docker ps` in terminal
+		-
+		  2. Copy the container id
+		-
+		  3. Execute command `docker stop container id` in terminal
+-
+  4. Running Next app with yarn in dev mode
+	-
+	  ```bash
+	  yarn run dev
+	  ```
+-
+  collapsed:: true
+	  5. Adding `PORT` to `package.json`
+  collapsed:: true
+	- In the `scripts` object, at this to `start`:
+		-
+		  ```json
+		  "start": "next start -p ${PORT:=3000}"
+		  ```
+- ### Setting up Material-ui
+	- #### `_app.js` in root folder
+		- **Example from MegSewsThings**:
+		  collapsed:: true
+			-
+			  ```jsx
+			  import "../styles/globals.css";
+			  import React, { useEffect } from "react";
+			  import PropTypes from "prop-types";
+			  import Head from "next/head";
+			  import CssBaseline from "@mui/material/CssBaseline";
+			  import { ThemeProvider } from "@mui/material";
+			  // import { StyledEngineProvider } from "@mui/material/styles";
+			  import megTheme from "../themes/megTheme";
+
+			  export default function App({ Component, pageProps }) {
+				useEffect(() => {
+				  // Remove the server-side injected CSS.
+				  const jssStyles = document.querySelector("#jss-server-side");
+				  if (jssStyles) {
+					jssStyles.parentElement.removeChild(jssStyles);
 				  }
-				  
-				  App.propTypes = {
-				    Component: PropTypes.elementType.isRequired,
-				    pageProps: PropTypes.object.isRequired,
-				  };
-				  ```
-		- `_document.js` in root folder
-			- **Example from MegSewsThings**:
-			  collapsed:: true
-				-
-				  ```jsx
-				  import React from "react";
-				  import Document, { Html, Head, Main, NextScript } from "next/document";
-				  import { ServerStyleSheets } from "@mui/styles";
-				  import theme from "../themes/megTheme";
-				  
-				  export default class MyDocument extends Document {
-				    render() {
-				      return (
-				        <Html lang="en">
-				          <Head>
-				            <meta charSet="utf-8" />
-				            {/* PWA primary color */}
-				            <meta name="theme-color" content={"primary.main"} />
-				            <link
-				              rel="stylesheet"
-				              href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-				            />
-				            <link rel="icon" href="/public/favicon.ico" />
-				          </Head>
-				          <body>
-				            <Main />
-				            <NextScript />
-				          </body>
-				        </Html>
-				      );
-				    }
-				  }
-				  
-				  // `getInitialProps` belongs to `_document` (instead of `_app`),
-				  // it's compatible with server-side generation (SSG).
-				  MyDocument.getInitialProps = async (ctx) => {
-				    const sheets = new ServerStyleSheets();
-				    const originalRenderPage = ctx.renderPage;
-				    
-				    ctx.renderPage = () =>
-				    	originalRenderPage({
-				      	enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-				    });
-				    
-				    const initialProps = await Document.getInitialProps(ctx);
-				    
-				    return {
-				      ...initialProps,
-				      // Styles fragment is rendered after the app and page rendering finish.
-				      styles: [
-				        ...React.Children.toArray(initialProps.styles),
-				        sheets.getStyleElement(),
-				      ],
-				    };
-				  };
-				  ```
+				}, []);
+
+				return (
+				  <>
+					<Head>
+					  <meta
+						name="viewport"
+						content="minimum-scale=1, initial-scale=1, width=device-width"
+					  />
+					</Head>
+					{/* <StyledEngineProvider injectFirst> */}
+					  <ThemeProvider theme={megTheme}>
+						<CssBaseline />
+						<Component {...pageProps} />
+					  </ThemeProvider>
+					{/* </StyledEngineProvider> */}
+				  </>
+				);
+			  }
+
+			  App.propTypes = {
+				Component: PropTypes.elementType.isRequired,
+				pageProps: PropTypes.object.isRequired,
+			  };
+			  ```
+	- `_document.js` in root folder
+		- **Example from MegSewsThings**:
+		  collapsed:: true
+			-
+			  ```jsx
+			  import React from "react";
+			  import Document, { Html, Head, Main, NextScript } from "next/document";
+			  import { ServerStyleSheets } from "@mui/styles";
+			  import theme from "../themes/megTheme";
+
+			  export default class MyDocument extends Document {
+				render() {
+				  return (
+					<Html lang="en">
+					  <Head>
+						<meta charSet="utf-8" />
+						{/* PWA primary color */}
+						<meta name="theme-color" content={"primary.main"} />
+						<link
+						  rel="stylesheet"
+						  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+						/>
+						<link rel="icon" href="/public/favicon.ico" />
+					  </Head>
+					  <body>
+						<Main />
+						<NextScript />
+					  </body>
+					</Html>
+				  );
+				}
+			  }
+
+			  // `getInitialProps` belongs to `_document` (instead of `_app`),
+			  // it's compatible with server-side generation (SSG).
+			  MyDocument.getInitialProps = async (ctx) => {
+				const sheets = new ServerStyleSheets();
+				const originalRenderPage = ctx.renderPage;
+
+				ctx.renderPage = () =>
+					originalRenderPage({
+					enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
+				});
+
+				const initialProps = await Document.getInitialProps(ctx);
+
+				return {
+				  ...initialProps,
+				  // Styles fragment is rendered after the app and page rendering finish.
+				  styles: [
+					...React.Children.toArray(initialProps.styles),
+					sheets.getStyleElement(),
+				  ],
+				};
+			  };
+			  ```
 -
 ### Vercel Nextjs Examples
 	- If you need any assistance with integrating other softwares or just to see design patterns with Nextjs, go to the vercel nextjs Github examples link [here](https://github.com/vercel/next.js/tree/canary/examples)

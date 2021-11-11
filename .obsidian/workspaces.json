@@ -103,286 +103,13 @@
       },
       "active": "ab76cbbff237a018"
     },
-    "iPad Home Setup": {
-      "main": {
-        "id": "4ae95a41eaf8ec44",
-        "type": "split",
-        "children": [],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "f1f064fb174c0d24",
-        "type": "mobile-drawer",
-        "children": [
-          {
-            "id": "6facbc4bd30d1540",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
-          {
-            "id": "4eeea043237877c3",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "fc712b1d8f7b5c28",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
-            "id": "e1d98c66c0c29064",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "c74a9cf07061d6ef",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 1,
-        "pinned": true
-      },
-      "right": {
-        "id": "b817c427cbe81ab6",
-        "type": "mobile-drawer",
-        "children": [
-          {
-            "id": "9fa3289e01b4038c",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "1b16d55b86e74b80",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          },
-          {
-            "id": "79ecca74204d601a",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "dd58c2c1ea94f8f1",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "e422d531f63cfcb4",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 2
-      },
-      "active": "78417929b7fbbaf9"
-    },
-    "Main Graph": {
-      "main": {
-        "id": "4ae95a41eaf8ec44",
-        "type": "split",
-        "children": [
-          {
-            "id": "ab76cbbff237a018",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          }
-        ],
-        "direction": "vertical"
-      },
-      "left": {
-        "id": "7f013f68f3c05d4b",
-        "type": "split",
-        "children": [
-          {
-            "id": "ca28b91bf89d537f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4a3878543e3d195e",
-                "type": "leaf",
-                "state": {
-                  "type": "file-explorer",
-                  "state": {}
-                }
-              },
-              {
-                "id": "26056e886619f66b",
-                "type": "leaf",
-                "state": {
-                  "type": "search",
-                  "state": {
-                    "query": "",
-                    "matchingCase": false,
-                    "explainSearch": false,
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical"
-                  }
-                }
-              },
-              {
-                "id": "e01b73fbb3b7ca2a",
-                "type": "leaf",
-                "state": {
-                  "type": "starred",
-                  "state": {}
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300
-      },
-      "right": {
-        "id": "afb980b7e9675eb0",
-        "type": "split",
-        "children": [
-          {
-            "id": "8b095af791871014",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "67e638c35e33b394",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "linksCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "e040592dff1d0df3",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {}
-                }
-              }
-            ],
-            "currentTab": 1
-          },
-          {
-            "id": "63a6e58efb7318e3",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "16df441b9b3807a3",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "83fab6c2331c7f1f",
-                "type": "leaf",
-                "state": {
-                  "type": "calendar",
-                  "state": {}
-                }
-              },
-              {
-                "id": "22a324df2089b0a4",
-                "type": "leaf",
-                "state": {
-                  "type": "todo",
-                  "state": {}
-                }
-              },
-              {
-                "id": "eca5e789102c87ba",
-                "type": "leaf",
-                "state": {
-                  "type": "tag",
-                  "state": {
-                    "sortOrder": "frequency",
-                    "useHierarchy": true
-                  }
-                }
-              }
-            ],
-            "currentTab": 3
-          }
-        ],
-        "direction": "horizontal",
-        "width": 300,
-        "collapsed": true
-      },
-      "active": "ab76cbbff237a018"
-    },
     "Base Desktop - INDEX": {
       "main": {
-        "id": "4ae95a41eaf8ec44",
+        "id": "9bd1fd630842c721",
         "type": "split",
         "children": [
           {
-            "id": "ac8565f530b4215d",
+            "id": "05d465d34fea4c98",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -456,7 +183,7 @@
           {
             "id": "86f6df99400c700b",
             "type": "tabs",
-            "dimension": 70.17964071856288,
+            "dimension": 73.14172447968286,
             "children": [
               {
                 "id": "9120bd1d968e42f1",
@@ -467,54 +194,13 @@
                 }
               },
               {
-                "id": "5ce4f2455953b33b",
+                "id": "597be3f49efc3f4c",
                 "type": "leaf",
                 "state": {
-                  "type": "localgraph",
+                  "type": "outline",
                   "state": {
-                    "file": "INDEX.md",
-                    "options": {
-                      "collapse-filter": false,
-                      "search": "",
-                      "localJumps": 2,
-                      "localBacklinks": true,
-                      "localForelinks": true,
-                      "localInterlinks": false,
-                      "showTags": false,
-                      "showAttachments": false,
-                      "hideUnresolved": false,
-                      "collapse-color-groups": true,
-                      "colorGroups": [],
-                      "collapse-display": true,
-                      "showArrow": false,
-                      "textFadeMultiplier": 0,
-                      "nodeSizeMultiplier": 1,
-                      "lineSizeMultiplier": 1,
-                      "collapse-forces": true,
-                      "centerStrength": 0.518713248970312,
-                      "repelStrength": 10,
-                      "linkStrength": 1,
-                      "linkDistance": 250,
-                      "scale": 0.8248151928965485,
-                      "close": true
-                    }
+                    "file": "INDEX.md"
                   }
-                }
-              }
-            ],
-            "currentTab": 1
-          },
-          {
-            "id": "109b48d01d39b7e5",
-            "type": "tabs",
-            "dimension": 29.820359281437124,
-            "children": [
-              {
-                "id": "2cab6d5b630653a3",
-                "type": "leaf",
-                "state": {
-                  "type": "todo",
-                  "state": {}
                 }
               },
               {
@@ -547,15 +233,56 @@
                 }
               },
               {
-                "id": "597be3f49efc3f4c",
+                "id": "2cab6d5b630653a3",
                 "type": "leaf",
                 "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "INDEX.md"
-                  }
+                  "type": "todo",
+                  "state": {}
                 }
               },
+              {
+                "id": "5ce4f2455953b33b",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "INDEX.md",
+                    "options": {
+                      "collapse-filter": false,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.8192600876921974,
+                      "close": true
+                    }
+                  }
+                }
+              }
+            ],
+            "currentTab": 5
+          },
+          {
+            "id": "109b48d01d39b7e5",
+            "type": "tabs",
+            "dimension": 26.858275520317143,
+            "children": [
               {
                 "id": "87acec133b41e0b9",
                 "type": "leaf",
@@ -567,44 +294,48 @@
                   }
                 }
               }
-            ],
-            "currentTab": 4
+            ]
           }
         ],
         "direction": "horizontal",
-        "width": 597
+        "width": 651
       },
-      "active": "ac8565f530b4215d"
+      "active": "05d465d34fea4c98"
     },
-    "Religion Workspace": {
+    "Main Graph - Top Level": {
       "main": {
-        "id": "4ae95a41eaf8ec44",
+        "id": "9bd1fd630842c721",
         "type": "split",
         "children": [
           {
-            "id": "b604f34b917ca4e2",
+            "id": "a4829422f7e66fb8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Religion.md",
-                "mode": "source"
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
         "direction": "vertical"
       },
       "left": {
-        "id": "294ecf5bebea87bf",
+        "id": "ad73a638908a627a",
         "type": "split",
         "children": [
           {
-            "id": "db3899da44c8eb01",
+            "id": "8f5442edc948fcfb",
             "type": "tabs",
             "children": [
               {
-                "id": "a461c81d1078278c",
+                "id": "9bdb6e06e5e43b54",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "160ade923f84144c",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -612,12 +343,12 @@
                 }
               },
               {
-                "id": "76931d742a8e6151",
+                "id": "47120fefa0dd4154",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#📥/📚/🟧",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -627,18 +358,10 @@
                 }
               },
               {
-                "id": "3591b99627909f97",
+                "id": "019b39c671f40cee",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
-                  "state": {}
-                }
-              },
-              {
-                "id": "bed83e3c00c1432a",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
                   "state": {}
                 }
               }
@@ -647,58 +370,19 @@
           }
         ],
         "direction": "horizontal",
-        "width": 264
+        "width": 220
       },
       "right": {
-        "id": "68e8b961231b2368",
+        "id": "202de2eaf0ff0f11",
         "type": "split",
         "children": [
           {
-            "id": "e103ca086d4fa8bd",
+            "id": "86f6df99400c700b",
             "type": "tabs",
-            "dimension": 55.88526211671613,
+            "dimension": 73.14172447968286,
             "children": [
               {
-                "id": "412ff8af5f7fccac",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Religion.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": false
-                  }
-                }
-              },
-              {
-                "id": "7367f2248ec190da",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "file": "Religion.md",
-                    "linksCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "e5b2b32ee1a84f4f",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "Religion.md"
-                  }
-                }
-              },
-              {
-                "id": "527b0b2b25474191",
+                "id": "9120bd1d968e42f1",
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
@@ -706,7 +390,42 @@
                 }
               },
               {
-                "id": "cd9c445e4b0b162d",
+                "id": "597be3f49efc3f4c",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {}
+                }
+              },
+              {
+                "id": "e62a78844128e6fb",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "edca7acd6bfce815",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "2cab6d5b630653a3",
                 "type": "leaf",
                 "state": {
                   "type": "todo",
@@ -714,16 +433,15 @@
                 }
               },
               {
-                "id": "897731d4cec9ca8a",
+                "id": "5ce4f2455953b33b",
                 "type": "leaf",
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "Religion.md",
                     "options": {
-                      "collapse-filter": true,
+                      "collapse-filter": false,
                       "search": "",
-                      "localJumps": 1,
+                      "localJumps": 2,
                       "localBacklinks": true,
                       "localForelinks": true,
                       "localInterlinks": false,
@@ -733,7 +451,7 @@
                       "collapse-color-groups": true,
                       "colorGroups": [],
                       "collapse-display": true,
-                      "showArrow": true,
+                      "showArrow": false,
                       "textFadeMultiplier": 0,
                       "nodeSizeMultiplier": 1,
                       "lineSizeMultiplier": 1,
@@ -742,7 +460,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 1.1029488891070454,
+                      "scale": 0.8192600876921974,
                       "close": true
                     }
                   }
@@ -752,12 +470,12 @@
             "currentTab": 5
           },
           {
-            "id": "43145511ed8f7a14",
+            "id": "109b48d01d39b7e5",
             "type": "tabs",
-            "dimension": 44.11473788328388,
+            "dimension": 26.858275520317143,
             "children": [
               {
-                "id": "a75715954d4e1995",
+                "id": "87acec133b41e0b9",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -771,23 +489,23 @@
           }
         ],
         "direction": "horizontal",
-        "width": 372
+        "width": 651,
+        "collapsed": true
       },
-      "active": "b604f34b917ca4e2"
+      "active": "a4829422f7e66fb8"
     },
-    "Current Workflow - pentagram book": {
+    "Main Todo List": {
       "main": {
-        "id": "4ae95a41eaf8ec44",
+        "id": "9bd1fd630842c721",
         "type": "split",
         "children": [
           {
-            "id": "b604f34b917ca4e2",
+            "id": "a4829422f7e66fb8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-                "mode": "source"
+                "file": "TODO.md"
               }
             }
           }
@@ -795,15 +513,23 @@
         "direction": "vertical"
       },
       "left": {
-        "id": "294ecf5bebea87bf",
+        "id": "ad73a638908a627a",
         "type": "split",
         "children": [
           {
-            "id": "db3899da44c8eb01",
+            "id": "8f5442edc948fcfb",
             "type": "tabs",
             "children": [
               {
-                "id": "a461c81d1078278c",
+                "id": "9bdb6e06e5e43b54",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {}
+                }
+              },
+              {
+                "id": "160ade923f84144c",
                 "type": "leaf",
                 "state": {
                   "type": "file-explorer",
@@ -811,12 +537,12 @@
                 }
               },
               {
-                "id": "76931d742a8e6151",
+                "id": "47120fefa0dd4154",
                 "type": "leaf",
                 "state": {
                   "type": "search",
                   "state": {
-                    "query": "tag:#📥/📚/🟧",
+                    "query": "",
                     "matchingCase": false,
                     "explainSearch": false,
                     "collapseAll": false,
@@ -826,18 +552,10 @@
                 }
               },
               {
-                "id": "3591b99627909f97",
+                "id": "019b39c671f40cee",
                 "type": "leaf",
                 "state": {
                   "type": "starred",
-                  "state": {}
-                }
-              },
-              {
-                "id": "bed83e3c00c1432a",
-                "type": "leaf",
-                "state": {
-                  "type": "recent-files",
                   "state": {}
                 }
               }
@@ -846,58 +564,19 @@
           }
         ],
         "direction": "horizontal",
-        "width": 264
+        "width": 220
       },
       "right": {
-        "id": "68e8b961231b2368",
+        "id": "202de2eaf0ff0f11",
         "type": "split",
         "children": [
           {
-            "id": "e103ca086d4fa8bd",
+            "id": "86f6df99400c700b",
             "type": "tabs",
-            "dimension": 55.88526211671613,
+            "dimension": 73.14172447968286,
             "children": [
               {
-                "id": "412ff8af5f7fccac",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": false
-                  }
-                }
-              },
-              {
-                "id": "7367f2248ec190da",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "file": "{ The Pentagram, Freemasonry, and the Goat.md",
-                    "linksCollapsed": false,
-                    "unlinkedCollapsed": true
-                  }
-                }
-              },
-              {
-                "id": "e5b2b32ee1a84f4f",
-                "type": "leaf",
-                "state": {
-                  "type": "outline",
-                  "state": {
-                    "file": "{ The Pentagram, Freemasonry, and the Goat.md"
-                  }
-                }
-              },
-              {
-                "id": "527b0b2b25474191",
+                "id": "9120bd1d968e42f1",
                 "type": "leaf",
                 "state": {
                   "type": "calendar",
@@ -905,7 +584,46 @@
                 }
               },
               {
-                "id": "cd9c445e4b0b162d",
+                "id": "597be3f49efc3f4c",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "TODO.md"
+                  }
+                }
+              },
+              {
+                "id": "e62a78844128e6fb",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "TODO.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "edca7acd6bfce815",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "TODO.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "2cab6d5b630653a3",
                 "type": "leaf",
                 "state": {
                   "type": "todo",
@@ -913,16 +631,16 @@
                 }
               },
               {
-                "id": "897731d4cec9ca8a",
+                "id": "5ce4f2455953b33b",
                 "type": "leaf",
                 "state": {
                   "type": "localgraph",
                   "state": {
-                    "file": "{ The Pentagram, Freemasonry, and the Goat.md",
+                    "file": "TODO.md",
                     "options": {
-                      "collapse-filter": true,
+                      "collapse-filter": false,
                       "search": "",
-                      "localJumps": 1,
+                      "localJumps": 2,
                       "localBacklinks": true,
                       "localForelinks": true,
                       "localInterlinks": false,
@@ -932,7 +650,7 @@
                       "collapse-color-groups": true,
                       "colorGroups": [],
                       "collapse-display": true,
-                      "showArrow": true,
+                      "showArrow": false,
                       "textFadeMultiplier": 0,
                       "nodeSizeMultiplier": 1,
                       "lineSizeMultiplier": 1,
@@ -941,7 +659,7 @@
                       "repelStrength": 10,
                       "linkStrength": 1,
                       "linkDistance": 250,
-                      "scale": 1.1029488891070454,
+                      "scale": 0.8192600876921974,
                       "close": true
                     }
                   }
@@ -951,12 +669,12 @@
             "currentTab": 5
           },
           {
-            "id": "43145511ed8f7a14",
+            "id": "109b48d01d39b7e5",
             "type": "tabs",
-            "dimension": 44.11473788328388,
+            "dimension": 26.858275520317143,
             "children": [
               {
-                "id": "a75715954d4e1995",
+                "id": "87acec133b41e0b9",
                 "type": "leaf",
                 "state": {
                   "type": "tag",
@@ -970,10 +688,11 @@
           }
         ],
         "direction": "horizontal",
-        "width": 372
+        "width": 651,
+        "collapsed": true
       },
-      "active": "b604f34b917ca4e2"
+      "active": "a4829422f7e66fb8"
     }
   },
-  "active": "Current Workflow - pentagram book"
+  "active": "Main Todo List"
 }

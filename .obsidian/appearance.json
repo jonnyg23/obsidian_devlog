@@ -1,4 +1,5 @@
 {
-  "baseFontSize": 21,
-  "cssTheme": "publish"
+  "baseFontSize": 15,
+  "cssTheme": "Custom Atom Theme",
+  "theme": "obsidian"
 }
