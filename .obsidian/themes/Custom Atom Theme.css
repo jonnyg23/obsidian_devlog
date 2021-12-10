@@ -15,7 +15,8 @@
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --text-accent: #61afef;
   --text-accent-hover: #69bafd;
-  --text-normal: #dcddde;
+  /* --text-normal: #5dbcd2; */
+  --text-normal: #c7d5f7;
   --text-muted: #888;
   --text-faint: rgb(81, 86, 99);
   --text-error: #e16d76;

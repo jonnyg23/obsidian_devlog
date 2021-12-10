@@ -1,8 +1,10 @@
 ---
 tags: 🖥️
-aliases: 
-	-
+aliases:
+  - 
 cssclass:
+type: language
+status: 🟥
 ---
 
 # [[Python]]

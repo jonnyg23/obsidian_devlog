@@ -1,36 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "Nextjs",
-      "path": "Nextjs.md"
+      "basename": "Test-Driven Development with FastAPI and Docker",
+      "path": "Test-Driven Development with FastAPI and Docker.md"
     },
     {
-      "basename": "Library-Dependency",
-      "path": "Templates/Inputs/Library-Dependency.md"
+      "basename": "TODO Lists & Kanban Work Boards",
+      "path": "TODO Lists & Kanban Work Boards.md"
     },
     {
-      "basename": "Language",
-      "path": "Templates/Inputs/Language.md"
+      "basename": "TODO",
+      "path": "TODO.md"
     },
     {
-      "basename": "Programming Languages",
-      "path": "Programming Languages.md"
+      "basename": "GoJonnyGo TODO",
+      "path": "GoJonnyGo TODO.md"
     },
     {
-      "basename": "Python",
-      "path": "Python.md"
+      "basename": "MegSewsThings TODO",
+      "path": "MegSewsThings TODO.md"
     },
     {
-      "basename": "INDEX",
-      "path": "INDEX.md"
+      "basename": "pyenv",
+      "path": "pyenv.md"
     },
     {
-      "basename": "New",
-      "path": "Templates/Inputs/New.md"
+      "basename": "2021_09_27",
+      "path": "2021_09_27.md"
     },
     {
-      "basename": "Article",
-      "path": "Templates/Inputs/Article.md"
+      "basename": "Stripe",
+      "path": "Stripe.md"
+    },
+    {
+      "basename": "2021_08_31",
+      "path": "2021_08_31.md"
+    },
+    {
+      "basename": "2021_08_25",
+      "path": "2021_08_25.md"
+    },
+    {
+      "basename": "2021_08_24",
+      "path": "2021_08_24.md"
+    },
+    {
+      "basename": "2021_08_22",
+      "path": "2021_08_22.md"
     },
     {
       "basename": "2021_08_20",
@@ -45,16 +61,88 @@
       "path": "2021_08_18.md"
     },
     {
+      "basename": "INDEX",
+      "path": "INDEX.md"
+    },
+    {
+      "basename": "Coding Tag Taxonomy",
+      "path": "Coding Tag Taxonomy.md"
+    },
+    {
+      "basename": "Library-Dependency",
+      "path": "Templates/Inputs/Library-Dependency.md"
+    },
+    {
+      "basename": "meta",
+      "path": "Templates/meta.md"
+    },
+    {
+      "basename": "SEO",
+      "path": "SEO.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Python.md"
+    },
+    {
+      "basename": "Programming Languages",
+      "path": "Programming Languages.md"
+    },
+    {
+      "basename": "Material-ui",
+      "path": "Material-ui.md"
+    },
+    {
+      "basename": "gunicorn",
+      "path": "gunicorn.md"
+    },
+    {
+      "basename": "Framer Motion",
+      "path": "Framer Motion.md"
+    },
+    {
+      "basename": "Formik",
+      "path": "Formik.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "Data Structures & Algorithms",
+      "path": "Data Structures & Algorithms.md"
+    },
+    {
       "basename": "Coding Workflow",
       "path": "Coding Workflow.md"
     },
     {
-      "basename": "TODO",
-      "path": "TODO.md"
+      "basename": "AlgoExpert",
+      "path": "AlgoExpert.md"
     },
     {
-      "basename": "TODO Lists & Kanban Work Boards",
-      "path": "TODO Lists & Kanban Work Boards.md"
+      "basename": "Nextjs",
+      "path": "Nextjs.md"
+    },
+    {
+      "basename": "Yup",
+      "path": "Yup.md"
+    },
+    {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
+      "basename": "Language",
+      "path": "Templates/Inputs/Language.md"
+    },
+    {
+      "basename": "New",
+      "path": "Templates/Inputs/New.md"
+    },
+    {
+      "basename": "Article",
+      "path": "Templates/Inputs/Article.md"
     },
     {
       "basename": "Book",
@@ -67,10 +155,6 @@
     {
       "basename": "MOC",
       "path": "Templates/Inputs/MOC.md"
-    },
-    {
-      "basename": "meta",
-      "path": "Templates/meta.md"
     },
     {
       "basename": "test",
@@ -91,18 +175,6 @@
     {
       "basename": "Video",
       "path": "Templates/Inputs/Video.md"
-    },
-    {
-      "basename": "Coding Tag Taxonomy",
-      "path": "Coding Tag Taxonomy.md"
-    },
-    {
-      "basename": "AlgoExpert",
-      "path": "AlgoExpert.md"
-    },
-    {
-      "basename": "Framer Motion",
-      "path": "Framer Motion.md"
     },
     {
       "basename": "b tag",
@@ -127,78 +199,6 @@
     {
       "basename": "jsx code block",
       "path": "Templates/Quick Adds/Code Snippets/jsx code block.md"
-    },
-    {
-      "basename": "sql code block",
-      "path": "Templates/Quick Adds/Code Snippets/sql code block.md"
-    },
-    {
-      "basename": "bash code block",
-      "path": "Templates/Quick Adds/Code Snippets/bash code block.md"
-    },
-    {
-      "basename": "js code block",
-      "path": "Templates/Quick Adds/Code Snippets/js code block.md"
-    },
-    {
-      "basename": "html code block",
-      "path": "Templates/Quick Adds/Code Snippets/html code block.md"
-    },
-    {
-      "basename": "py code block",
-      "path": "Templates/Quick Adds/Code Snippets/py code block.md"
-    },
-    {
-      "basename": "{ John",
-      "path": "{ John.md"
-    },
-    {
-      "basename": "{ 1 Samuel",
-      "path": "{ 1 Samuel.md"
-    },
-    {
-      "basename": "{ Matthew",
-      "path": "{ Matthew.md"
-    },
-    {
-      "basename": "{ 1 Corinthians",
-      "path": "{ 1 Corinthians.md"
-    },
-    {
-      "basename": "Tag Taxonomy",
-      "path": "Tag Taxonomy.md"
-    },
-    {
-      "basename": "{ SEO Made Simple 2020",
-      "path": "Readwise/Books/{ SEO Made Simple 2020.md"
-    },
-    {
-      "basename": "{ Lucifer - Eliphas Levi - Albert Pike and the Masonic Lodge",
-      "path": "{ Lucifer - Eliphas Levi - Albert Pike and the Masonic Lodge.md"
-    },
-    {
-      "basename": "{ Freemasonry and The New Age Movement",
-      "path": "{ Freemasonry and The New Age Movement.md"
-    },
-    {
-      "basename": "{ College Fraternities - The Secret Society On Campus",
-      "path": "{ College Fraternities - The Secret Society On Campus.md"
-    },
-    {
-      "basename": "{ The Golden Dawn - A Graphic Expose’",
-      "path": "{ The Golden Dawn - A Graphic Expose’.md"
-    },
-    {
-      "basename": "pg number",
-      "path": "Templates/Quick Adds/pg number.md"
-    },
-    {
-      "basename": "{ The Basic Doctrines of the New Age Movement",
-      "path": "{ The Basic Doctrines of the New Age Movement.md"
-    },
-    {
-      "basename": "div",
-      "path": "Templates/Quick Adds/div.md"
     }
   ],
   "omittedPaths": [],
