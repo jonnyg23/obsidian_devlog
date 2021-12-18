@@ -1,10 +1,10 @@
 ---
-tags: 📥/📓
+tags: 📥/📓/🟧
 aliases:
   - 
 cssclass:
 type: learning-journal
-status: 🟥
+status: 🟧
 ---
 
 ## Metadata
