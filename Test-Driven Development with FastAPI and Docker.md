@@ -151,7 +151,7 @@ Run the server again. Navigate to [http://localhost:8000/ping](http://localhost:
 ```
 
 Run the server. Now, at http://localhost:8000/ping, you should see:
-```bash
+```json
 {
   "ping": "pong!",
   "environment": "prod",
@@ -196,7 +196,7 @@ def get_settings() -> BaseSettings:
 
 - After the auto-reload, refresh the browser a few times. You should only see one `Loading config settings from the environment...` log message.
 
-### Async Handlers
+### [[Async]] Handlers
 
 - Rather than having to go through the trouble of spinning up a task queue (like Celery or RQ) or utilizing threads, FastAPI makes it easy to deliver routes asynchronously. As long as you don't have any blocking I/O calls in the handler, you can simply declare the handler as asynchronous by adding the `async` keyword like so:
 
@@ -238,9 +238,9 @@ env
 - Init a git repo and commit your code.
 
 
-## Docker Config
+## [[Docker]] Config
 
-- Let's containerize the FastAPI app.
+- Let's containerize the [[FastAPI]] app.
 
 ---
 
@@ -388,7 +388,7 @@ services:
 
 ## Postgres Setup
 
-### Postgres
+### [[Postgres]]
 
 - To configure Postgres, we'll need to add a new service to the _docker-compose.yml_ file, add the appropriate environment variables, and install [asyncpg](https://github.com/MagicStack/asyncpg).
 
@@ -565,9 +565,9 @@ postgres=# \q
 ```
 
 
-### Tortoise ORM
+### [[Tortoise ORM]]
 
-- To simplify interactions with the database, we'll using an async ORM called [Tortoise](https://tortoise-orm.readthedocs.io/).
+- To simplify interactions with the database, we'll using an async [[ORM]] called [Tortoise](https://tortoise-orm.readthedocs.io/).
 
 - Add the dependency to the _requirements.txt_ file:
 	- `tortoise-orm==0.17.4` 
@@ -628,7 +628,7 @@ async def pong(settings: Settings = Depends(get_settings)):
 
 - Ensure the `textsummary` table was created:
 
-```markdown
+```bash
 $ docker-compose exec web-db psql -U postgres
 
 psql (13.3)
@@ -682,7 +682,7 @@ web_dev=# \q
 
 ### Migrations
 
-- Tortoise supports [database migrations](https://tortoise-orm.readthedocs.io/en/latest/migration.html) via [Aerich](https://github.com/tortoise/aerich). Let's take a few steps back and configure it.
+- Tortoise supports [[Database Migrations]](https://tortoise-orm.readthedocs.io/en/latest/migration.html) via [[Aerich]](https://github.com/tortoise/aerich). Let's take a few steps back and configure it.
 
 - First, bring down the containers and volumes to destroy the current database table since we want Aerich to manage the schema:
 	- `$ docker-compose down -v` 
@@ -704,7 +704,7 @@ register_tortoise(
 
 - Ensure the `textsummary` table was NOT created:
 
-```markdown
+```bash
 $ docker-compose exec web-db psql -U postgres
 
 psql (13.3)
@@ -719,7 +719,7 @@ Did not find any relations.
 web_dev=# \q
 ```
 
-- Add Aerich to the requirements file:
+- Add `Aerich` to the requirements file:
 	- `aerich==0.5.3` 
 
 - Then, update the containers:
@@ -758,7 +758,7 @@ location = ./migrations
 
 - Create the first migration:
 
-```markdown
+```bash
 $ docker-compose exec web aerich init-db
 
 Success create app migrate location migrations/models
@@ -785,7 +785,7 @@ CREATE TABLE IF NOT EXISTS "aerich" (
 
 - That's it! You should now be able to see the two tables:
 
-```
+```bash
 $ docker-compose exec web-db psql -U postgres
 
 psql (13.3)
@@ -900,7 +900,7 @@ requests==2.25.1
 
 You should see:
 
-```
+```bash
 =============================== test session starts ===============================
 platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /usr/src/app
@@ -936,7 +936,7 @@ def test_ping(test_app):
 
 - You should see:
 
-```
+```bash
 =============================== test session starts ===============================
 platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /usr/src/app
@@ -1066,7 +1066,7 @@ def test_app():
 
 - Make sure the tests still pass:
 
-```
+```bash
 $ docker-compose exec web python -m pytest
 
 =============================== test session starts ===============================
@@ -1190,7 +1190,7 @@ async def shutdown_event():
 
 - Since we haven't applied the migrations, you shouldn't see any tables in the database:
 
-```
+```bash
 $ docker-compose exec web-db psql -U postgres
 
 psql (13.3)
@@ -1262,7 +1262,7 @@ if __name__ == "__main__":
 
 - You should now see the schema:
 
-```
+```bash
 $ docker-compose exec web-db psql -U postgres
 
 psql (13.3)
@@ -1309,7 +1309,7 @@ class SummaryPayloadSchema(BaseModel):
 ```
 
 
-## RESTful Routes
+## [[REST API | RESTful]] Routes
 
 - Next, let’s set up three new routes, RESTful best practices, with TDD:
 
@@ -1535,7 +1535,7 @@ def test_app_with_db():
 
 - Run the tests:
 
-```
+```bash
 $ docker-compose exec web python -m pytest
 
 =============================== test session starts ===============================
@@ -1702,7 +1702,7 @@ SummarySchema = pydantic_model_creator(TextSummary)  # new
 
 - Ensure the tests pass:
 
-```
+```bash
 $ docker-compose exec web python -m pytest
 
 =============================== test session starts ===============================
@@ -1729,7 +1729,7 @@ def test_read_summary_incorrect_id(test_app_with_db):
 
 - It should fail:
 
-```
+```bash
 >       assert response.status_code == 404
 E       assert 200 == 404
 E        +  where 200 = <Response [200]>.status_code
@@ -1749,7 +1749,7 @@ async def read_summary(id: int) -> SummarySchema:
 
 - It should now pass:
 
-```
+```bash
 =============================== test session starts ===============================
 platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /usr/src/app
@@ -1806,7 +1806,7 @@ async def get_all() -> List:
 
 - Does the test past?
 
-```
+```bash
 =============================== test session starts ===============================
 platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
 rootdir: /usr/src/app
@@ -1827,7 +1827,8 @@ You can [select specific tests](https://docs.pytest.org/en/latest/how-to/usage.h
 
 For example, to run all tests that have `ping` in their names:
 
-`$ docker-compose exec web python -m pytest -k ping
+```bash
+$ docker-compose exec web python -m pytest -k ping
 
 =============================== test session starts ===============================
 platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
@@ -1836,7 +1837,8 @@ collected 6 items / 5 deselected / 1 selected
 
 tests/test_ping.py .                                                        [100%]
 
-========================= 1 passed, 5 deselected in 0.14s =========================` 
+========================= 1 passed, 5 deselected in 0.14s =========================
+```
 
 So, you can see that the single test in _test_ping.py_ ran (and passed) while the five tests in _test_summaries.py_ were skipped.
 
@@ -1849,7 +1851,7 @@ Which test(s) will run when you run this command:
 
 Before moving on, let's review some useful pytest commands:
 
-```
+```bash
 # normal run
 $ docker-compose exec web python -m pytest
 
@@ -1882,7 +1884,7 @@ $ docker-compose exec web python -m pytest --durations=2
 
 - With the routes up and tested, let's get this app deployed to Heroku!
 
-### Gunicorn
+### [[Gunicorn]]
 
 - To use [Gunicorn](https://gunicorn.org/), a production-grade WSGI server, first add the dependency to the _requirements.txt_ file:
 	- `gunicorn==20.1.0` 
@@ -1952,13 +1954,13 @@ ENV TESTING 0
 
 - Finally, take note of the `$PORT` environment variable in the Gunicorn command. Essentially, our web app must be listening on a particular port specified by the `$PORT` environment variable, which is [supplied by Heroku](https://devcenter.heroku.com/articles/dynos#web-dynos).
 
-### Heroku
+### [[Heroku]]
 
 - [Sign up](https://signup.heroku.com/) for a Heroku account (if you don’t already have one), and then install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) (if you haven't already done so).
 
 - Create a new app:
 
-```
+```bash
 $ heroku create
 Creating app... done, ⬢ thawing-beach-87010
 https://thawing-beach-87010.herokuapp.com/ | https://git.heroku.com/thawing-beach-87010.git
@@ -1983,7 +1985,7 @@ https://thawing-beach-87010.herokuapp.com/ | https://git.heroku.com/thawing-beac
 
 - You should see something similar to:
 
-```
+```bash
 [2021-07-06 12:22:08 +0000] [8] [INFO]  Starting gunicorn 20.1.0
 [2021-07-06 12:22:08 +0000] [8] [INFO]  Listening at: http://0.0.0.0:8765 (8)
 [2021-07-06 12:22:08 +0000] [8] [INFO]  Using worker: uvicorn.workers.UvicornWorker
@@ -2035,7 +2037,7 @@ https://thawing-beach-87010.herokuapp.com/ | https://git.heroku.com/thawing-beac
 
 - You should see:
 
-```
+```bash
 HTTP/1.1 201 Created
 Connection: keep-alive
 Content-Length: 38
@@ -2051,3 +2053,2550 @@ Via: 1.1 vegur
 ```
 
 - Ensure [https://APP_NAME.herokuapp.com/docs](https://app_name.herokuapp.com/docs) works as well.
+
+## Code Coverage and Quality
+
+In this chapter, we'll add tools for checking code coverage and quality to the project.
+
+---
+
+### [[Code Coverage]]
+
+- **[Code coverage](https://en.wikipedia.org/wiki/Code_coverage) is the measure of how much code is executed during testing. By adding code coverage to your test suite, you can find areas of your code not covered by tests.**
+
+- **[Coverage.py](https://coverage.readthedocs.io/) is a popular tool for measuring code coverage in Python-based applications. Now, since we're using pytest, we'll integrate Coverage.py with pytest using [[pytest-cov]](https://pytest-cov.readthedocs.io/).**
+
+- Add pytest-cov to the _requirements.txt_ file:
+	- `pytest-cov==2.12.1` 
+
+- Next, we can configure the coverage reports in a _.coveragerc_ file. Add this file to the "project" directory, and then add the following config to exclude the tests from the coverage results and enable [branch coverage measurement](https://coverage.readthedocs.io/en/latest/branch.html):
+
+```
+[run]
+omit = tests/*
+branch = True
+```
+
+- Update the containers:
+	- `$ docker-compose up -d --build` 
+
+- Run the tests with coverage:
+	- `$ docker-compose exec web python -m pytest --cov="."` 
+
+- You should see something similar to:
+
+```bash
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 6 items
+
+tests/test_ping.py .                                                        [ 16%]
+tests/test_summaries.py .....                                               [100%]
+
+----------- coverage: platform linux, python 3.9.6-final-0 -----------
+Name                     Stmts   Miss Branch BrPart  Cover
+----------------------------------------------------------
+app/__init__.py              0      0      0      0   100%
+app/api/__init__.py          0      0      0      0   100%
+app/api/crud.py             15      0      2      0   100%
+app/api/ping.py              6      0      0      0   100%
+app/api/summaries.py        20      0      2      0   100%
+app/config.py               13      2      0      0    85%
+app/db.py                   17      7      2      1    58%
+app/main.py                 18      3      0      0    83%
+app/models/__init__.py       0      0      0      0   100%
+app/models/pydantic.py       5      0      0      0   100%
+app/models/tortoise.py       9      1      0      0    89%
+----------------------------------------------------------
+TOTAL                      103     13      6      1    87%
+
+================================ 6 passed in 0.56s ================================
+```
+
+- Want to view an HTML version?
+	- `$ docker-compose exec web python -m pytest --cov="." --cov-report html` 
+
+- The HTML version can be viewed within the newly created "htmlcov" directory. With it, you can quickly see which parts of the code are, and are not, covered by a test.
+	- `$ open project/htmlcov/index.html` 
+
+- Add this directory along with the _.coverage_ file to the _.gitignore_ and _.dockerignore_ files.
+
+>**Just keep in mind that while code coverage is a good metric to look at, it does not measure the overall effectiveness of the test suite. In other words, having 100% coverage means that every line of code is being tested; it does not mean that the tests handle every scenario.**
+> 
+> **Just because you have 100% test coverage doesn’t mean you're testing the right things.**
+
+### [[Code Quality]]
+
+- [[Linting]](https://stackoverflow.com/a/8503586/1799408) is the process of checking your code for stylistic or programming errors. Although there are a [number](https://github.com/vintasoftware/python-linters-and-code-analysis) of commonly used linters for Python, we'll use [[Flake8]](https://gitlab.com/pycqa/flake8) since it combines two other popular linters -- [pep8](https://pypi.python.org/pypi/pep8) and [pyflakes](https://pypi.python.org/pypi/pyflakes).
+
+- Add Flake8 to the _requirements.txt_ file:
+	- `flake8==3.9.2` 
+
+- To [configure](https://flake8.pycqa.org/en/latest/user/configuration.html) Flake8, add a _setup.cfg_ file to the "project" directory:
+
+```
+[flake8]
+max-line-length = 119
+```
+
+- This sets the maximum allowed line length to 119.
+
+- Update the containers:
+	- `$ docker-compose up -d --build` 
+
+- Run Flake8:
+	- `$ docker-compose exec web flake8 .` 
+
+Were any errors found?
+
+**Correct any issues before moving on.**
+
+- Next, let's add [[Black]](https://black.readthedocs.io/), which is used for formatting your code so that "code looks the same regardless of the project you're reading". This helps to speed up code reviews. "Formatting becomes transparent after a while and you can focus on the content instead."
+
+- Add the dependency to the requirements file:
+	- `black==21.6b0` 
+
+- Update the containers, and then run Black:
+
+```bash
+$ docker-compose up -d --build
+$ docker-compose exec web black . --check
+```
+
+- Since we used the [check](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#command-line-options) option, you should see the status:
+
+```bash
+would reformat app/api/ping.py
+would reformat app/main.py
+would reformat app/api/summaries.py
+would reformat tests/test_summaries.py
+Oh no! 💥 💔 💥
+4 files would be reformatted, 11 files would be left unchanged.
+```
+
+- Try running it with the [diff](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#command-line-options) option as well before applying the changes:
+
+```bash
+$ docker-compose exec web black . --diff
+
+$ docker-compose exec web black .
+```
+
+- Finally, let's add [isort](https://github.com/timothycrosley/isort) to the project as well to quickly sort all our imports alphabetically and automatically separate them into sections.
+
+- Again, add the dependency:
+	- `isort==5.9.1` 
+
+- Run it with the [check-only](https://github.com/timothycrosley/isort#the---check-only-option) and [diff](https://github.com/timothycrosley/isort#using-isort) options:
+
+```bash
+$ docker-compose up -d --build
+$ docker-compose exec web isort . --check-only
+$ docker-compose exec web isort . --diff
+```
+
+- Then, apply the changes:
+	- `$ docker-compose exec web isort .` 
+
+- Verify one last time that Flake8, Black, and isort all pass:
+
+```bash
+$ docker-compose exec web flake8 .
+$ docker-compose exec web black . --check
+$ docker-compose exec web isort . --check-only
+```
+
+*Commit your code.*
+
+## Continuous Integration
+
+Next, we'll add continuous integration (CI), via [GitHub Actions](https://github.com/features/actions), to our project. We'll also set up [GitHub Packages](https://github.com/features/packages), a package management service, to store Docker images.
+
+---
+
+> Do you usually use a different [CI service](https://github.com/ligurio/awesome-ci) or run [Jenkins](https://jenkins.io/)? It's encouraged to check your understanding by continuing to use the CI service that you're accustomed to. Convert the GitHub configuration examples as necessary.
+
+### GitHub Packages
+
+- [GitHub Packages](https://github.com/features/packages) is a package management service, fully integrated with GitHub. It allows you to host your software packages, publicly or privately, for use within your projects on GitHub. We'll use it to store Docker images.
+
+- Assuming you have an account on GitHub, create a new repository for this project called `fastapi-tdd-docker`.
+
+- To test locally, you'll need to [create](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) a personal access token. Within your [Developer Settings](https://github.com/settings/developers), click "Personal access tokens". Then, click "Generate new token". Provide a descriptive note and select the following scopes:
+
+1.  `write:packages`
+2.  `read:packages`
+3.  `delete:packages`
+4.  `workflow`
+
+![[github_personal_access_token.png]]
+
+
+- Take note of the token.
+
+- Build and tag the image:
+
+```bash
+$ docker build -f project/Dockerfile.prod -t docker.pkg.github.com/<USERNAME>/<REPOSITORY_NAME>/summarizer:latest ./project
+
+# example:
+# docker build -f project/Dockerfile -t docker.pkg.github.com/testdrivenio/fastapi-tdd-docker/summarizer:latest ./project
+```
+
+- Next, using your personal access token, [authenticate](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to GitHub Packages with Docker:
+
+```bash
+$ docker login docker.pkg.github.com -u <USERNAME> -p <TOKEN>
+
+# example:
+# docker login docker.pkg.github.com -u testdrivenio -p 3f18407a02445cb1837d0851f21a9757eccfdc8a
+```
+
+- Push the image to the Docker registry on GitHub Packages:
+
+```bash
+$ docker push docker.pkg.github.com/<USERNAME>/<REPOSITORY_NAME>/summarizer:latest
+
+# example:
+# docker push docker.pkg.github.com/testdrivenio/fastapi-tdd-docker/summarizer:latest
+```
+
+- You should now be able to see the package at the following URL:
+	- `https://github.com/<USERNAME>/<REPOSITORY_NAME>/packages`
+
+
+![[github_packages.png]]
+
+
+### GitHub Actions
+
+- To configure [GitHub Actions](https://github.com/features/actions), start by adding a new directory called ".github" in the root of your project. Within that directory add another directory called "workflows". Now, to configure a workflow, which is made up of one or more jobs, create a new file in the "workflows" directory called _main.yml_.
+
+```yaml
+name: Continuous Integration and Delivery
+
+on: [push]
+
+env:
+  IMAGE: docker.pkg.github.com/$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')/summarizer
+
+jobs:
+
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2.3.4
+      - name: Log in to GitHub Packages
+        run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull image
+        run: |
+          docker pull ${{ env.IMAGE }}:latest || true
+      - name: Build image
+        run: |
+          docker build \
+            --cache-from ${{ env.IMAGE }}:latest \
+            --tag ${{ env.IMAGE }}:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+      - name: Push image
+        run: |
+          docker push ${{ env.IMAGE }}:latest
+
+  test:
+    name: Test Docker Image
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2.3.4
+      - name: Log in to GitHub Packages
+        run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull image
+        run: |
+          docker pull ${{ env.IMAGE }}:latest || true
+      - name: Build image
+        run: |
+          docker build \
+            --cache-from ${{ env.IMAGE }}:latest \
+            --tag ${{ env.IMAGE }}:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+      - name: Run container
+        run: |
+          docker run \
+            -d \
+            --name fastapi-tdd \
+            -e PORT=8765 \
+            -e ENVIRONMENT=dev \
+            -e DATABASE_TEST_URL=sqlite://sqlite.db \
+            -p 5003:8765 \
+            ${{ env.IMAGE }}:latest
+      - name: Pytest
+        run: docker exec fastapi-tdd python -m pytest .
+      - name: Flake8
+        run: docker exec fastapi-tdd python -m flake8 .
+      - name: Black
+        run: docker exec fastapi-tdd python -m black . --check
+      - name: isort
+        run: docker exec fastapi-tdd python -m isort . --check-only
+```
+
+- Here, after setting the global `IMAGE` environment variable, we defined two [jobs](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobs), `build` and `test`.
+
+- In the `build` job, we:
+
+1.  Check out the repository so the job has access to it
+2.  Log in to GitHub Packages
+3.  Pull the image if it exists
+4.  Build the image
+5.  Push the image up to GitHub Packages
+
+- Then, after building and running the image, in the `test` job, we run pytest, Flake8, Black, and isort.
+
+- Commit your changes, and then push to GitHub. This _should_ trigger a new build, which _should_ pass.
+
+- Once done, add a _README.md_ file to the project root, adding the GitHub status badge:
+
+```
+# Test-Driven Development with FastAPI and Docker
+
+![Continuous Integration and Delivery](https://github.com/YOUR_GITHUB_NAMESPACE/fastapi-tdd-docker/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+```
+
+> Be sure to replace `YOUR_GITHUB_NAMESPACE` with your actual GitHub username or organization.
+
+
+## Continuous Delivery
+
+- In this chapter, we'll add continuous delivery (CD) to the existing GitHub Actions config.
+
+---
+
+- First, retrieve your [Heroku auth token](https://devcenter.heroku.com/articles/authentication):
+	- `$ heroku auth:token` 
+
+- Then, save the token as a new variable called `HEROKU_AUTH_TOKEN` within your repository's [secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets) (Settings > Secrets):
+
+![[github-secrets.png]]
+
+
+- Next, add a new `deploy` job to the GitHub config file inside of `jobs` in line vertically with `build`:
+
+```
+deploy:
+  name: Deploy to Heroku
+  runs-on: ubuntu-latest
+  needs: [build, test]
+  env:
+    HEROKU_APP_NAME: <APP_NAME>
+    HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/summarizer
+  steps:
+    - name: Checkout master
+      uses: actions/checkout@v2.3.4
+    - name: Log in to GitHub Packages
+      run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Pull image
+      run: |
+        docker pull ${{ env.IMAGE }}:latest || true
+    - name: Build image
+      run: |
+        docker build \
+          --cache-from ${{ env.IMAGE }}:latest \
+          --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
+          --file ./project/Dockerfile.prod \
+          "./project"
+    - name: Log in to the Heroku Container Registry
+      run: docker login -u _ -p ${HEROKU_AUTH_TOKEN} registry.heroku.com
+      env:
+        HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}
+    - name: Push to the registry
+      run: docker push ${{ env.HEROKU_REGISTRY_IMAGE }}
+    - name: Set environment variables
+      run: |
+        echo "HEROKU_REGISTRY_IMAGE=${{ env.HEROKU_REGISTRY_IMAGE }}" >> $GITHUB_ENV
+        echo "HEROKU_AUTH_TOKEN=${{ secrets.HEROKU_AUTH_TOKEN }}" >> $GITHUB_ENV
+    - name: Release
+      run: |
+        chmod +x ./release.sh
+        ./release.sh
+```
+
+> Make sure to replace `<APP_NAME>` with your Heroku app's actual name.
+
+- Add _release.sh_ to the project root:
+
+```sh
+#!/bin/sh
+
+set -e
+
+IMAGE_ID=$(docker inspect ${HEROKU_REGISTRY_IMAGE} --format={{.Id}})
+PAYLOAD='{"updates": [{"type": "web", "docker_image": "'"$IMAGE_ID"'"}]}'
+
+curl -n -X PATCH https://api.heroku.com/apps/$HEROKU_APP_NAME/formation \
+  -d "${PAYLOAD}" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/vnd.heroku+json; version=3.docker-releases" \
+  -H "Authorization: Bearer ${HEROKU_AUTH_TOKEN}"
+```
+
+- In the `deploy` stage, we:
+
+1.  Check out the repository so the job has access to it
+2.  Log in to GitHub Packages
+3.  Pull the image if it exists
+4.  Build and tag the new image
+5.  Log in to the [Heroku Container Registry](https://devcenter.heroku.com/articles/container-registry-and-runtime)
+6.  Push the image up to the registry
+7.  [Set](https://help.github.com/en/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable) the `HEROKU_REGISTRY_IMAGE` and `HEROKU_AUTH_TOKEN` environment variables with `set-env` so they can be accessed within the release file
+8.  Create a new release via the [Heroku API](https://devcenter.heroku.com/articles/container-registry-and-runtime#api) using the image ID within the _release.sh_ script
+
+- To test, make a quick change to the `/ping` GET route by removing the exclamation point (`!`):
+
+```python
+@router.get("/ping")
+async def pong(settings: Settings = Depends(get_settings)):
+    return {
+        "ping": "pong",
+        "environment": settings.environment,
+        "testing": settings.testing,
+    }
+```
+
+- Update the test as well:
+
+```python
+# project/tests/test_ping.py
+
+def test_ping(test_app):
+    response = test_app.get("/ping")
+    assert response.status_code == 200
+    assert response.json() == {"environment": "dev", "ping": "pong", "testing": True}
+```
+
+- Commit your code and again push it up to GitHub. Your app should be auto deployed to Heroku! Navigate to [https://APP_NAME.herokuapp.com/ping/](https://app_name.herokuapp.com/ping/). You should now see:
+
+```json
+{
+  "ping": "pong",
+  "environment": "dev",
+  "testing": false
+}
+```
+
+
+### Jonny Important Note!!
+
+>Note: I had to change the python production version for deployment to `3.8.12-slim-buster` instead of `3.8.11-slim-buster`. I also had to ensure that there were not any unused dependencies in any python files or the *flake8* test would fail in Github Actions.
+
+
+## Remaining Routes
+
+Next, let's finish setting up the routes:
+
+| **Endpoint**   | **HTTP Method** | **CRUD Method** | **Result**           |
+| -------------- | --------------- | --------------- | -------------------- |
+| /summaries     | GET             | READ            | get all summaries    |
+| /summaries/:id | GET             | READ            | get a single summary |
+| /summaries     | POST            | CREATE          | add a summary        |
+| /summaries/:id | PUT             | UPDATE          | update a summary     |
+| /summaries/:id | DELETE          | DELETE          | delete a summary     | 
+
+
+Again, for each, we'll:
+1.  write a test
+2.  run the test, to ensure it fails (**red**)
+3.  write just enough code to get the test to pass (**green**)
+4.  **refactor** (if necessary)
+
+
+### DELETE Route
+
+- Add the following tests to _test_summaries.py_ in "project/tests":
+
+```python
+def test_remove_summary(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.delete(f"/summaries/{summary_id}/")
+    assert response.status_code == 200
+    assert response.json() == {"id": summary_id, "url": "https://foo.bar"}
+
+def test_remove_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.delete("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+```
+
+- Run the tests to ensure they both fail:
+	- `$ docker-compose exec web python -m pytest` 
+
+- You should the following errors:
+
+```bash
+>       assert response.status_code == 200
+E       assert 405 == 200
+E        +  where 405 = <Response [405]>.status_code
+
+>       assert response.status_code == 404
+E       assert 405 == 404
+E        +  where 405 = <Response [405]>.status_code
+```
+
+- Then add the route handler to _project/app/api/summaries.py_:
+
+```python
+@router.delete("/{id}/", response_model=SummaryResponseSchema)
+async def delete_summary(id: int) -> SummaryResponseSchema:
+    summary = await crud.get(id)
+    if not summary:
+        raise HTTPException(status_code=404, detail="Summary not found")
+
+    await crud.delete(id)
+
+    return summary
+```
+
+- Add the CRUD util to _project/app/api/crud.py_:
+
+```python
+async def delete(id: int) -> int:
+    summary = await TextSummary.filter(id=id).first().delete()
+    return summary
+```
+
+- Ensure the tests pass:
+
+```bash
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 8 items
+
+tests/test_ping.py .                                                        [ 12%]
+tests/test_summaries.py .......                                             [100%]
+
+================================ 8 passed in 0.26s ================================
+```
+
+
+### PUT Route
+
+- Start with some tests:
+
+```python
+def test_update_summary(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 200
+
+    response_dict = response.json()
+    assert response_dict["id"] == summary_id
+    assert response_dict["url"] == "https://foo.bar"
+    assert response_dict["summary"] == "updated!"
+    assert response_dict["created_at"]
+
+def test_update_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.put(
+        "/summaries/999/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+def test_update_summary_invalid_json(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "url"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            },
+            {
+                "loc": ["body", "summary"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+def test_update_summary_invalid_keys(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "https://foo.bar"})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "summary"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+```
+
+- Ensure the tests fail.
+
+Add the handler:
+
+```python
+@router.put("/{id}/", response_model=SummarySchema)
+async def update_summary(id: int, payload: SummaryUpdatePayloadSchema) -> SummarySchema:
+    summary = await crud.put(id, payload)
+    if not summary:
+        raise HTTPException(status_code=404, detail="Summary not found")
+
+    return summary
+```
+
+- Add a new Pydantic model to _project/app/models/pydantic.py_:
+
+```python
+class SummaryUpdatePayloadSchema(SummaryPayloadSchema):
+    summary: str
+```
+
+- Make sure to import it in _project/app/api/summaries.py_:
+
+```python
+from app.models.pydantic import (  # isort:skip
+    SummaryPayloadSchema,
+    SummaryResponseSchema,
+    SummaryUpdatePayloadSchema,
+)
+```
+
+- Did you notice the [isort:skip](https://pycqa.github.io/isort/docs/configuration/action_comments.html#isort-skip) action comment? This prevents isort from formatting the associated import. It's necessary as both isort and Black will attempt to format it in different ways.
+
+- Util:
+
+```python
+async def put(id: int, payload: SummaryPayloadSchema) -> Union[dict, None]:
+    summary = await TextSummary.filter(id=id).update(url=payload.url, summary=payload.summary)
+    if summary:
+        updated_summary = await TextSummary.filter(id=id).first().values()
+        return updated_summary[0]
+    return None
+```
+
+- Do the tests pass now?
+
+```bash
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 12 items
+
+tests/test_ping.py .                                                        [  8%]
+tests/test_summaries.py ...........                                         [100%]
+
+=============================== 12 passed in 0.30s ================================
+```
+
+### Additional Validation
+
+Let's add some additional validation to the routes, checking that:
+
+1.  The id is greater than `0` for reading, updating, and deleting a single summary
+2.  The URL is valid for adding and updating a summary
+
+#### GET
+
+- Update the `test_read_summary_incorrect_id` test:
+
+```python
+def test_read_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.get("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+    response = test_app_with_db.get("/summaries/0/")
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["path", "id"],
+                "msg": "ensure this value is greater than 0",
+                "type": "value_error.number.not_gt",
+                "ctx": {"limit_value": 0},
+            }
+        ]
+    }
+```
+
+- The test should fail:
+
+```
+>       assert response.status_code == 422
+E       assert 404 == 422
+E        +  where 404 = <Response [404]>.status_code
+```
+
+- Update the handler:
+
+```python
+@router.get("/{id}/", response_model=SummarySchema)
+async def read_summary(id: int = Path(..., gt=0)) -> SummarySchema:
+    summary = await crud.get(id)
+    if not summary:
+        raise HTTPException(status_code=404, detail="Summary not found")
+
+    return summary
+```
+
+- Make sure to import `Path`:
+	- `from fastapi import APIRouter, HTTPException, Path` 
+
+
+So, we added the following metadata to the parameter with [Path](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/):
+1.  `...` - the value is required ([Ellipsis](https://docs.python.org/3/library/constants.html#Ellipsis))
+2.  `gt` - the value must be [greater than](https://fastapi.tiangolo.com/tutorial/path-params-numeric-validations/#number-validations-greater-than-or-equal) 0
+
+The tests should pass. Try out the API documentation as well:
+
+![[swagger-ui-error.png]]
+
+
+#### POST
+
+- Update the `test_create_summaries_invalid_json` test:
+
+```python
+def test_create_summaries_invalid_json(test_app):
+    response = test_app.post("/summaries/", data=json.dumps({}))
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "url"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+    response = test_app.post("/summaries/", data=json.dumps({"url": "invalid://url"}))
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+```
+
+The test should fail:
+
+```
+>       assert response.status_code == 422
+E       assert 201 == 422
+E        +  where 201 = <Response [201]>.status_code
+```
+
+- To get the test to pass, update the `SummaryPayloadSchema` model like so:
+
+```python
+class SummaryPayloadSchema(BaseModel):
+    url: AnyHttpUrl
+```
+
+- Here, we added additional validation to the Pydantic model with the [AnyHttpUrl](https://pydantic-docs.helpmanual.io/usage/types/#urls) validator.
+
+- Add the import:
+	- `from pydantic import BaseModel, AnyHttpUrl`
+
+#### PUT
+
+- Update the `test_update_summary_incorrect_id` test:
+
+```python
+def test_update_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.put(
+        "/summaries/999/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+    response = test_app_with_db.put(
+        f"/summaries/0/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["path", "id"],
+                "msg": "ensure this value is greater than 0",
+                "type": "value_error.number.not_gt",
+                "ctx": {"limit_value": 0},
+            }
+        ]
+    }
+```
+
+- Update the handler:
+
+```python
+@router.put("/{id}/", response_model=SummarySchema)
+async def update_summary(payload: SummaryUpdatePayloadSchema, id: int = Path(..., gt=0)) -> SummarySchema:
+    summary = await crud.put(id, payload)
+    if not summary:
+        raise HTTPException(status_code=404, detail="Summary not found")
+
+    return summary
+```
+
+- Update `test_update_summary_invalid_keys` as well:
+
+```python
+def test_update_summary_invalid_keys(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "https://foo.bar"})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "summary"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "invalid://url", "summary": "updated!"})
+    )
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+```
+
+**This should pass.**
+
+
+#### DELETE
+
+- Test:
+
+```python
+def test_remove_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.delete("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+    response = test_app_with_db.delete("/summaries/0/")
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["path", "id"],
+                "msg": "ensure this value is greater than 0",
+                "type": "value_error.number.not_gt",
+                "ctx": {"limit_value": 0},
+            }
+        ]
+    }
+```
+
+- Make sure the tests fail.
+
+- Handler:
+
+```python
+@router.delete("/{id}/", response_model=SummaryResponseSchema)
+async def delete_summary(id: int = Path(..., gt=0)) -> SummaryResponseSchema:
+    summary = await crud.get(id)
+    if not summary:
+        raise HTTPException(status_code=404, detail="Summary not found")
+
+    await crud.delete(id)
+
+    return summary
+```
+
+- **All tests should pass!**
+
+```bash
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 12 items
+
+tests/test_ping.py .                                                        [  8%]
+tests/test_summaries.py ...........                                         [100%]
+
+=============================== 12 passed in 0.31s ================================
+```
+
+
+### Parametrizing Test Functions
+
+- Parameterized tests allow a developer to run the same test multiple times with different data inputs.
+
+- Take note of these three tests:
+
+```python
+def test_update_summary_incorrect_id(test_app_with_db):
+    response = test_app_with_db.put(
+        "/summaries/999/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+    response = test_app_with_db.put(
+        f"/summaries/0/",
+        data=json.dumps({"url": "https://foo.bar", "summary": "updated!"})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["path", "id"],
+                "msg": "ensure this value is greater than 0",
+                "type": "value_error.number.not_gt",
+                "ctx": {"limit_value": 0},
+            }
+        ]
+    }
+
+def test_update_summary_invalid_json(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "url"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            },
+            {
+                "loc": ["body", "summary"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+def test_update_summary_invalid_keys(test_app_with_db):
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+    summary_id = response.json()["id"]
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "https://foo.bar"})
+    )
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "summary"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps({"url": "invalid://url", "summary": "updated!"})
+    )
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+```
+
+- These tests really differ only in their inputs and expected outputs, so we can use the [pytest.mark.parametrize](https://docs.pytest.org/en/latest/how-to/parametrize.html#pytest-mark-parametrize-parametrizing-test-functions) decorator to enable parametrization of arguments in order to run the same test multiple times with different data configurations.
+
+- Replace the three tests with these two:
+
+```python
+@pytest.mark.parametrize("summary_id, payload, status_code, detail", [
+    [999, {"url": "https://foo.bar", "summary": "updated!"}, 404, "Summary not found"],
+    [
+        0,
+        {"url": "https://foo.bar", "summary": "updated!"},
+        422,
+        [{"loc": ["path", "id"], "msg": "ensure this value is greater than 0", "type": "value_error.number.not_gt", "ctx": {"limit_value": 0}}]
+    ],
+    [
+        1,
+        {},
+        422,
+        [
+            {"loc": ["body", "url"], "msg": "field required", "type": "value_error.missing"},
+            {"loc": ["body", "summary"], "msg": "field required", "type": "value_error.missing"}
+        ]
+    ],
+    [
+        1,
+        {"url": "https://foo.bar"},
+        422,
+        [{"loc": ["body", "summary"], "msg": "field required", "type": "value_error.missing"}]
+    ],
+])
+def test_update_summary_invalid(test_app_with_db, summary_id, payload, status_code, detail):
+    response = test_app_with_db.put(
+        f"/summaries/{summary_id}/",
+        data=json.dumps(payload)
+    )
+    assert response.status_code == status_code
+    assert response.json()["detail"] == detail
+
+def test_update_summary_invalid_url(test_app):
+    response = test_app.put(
+        "/summaries/1/",
+        data=json.dumps({"url": "invalid://url", "summary": "updated!"})
+    )
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+```
+
+- Add the import:
+	- `import pytest` 
+
+**Make sure the tests still pass.**
+
+### Tests
+
+- How does our test coverage look?
+
+```bash
+$ docker-compose exec web python -m pytest --cov="."
+
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 14 items
+
+tests/test_ping.py .                                                        [  7%]
+tests/test_summaries.py .............                                       [100%]
+
+----------- coverage: platform linux, python 3.9.6-final-0 -----------
+Name                     Stmts   Miss Branch BrPart  Cover
+----------------------------------------------------------
+app/__init__.py              0      0      0      0   100%
+app/api/__init__.py          0      0      0      0   100%
+app/api/crud.py             24      0      4      0   100%
+app/api/ping.py              6      0      0      0   100%
+app/api/summaries.py        33      0      6      0   100%
+app/config.py               13      2      0      0    85%
+app/db.py                   17      7      2      1    58%
+app/main.py                 18      3      0      0    83%
+app/models/__init__.py       0      0      0      0   100%
+app/models/pydantic.py       7      0      0      0   100%
+app/models/tortoise.py       9      1      0      0    89%
+----------------------------------------------------------
+TOTAL                      127     13     12      1    90%
+
+=============================== 14 passed in 0.68s ================================
+```
+
+- Run Flake8, Black, and isort:
+
+```bash
+$ docker-compose exec web flake8 .
+$ docker-compose exec web black .
+$ docker-compose exec web isort .
+```
+
+- Commit and push your code up to GitHub to trigger a new build. Once the deploy is complete, test all the routes with HTTPie.
+
+- GET all summaries:
+
+```bash
+$ http GET https://thawing-beach-87010.herokuapp.com/summaries/
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 114
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 15:41:48 GMT
+Server: uvicorn
+Via: 1.1 vegur
+
+[
+    {
+        "created_at": "2021-07-06T12:30:02.622318+00:00",
+        "id": 1,
+        "summary": "dummy summary",
+        "url": "https://testdriven.io"
+    }
+]
+```
+
+- GET single summary:
+
+```bash
+$ http GET https://thawing-beach-87010.herokuapp.com/summaries/1/
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 112
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 15:42:14 GMT
+Server: uvicorn
+Via: 1.1 vegur
+
+{
+    "created_at": "2021-07-06T12:30:02.622318+00:00",
+    "id": 1,
+    "summary": "dummy summary",
+    "url": "https://testdriven.io"
+}
+```
+
+- POST:
+
+```bash
+$ http --json POST https://thawing-beach-87010.herokuapp.com/summaries/ url=https://testdriven.io
+
+HTTP/1.1 201 Created
+Connection: keep-alive
+Content-Length: 38
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 15:42:40 GMT
+Server: uvicorn
+Via: 1.1 vegur
+
+{
+    "id": 2,
+    "url": "https://testdriven.io"
+}
+```
+
+- PUT:
+
+```bash
+$ http --json PUT https://thawing-beach-87010.herokuapp.com/summaries/2/ url=https://testdriven.io summary=super
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 104
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 15:43:06 GMT
+Server: uvicorn
+Via: 1.1 vegur
+
+{
+    "created_at": "2021-07-07T15:42:40.975366+00:00",
+    "id": 2,
+    "summary": "super",
+    "url": "https://testdriven.io"
+}
+```
+
+- DELETE:
+
+```bash
+$ http DELETE https://thawing-beach-87010.herokuapp.com/summaries/2/
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 38
+Content-Type: application/json
+Date: Wed, 07 Jul 2021 15:43:31 GMT
+Server: uvicorn
+Via: 1.1 vegur
+
+{
+    "id": 2,
+    "url": "https://testdriven.io"
+}
+```
+
+
+## [[Pytest Monkeypatching]]
+
+In this chapter, we'll use the pytest `monkeypatch` fixture to mock functionality in our tests.
+
+---
+
+### Monkeypatching
+
+- Monkeypatching is the act of dynamically changing a piece of code at runtime. Essentially, it allows you to override the default behavior of a module, object, method, or function without changing its source code.
+
+Let's look at a quick example.
+
+Source code:
+
+```python
+# twitter.py
+
+import os
+import tweepy
+
+consumer_key = os.getenv("CONSUMER_KEY")
+consumer_secret = os.getenv("CONSUMER_SECRET")
+access_key = os.getenv("ACCESS_KEY")
+access_secret = os.getenv("ACCESS_SECRET")
+
+def get_friends(user):
+    """
+ Given a valid Twitter user 20 friends are returned
+ """
+
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_key, access_secret)
+    api = tweepy.API(auth)
+
+    friends = []
+
+    try:
+        user = api.get_user(user)
+    except tweepy.error.TweepError:
+        return "Failed to get request token."
+
+    for friend in user.friends():
+        friends.append(friend.screen_name)
+
+    return friends
+```
+
+- So, the `get_friends` function uses `tweepy` to authenticate against the Twitter API. Once authenticated, it then returns a list of twenty friends.
+
+- Test:
+
+```python
+# test.py
+
+import twitter
+
+def test_get_friends(monkeypatch):
+    def mock_get_friends(user):
+        return [(lambda x: f"friend{x}")(x) for x in range(20)]
+
+    monkeypatch.setattr(twitter, "get_friends", mock_get_friends)
+
+    assert len(twitter.get_friends("testdrivenio")) == 20
+```
+
+- `test_get_friends` uses the pytest [monkeypatch](https://docs.pytest.org/en/latest/how-to/monkeypatch.html) fixture to create a mocked version of `get_friends`, called `mock_get_friends`, that returns a list of twenty strings. Then, during a test run, `mock_get_friends` gets called rather than the real `get_friends` function. This not only decreases the amount of time it will take for the test to run, but it also makes the test more predictable since it is not affected by network connectivity issues, outages in the Twitter API, or rate limiting issues.
+
+- That said, keep in mind that the test is not actually testing the `get_friends` function call; it's replacing the function's default behavior (authenticating and calling the Twitter API) with new behavior (simply returning a list of strings).
+
+- While mocking or monkeypatching can speed up test runs and make the tests more predictable, at some point in the testing process, possibly in a staging environment, you should test out all external communication so that you can be confident that the system works as expected. This is often achieved with some form of end-to-end tests.
+
+- In our tests, we'll use the `monkeypatch` fixture to mock database calls.
+
+### Unit Tests
+
+- Add a new file to "project/tests" called _test_summaries_unit.py_:
+
+```python
+# project/tests/test_summaries_unit.py
+
+import json
+from datetime import datetime
+
+import pytest
+
+from app.api import crud, summaries
+
+def test_create_summary(test_app, monkeypatch):
+    pass
+
+def test_create_summaries_invalid_json(test_app):
+    response = test_app.post("/summaries/", data=json.dumps({}))
+    assert response.status_code == 422
+    assert response.json() == {
+        "detail": [
+            {
+                "loc": ["body", "url"],
+                "msg": "field required",
+                "type": "value_error.missing",
+            }
+        ]
+    }
+
+    response = test_app.post("/summaries/", data=json.dumps({"url": "invalid://url"}))
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+
+def test_read_summary(test_app, monkeypatch):
+    pass
+
+def test_read_summary_incorrect_id(test_app, monkeypatch):
+    pass
+
+def test_read_all_summaries(test_app, monkeypatch):
+    pass
+
+def test_remove_summary(test_app, monkeypatch):
+    pass
+
+def test_remove_summary_incorrect_id(test_app, monkeypatch):
+    pass
+
+def test_update_summary(test_app, monkeypatch):
+    pass
+
+@pytest.mark.parametrize(
+    "summary_id, payload, status_code, detail",
+    [
+        [
+            999,
+            {"url": "https://foo.bar", "summary": "updated!"},
+            404,
+            "Summary not found",
+        ],
+        [
+            0,
+            {"url": "https://foo.bar", "summary": "updated!"},
+            422,
+            [
+                {
+                    "loc": ["path", "id"],
+                    "msg": "ensure this value is greater than 0",
+                    "type": "value_error.number.not_gt",
+                    "ctx": {"limit_value": 0},
+                }
+            ],
+        ],
+        [
+            1,
+            {},
+            422,
+            [
+                {
+                    "loc": ["body", "url"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                },
+                {
+                    "loc": ["body", "summary"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                },
+            ],
+        ],
+        [
+            1,
+            {"url": "https://foo.bar"},
+            422,
+            [
+                {
+                    "loc": ["body", "summary"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                }
+            ],
+        ],
+    ],
+)
+def test_update_summary_invalid(test_app, monkeypatch, summary_id, payload, status_code, detail):
+    pass
+
+def test_update_summary_invalid_url(test_app):
+    response = test_app.put(
+        f"/summaries/1/",
+        data=json.dumps({"url": "invalid://url", "summary": "updated!"}),
+    )
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+```
+
+- So, we'll write all the same tests as before, but we'll monkeypatch calls to the CRUD service.
+
+#### Add Summary
+
+```python
+def test_create_summary(test_app, monkeypatch):
+    test_request_payload = {"url": "https://foo.bar"}
+    test_response_payload = {"id": 1, "url": "https://foo.bar"}
+
+    async def mock_post(payload):
+        return 1
+
+    monkeypatch.setattr(crud, "post", mock_post)
+
+    response = test_app.post("/summaries/", data=json.dumps(test_request_payload),)
+
+    assert response.status_code == 201
+    assert response.json() == test_response_payload
+```
+
+#### Get Summary
+
+```python
+def test_read_summary(test_app, monkeypatch):
+    test_data = {
+        "id": 1,
+        "url": "https://foo.bar",
+        "summary": "summary",
+        "created_at": datetime.utcnow().isoformat(),
+    }
+
+    async def mock_get(id):
+        return test_data
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    response = test_app.get("/summaries/1/")
+    assert response.status_code == 200
+    assert response.json() == test_data
+
+
+def test_read_summary_incorrect_id(test_app, monkeypatch):
+    async def mock_get(id):
+        return None
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    response = test_app.get("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+
+
+def test_read_all_summaries(test_app, monkeypatch):
+    test_data = [
+        {
+            "id": 1,
+            "url": "https://foo.bar",
+            "summary": "summary",
+            "created_at": datetime.utcnow().isoformat(),
+        },
+        {
+            "id": 2,
+            "url": "https://testdrivenn.io",
+            "summary": "summary",
+            "created_at": datetime.utcnow().isoformat(),
+        }
+    ]
+
+    async def mock_get_all():
+        return test_data
+
+    monkeypatch.setattr(crud, "get_all", mock_get_all)
+
+    response = test_app.get("/summaries/")
+    assert response.status_code == 200
+    assert response.json() == test_data
+```
+
+#### Remove Summary
+
+```python
+def test_remove_summary(test_app, monkeypatch):
+    async def mock_get(id):
+        return {
+            "id": 1,
+            "url": "https://foo.bar",
+            "summary": "summary",
+            "created_at": datetime.utcnow().isoformat(),
+        }
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    async def mock_delete(id):
+        return id
+
+    monkeypatch.setattr(crud, "delete", mock_delete)
+
+    response = test_app.delete("/summaries/1/")
+    assert response.status_code == 200
+    assert response.json() == {"id": 1, "url": "https://foo.bar"}
+
+
+def test_remove_summary_incorrect_id(test_app, monkeypatch):
+    async def mock_get(id):
+        return None
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    response = test_app.delete("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
+```
+
+#### Update Summary
+
+```python
+def test_update_summary(test_app, monkeypatch):
+    test_request_payload = {"url": "https://foo.bar", "summary": "updated"}
+    test_response_payload = {
+        "id": 1,
+        "url": "https://foo.bar",
+        "summary": "summary",
+        "created_at": datetime.utcnow().isoformat(),
+    }
+
+    async def mock_put(id, payload):
+        return test_response_payload
+
+    monkeypatch.setattr(crud, "put", mock_put)
+
+    response = test_app.put("/summaries/1/", data=json.dumps(test_request_payload),)
+    assert response.status_code == 200
+    assert response.json() == test_response_payload
+
+
+@pytest.mark.parametrize(
+    "summary_id, payload, status_code, detail",
+    [
+        [
+            999,
+            {"url": "https://foo.bar", "summary": "updated!"},
+            404,
+            "Summary not found",
+        ],
+        [
+            0,
+            {"url": "https://foo.bar", "summary": "updated!"},
+            422,
+            [
+                {
+                    "loc": ["path", "id"],
+                    "msg": "ensure this value is greater than 0",
+                    "type": "value_error.number.not_gt",
+                    "ctx": {"limit_value": 0},
+                }
+            ],
+        ],
+        [
+            1,
+            {},
+            422,
+            [
+                {
+                    "loc": ["body", "url"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                },
+                {
+                    "loc": ["body", "summary"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                },
+            ],
+        ],
+        [
+            1,
+            {"url": "https://foo.bar"},
+            422,
+            [
+                {
+                    "loc": ["body", "summary"],
+                    "msg": "field required",
+                    "type": "value_error.missing",
+                }
+            ],
+        ],
+    ],
+)
+def test_update_summary_invalid(test_app, monkeypatch, summary_id, payload, status_code, detail):
+    async def mock_put(id, payload):
+        return None
+
+    monkeypatch.setattr(crud, "put", mock_put)
+
+    response = test_app.put(f"/summaries/{summary_id}/", data=json.dumps(payload))
+    assert response.status_code == status_code
+    assert response.json()["detail"] == detail
+```
+
+#### Test
+
+- Make sure the tests pass:
+
+```bash
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1
+collected 27 items
+
+tests/test_ping.py .                                                        [  3%]
+tests/test_summaries.py .............                                       [ 51%]
+tests/test_summaries_unit.py .............                                  [100%]
+
+=============================== 27 passed in 0.39s ================================
+```
+
+### Parallel Test Runs
+
+- Next, since we're no longer hitting a database, we can run these tests in parallel with [pytest-xdist](https://github.com/pytest-dev/pytest-xdist).
+
+- Add the package to the _requirements.txt_ file:
+	- `pytest-xdist==2.3.0` 
+
+- Update the containers:
+	- `$ docker-compose up -d --build` 
+
+- Run the unit tests in parallel:
+
+```bash
+$ docker-compose exec web pytest -k "unit" -n auto
+
+=============================== test session starts ===============================
+platform linux -- Python 3.9.6, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
+rootdir: /usr/src/app
+plugins: cov-2.12.1, xdist-2.3.0, forked-1.3.0
+gw0 [13] / gw1 [13] / gw2 [13] / gw3 [13] / gw4 [13] / gw5 [13] / gw6 [13] / gw7 [13]
+.............                                                               [100%]
+=============================== 13 passed in 2.78s ================================
+```
+
+> We'll continue to run all tests locally throughout the rest of this course. That said, you are more than welcome to just run the unit tests locally and run all tests on GitHub.
+
+
+
+## Text Summarization
+
+In this chapter, we'll develop the text summarization piece of our application.
+
+---
+
+### Newspaper3k
+
+- Our objective is to create a real-time text summarization service used for creating article summaries from a given URL.
+
+- We'll need to use a web scraping library to extract the text of an article and then use a machine learning library to generate the actual summary. We could roll our own solution with say [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) (for scraping) and [Bart](https://huggingface.co/transformers/model_doc/bart.html) (for summarizing), but there's a library that will do both: [Newspaper3k](https://newspaper.readthedocs.io/).
+
+- So, start by adding the library to the requirements file:
+	- `newspaper3k==0.2.8` 
+
+- Install:
+	- `$ docker-compose up -d --build`
+
+### Summarizer
+
+- Add a new file called _project/app/summarizer.py_:
+
+```python
+# project/app/summarizer.py
+
+from newspaper import Article
+
+def generate_summary(url: str) -> str:
+    article = Article(url)
+    article.download()
+    article.parse()
+    article.nlp()
+    return article.summary
+```
+
+That's it.
+
+- After creating a new `Article` instance, we downloaded the given URL's HTML, extracted the meaningful content (via `parse()`) and the relevant keywords (via `nlp()`), and then generated a summary.
+
+> For more, review the [Quickstart](https://newspaper.readthedocs.io/en/latest/user_guide/quickstart.html) guide from the official docs.
+
+- The `nlp` method requires the [punkt](https://www.nltk.org/api/nltk.tokenize.html?highlight=punk#module-nltk.tokenize.punkt) tokenizer from the [Natural Language Toolkit](https://www.nltk.org/index.html) (NLTK), so update _summarizer.py_ like so to install it:
+
+```python
+# project/app/summarizer.py
+
+import nltk
+from newspaper import Article
+
+def generate_summary(url: str) -> str:
+    article = Article(url)
+    article.download()
+    article.parse()
+
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt")
+    finally:
+        article.nlp()
+
+    return article.summary
+```
+
+- Next, update the `post` function in _project/app/api/crud.py_ to generate the summary when a new URL is added:
+
+```python
+async def post(payload: SummaryPayloadSchema) -> int:
+    article_summary = generate_summary(payload.url)
+    summary = TextSummary(url=payload.url, summary=article_summary)
+    await summary.save()
+    return summary.id
+```
+
+- Don't forget the import:
+	- `from app.summarizer import generate_summary` 
+
+- Test it out:
+
+```bash
+$ http --json POST http://localhost:8004/summaries/ url=http://testdriven.io
+
+HTTP/1.1 201 Created
+content-length: 37
+content-type: application/json
+date: Thu, 08 Jul 2021 00:10:38 GMT
+server: uvicorn
+
+{
+    "id": 1,
+    "url": "http://testdriven.io"
+}
+
+$ http GET http://localhost:8004/summaries/1/
+
+HTTP/1.1 200 OK
+content-length: 779
+content-type: application/json
+date: Thu, 08 Jul 2021 00:11:02 GMT
+server: uvicorn
+
+{
+    "created_at": "2021-07-08T00:10:39.390969+00:00",
+    "id": 1,
+    "summary": "Our courses and tutorials teach practical application of popular tech used by both enterprise and startups.\nYou will quickly become effective in your chosen stack, as we provide pragmatic examples and detailed walkthroughs of the workings of each technology.\nThrough our courses, you will not only become more comfortable with specific tools and technologies like AWS ECS, Docker, and Flask, to name a few -- but you will also gain skills necessary to contribute to a team or launch your own exciting project.\nEvery tool taught in our courses is supported by large communities and is in high-demand by hiring managers around the globe.\nWe teach tools we love and use every day.",
+    "url": "http://testdriven.io"
+}
+```
+
+### Background Task
+
+- The `generate_summary` function introduces a blocking operation into the `post` function. Since both `article.parse()` and `article.nlp()` are expensive operations, let's move the entire `generate_summary` function out of the request/response flow by running it as a [background task](https://fastapi.tiangolo.com/tutorial/background-tasks/).
+
+- First, update `post`:
+
+```python
+async def post(payload: SummaryPayloadSchema) -> int:
+    summary = TextSummary(url=payload.url, summary="")
+    await summary.save()
+    return summary.id
+```
+
+- Next, update `create_summary`:
+
+```python
+@router.post("/", response_model=SummaryResponseSchema, status_code=201)
+async def create_summary(payload: SummaryPayloadSchema, background_tasks: BackgroundTasks) -> SummaryResponseSchema:
+    summary_id = await crud.post(payload)
+
+    background_tasks.add_task(generate_summary, summary_id, payload.url)
+
+    response_object = {"id": summary_id, "url": payload.url}
+    return response_object
+```
+
+- Make sure to import both `BackgroundTasks` and `generate_summary`:
+
+```python
+from fastapi import APIRouter, HTTPException, Path, BackgroundTasks
+
+from app.summarizer import generate_summary
+```
+
+- Finally, update `generate_summary` like so:
+
+```python
+# project/app/summarizer.py
+
+import nltk
+from newspaper import Article
+
+from app.models.tortoise import TextSummary
+
+async def generate_summary(summary_id: int, url: str) -> None:
+    article = Article(url)
+    article.download()
+    article.parse()
+
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt")
+    finally:
+        article.nlp()
+
+    summary = article.summary
+
+    await TextSummary.filter(id=summary_id).update(summary=summary)
+```
+
+- Now, the summary is generated _after_ the response is sent back to the client. Once generated, the database is updated. To test, add `asyncio.sleep` to generate_summary:
+
+```python
+# project/app/summarizer.py
+
+import asyncio
+
+import nltk
+from newspaper import Article
+
+from app.models.tortoise import TextSummary
+
+async def generate_summary(summary_id: int, url: str) -> None:
+    article = Article(url)
+    article.download()
+    article.parse()
+
+    try:
+        nltk.data.find("tokenizers/punkt")
+    except LookupError:
+        nltk.download("punkt")
+    finally:
+        article.nlp()
+
+    summary = article.summary
+
+    await asyncio.sleep(10)
+
+    await TextSummary.filter(id=summary_id).update(summary=summary)
+```
+
+- Then, add a new summary:
+
+```bash
+$ http --json POST http://localhost:8004/summaries/ url=http://testdriven.io
+
+HTTP/1.1 201 Created
+content-length: 34
+content-type: application/json
+date: Sun, 10 May 2020 15:59:54 GMT
+server: uvicorn
+
+{
+    "id": 5,
+    "url": "http://testdriven.io"
+}
+```
+
+- Get the summary:
+
+```bash
+$ http GET http://localhost:8004/summaries/5/
+
+HTTP/1.1 200 OK
+content-length: 134
+content-type: application/json
+date: Sun, 10 May 2020 16:00:09 GMT
+server: uvicorn
+
+{
+    "created_at": "2020-05-10T15:59:55.098074",
+    "id": 5,
+    "summary": "",
+    "url": "http://testdriven.io"
+}
+```
+
+- Wait about ten seconds before getting the summary again:
+
+```bash
+$ http GET http://localhost:8004/summaries/5/
+
+HTTP/1.1 200 OK
+content-length: 134
+content-type: application/json
+date: Sun, 10 May 2020 16:00:09 GMT
+server: uvicorn
+
+{
+    "created_at": "2020-05-10T15:59:55.098074",
+    "id": 5,
+    "summary": "Our courses and tutorials teach practical application of popular tech used by both enterprise and startups.\nYou will quickly become effective in your chosen stack, as we provide pragmatic examples and detailed walkthroughs of the workings of each technology.\nThrough our courses, you will not only become more comfortable with specific tools and technologies like AWS ECS, Docker, and Flask, to name a few -- but you will also gain skills necessary to contribute to a team or launch your own exciting project.\nEvery tool taught in our courses is supported by large communities and is in high-demand by hiring managers around the globe.\nWe teach tools we love and use every day.",
+    "url": "http://testdriven.io"
+}
+```
+
+- Be sure to remove `asyncio.sleep` once done.
+
+### Tests
+
+- Do the tests pass?
+	- `$ docker-compose exec web python -m pytest` 
+
+- You should see six failures:
+
+```bash
+>           raise ArticleException('Article `download()` failed with %s on URL %s' %
+                  (self.download_exception_msg, self.url))
+E           newspaper.article.ArticleException: Article `download()` failed with HTTPSConnectionPool(host='foo.bar', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f00e5582e50>: Failed to establish a new connection: [Errno -2] Name or service not known')) on URL https://foo.bar`
+```
+
+- Let's use `monkeypatch` again.
+
+- Example:
+
+```python
+def test_create_summary(test_app_with_db, monkeypatch):
+    def mock_generate_summary(summary_id, url):
+        return None
+    monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
+
+    response = test_app_with_db.post(
+        "/summaries/", data=json.dumps({"url": "https://foo.bar"})
+    )
+
+    assert response.status_code == 201
+    assert response.json()["url"] == "https://foo.bar"
+```
+
+- Add the import:
+	- `from app.api import summaries` 
+
+- Fix the other failing tests on your own.
+
+- Run Flake8, Black, and isort:
+
+```bash
+$ docker-compose exec web flake8 .
+$ docker-compose exec web black .
+$ docker-compose exec web isort .
+```
+
+- Commit your code and push it to GitHub. Test the summarizer on Heroku.
+
+
+## Advanced CI
+
+In this chapter, we'll update the CI process and set up a multistage Docker build for production.
+
+---
+
+### Multistage Docker Build
+
+- Start by updating Dockerfile.prod like so:
+
+```dockerfile
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM python:3.8.11-slim-buster as builder
+
+# install system dependencies
+RUN apt-get update \
+  && apt-get -y install gcc postgresql \
+  && apt-get clean
+
+# set work directory
+WORKDIR /usr/src/app
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+
+# lint
+COPY . /usr/src/app/
+RUN pip install black==21.6b0 flake8==3.9.2 isort==5.9.1
+RUN flake8 .
+RUN black --exclude=migrations .
+RUN isort .
+
+
+#########
+# FINAL #
+#########
+
+# pull official base image
+FROM python:3.8.11-slim-buster
+
+# create directory for the app user
+RUN mkdir -p /home/app
+
+# create the app user
+RUN addgroup --system app && adduser --system --group app
+
+# create the appropriate directories
+ENV HOME=/home/app
+ENV APP_HOME=/home/app/web
+RUN mkdir $APP_HOME
+WORKDIR $APP_HOME
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV ENVIRONMENT prod
+ENV TESTING 0
+
+# install system dependencies
+RUN apt-get update \
+  && apt-get -y install netcat gcc postgresql \
+  && apt-get clean
+
+# install python dependencies
+COPY --from=builder /usr/src/app/wheels /wheels
+COPY --from=builder /usr/src/app/requirements.txt .
+RUN pip install --upgrade pip
+RUN pip install --no-cache /wheels/*
+RUN pip install "uvicorn[standard]==0.14.0"
+
+# add app
+COPY . .
+
+# chown all the files to the app user
+RUN chown -R app:app $HOME
+
+# change to the app user
+USER app
+
+# run gunicorn
+CMD gunicorn --bind 0.0.0.0:$PORT app.main:app -k uvicorn.workers.UvicornWorker
+```
+
+- Here, we used a Docker [multistage](https://stackoverflow.com/a/53101932/1799408) build to reduce the final image size. Essentially, `builder` is a temporary image that's used for building the Python wheels. The wheels are then copied over to the final production image and the builder image is discarded.
+
+- Did you notice that Flake8, Black, and isort are being run in the `builder` image? If any of them fail, the build stops.
+
+- To test locally, build the new image and spin up the container:
+
+```bash
+$ docker build -f project/Dockerfile.prod -t web ./project
+
+$ docker run --name fastapi-tdd -e PORT=8765 -e DATABASE_URL=sqlite://sqlite.db -p 5003:8765 web:latest
+```
+
+- You should see something similar to:
+
+```bash
+[2021-07-08 11:54:28 +0000] [7] [INFO] Starting gunicorn 20.1.0
+[2021-07-08 11:54:28 +0000] [7] [INFO] Listening at: http://0.0.0.0:8765 (7)
+[2021-07-08 11:54:28 +0000] [7] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2021-07-08 11:54:28 +0000] [9] [INFO] Booting worker with pid: 9
+[2021-07-08 11:54:28 +0000] [9] [INFO] Started server process [9]
+[2021-07-08 11:54:28 +0000] [9] [INFO] Waiting for application startup.
+[2021-07-08 11:54:28 +0000] [9] [INFO] Application startup complete.
+```
+
+- Navigate to [http://localhost:5003/ping/](http://localhost:5003/ping/).
+
+- You should see:
+
+```json
+{
+  "ping": "pong!",
+  "environment": "prod",
+  "testing": false
+}
+```
+
+- Bring down the container once done:
+	- `$ docker rm fastapi-tdd -f` 
+
+- Commit and push your code up to GitHub to trigger a new build. Ensure it passes.
+
+### Docker Caching
+
+- Next, to speed up the build on GitHub Actions, update the _.github/workflows/main.yml_ file:
+
+```yaml
+name: Continuous Integration and Delivery
+
+on: [push]
+
+env:
+  IMAGE: docker.pkg.github.com/$(echo $GITHUB_REPOSITORY | tr '[A-Z]' '[a-z]')/summarizer
+
+jobs:
+
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2.3.4
+      - name: Log in to GitHub Packages
+        run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull images
+        run: |
+          docker pull ${{ env.IMAGE }}-builder:latest || true
+          docker pull ${{ env.IMAGE }}-final:latest || true
+      - name: Build images
+        run: |
+          docker build \
+            --target builder \
+            --cache-from ${{ env.IMAGE }}-builder:latest \
+            --tag ${{ env.IMAGE }}-builder:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+          docker build \
+            --cache-from ${{ env.IMAGE }}-final:latest \
+            --tag ${{ env.IMAGE }}-final:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+      - name: Push images
+        run: |
+          docker push ${{ env.IMAGE }}-builder:latest
+          docker push ${{ env.IMAGE }}-final:latest
+
+  test:
+    name: Test Docker Image
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2.3.4
+      - name: Log in to GitHub Packages
+        run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull images
+        run: |
+          docker pull ${{ env.IMAGE }}-builder:latest || true
+          docker pull ${{ env.IMAGE }}-final:latest || true
+      - name: Build images
+        run: |
+          docker build \
+            --target builder \
+            --cache-from ${{ env.IMAGE }}-builder:latest \
+            --tag ${{ env.IMAGE }}-builder:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+          docker build \
+            --cache-from ${{ env.IMAGE }}-final:latest \
+            --tag ${{ env.IMAGE }}-final:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+      - name: Run container
+        run: |
+          docker run \
+            -d \
+            --name fastapi-tdd \
+            -e PORT=8765 \
+            -e ENVIRONMENT=dev \
+            -e DATABASE_TEST_URL=sqlite://sqlite.db \
+            -p 5003:8765 \
+            ${{ env.IMAGE }}-final:latest
+      - name: Pytest
+        run: docker exec fastapi-tdd python -m pytest .
+      - name: Flake8
+        run: docker exec fastapi-tdd python -m flake8 .
+      - name: Black
+        run: docker exec fastapi-tdd python -m black . --check
+      - name: isort
+        run: docker exec fastapi-tdd python -m isort . --check-only
+
+  deploy:
+    name: Deploy to Heroku
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    env:
+      HEROKU_APP_NAME: thawing-beach-87010
+      HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/summarizer
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2.3.4
+      - name: Log in to GitHub Packages
+        run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull images
+        run: |
+          docker pull ${{ env.IMAGE }}-builder:latest || true
+          docker pull ${{ env.IMAGE }}-final:latest || true
+      - name: Build images
+        run: |
+          docker build \
+            --target builder \
+            --cache-from ${{ env.IMAGE }}-builder:latest \
+            --tag ${{ env.IMAGE }}-builder:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+          docker build \
+            --cache-from ${{ env.IMAGE }}-final:latest \
+            --tag ${{ env.IMAGE }}:latest \
+            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
+            --file ./project/Dockerfile.prod \
+            "./project"
+      - name: Log in to the Heroku Container Registry
+        run: docker login -u _ -p ${HEROKU_AUTH_TOKEN} registry.heroku.com
+        env:
+          HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}
+      - name: Push to the registry
+        run: docker push ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
+      - name: Set environment variables
+        run: |
+          echo "HEROKU_REGISTRY_IMAGE=${{ env.HEROKU_REGISTRY_IMAGE }}" >> $GITHUB_ENV
+          echo "HEROKU_AUTH_TOKEN=${{ secrets.HEROKU_AUTH_TOKEN }}" >> $GITHUB_ENV
+      - name: Release
+        run: |
+          chmod +x ./release.sh
+          ./release.sh
+```
+
+- We're now pulling, building, and pushing the `builder` image using the `--target` [option](https://docs.docker.com/compose/compose-file/#target).
+
+> For more on Docker caching, review the [Faster CI Builds with Docker Cache](https://testdriven.io/blog/faster-ci-builds-with-docker-cache/) post.
+
+### Update Requirements
+
+- Next, let's move development-only requirements to a new file.
+
+_requirements-dev.txt_:
+
+```txt
+black==21.6b0
+flake8==3.9.2
+isort==5.9.1
+pytest==6.2.4
+pytest-cov==2.12.1
+pytest-xdist==2.3.0
+
+-r requirements.txt
+```
+
+_requirements.txt_:
+
+```txt
+aerich==0.5.3
+asyncpg==0.23.0
+fastapi==0.65.3
+gunicorn==20.1.0
+newspaper3k==0.2.8
+requests==2.25.1
+tortoise-orm==0.17.4
+uvicorn==0.14.0
+```
+
+- Update _Dockerfile_:
+
+```dockerfile
+# pull official base image
+FROM python:3.9.6-slim-buster
+
+# set working directory
+WORKDIR /usr/src/app
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install system dependencies
+RUN apt-get update \
+  && apt-get -y install netcat gcc postgresql \
+  && apt-get clean
+
+# install python dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+COPY ./requirements-dev.txt .
+RUN pip install -r requirements-dev.txt
+
+# add app
+COPY . .
+
+# add entrypoint.sh
+COPY ./entrypoint.sh .
+RUN chmod +x /usr/src/app/entrypoint.sh
+
+# run entrypoint.sh
+ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+```
+
+- Test:
+
+```bash
+$ docker-compose down -v
+$ docker-compose up -d --build
+$ docker-compose exec web aerich upgrade
+
+$ docker-compose exec web python -m pytest
+$ docker-compose exec web flake8 .
+$ docker-compose exec web black .
+$ docker-compose exec web isort .
+```
+
+- Install the requirements in the `test` job of _.github/workflows/main.yml_:
+
+```yaml
+- name: Install requirements
+  run: docker exec fastapi-tdd pip install black==21.6b0 flake8==3.9.2 isort==5.9.1 pytest==6.2.4
+
+Full job:
+
+`test:
+  name: Test Docker Image
+  runs-on: ubuntu-latest
+  needs: build
+  steps:
+    - name: Checkout master
+      uses: actions/checkout@v2.3.4
+    - name: Log in to GitHub Packages
+      run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Pull images
+      run: |
+        docker pull ${{ env.IMAGE }}-builder:latest || true
+        docker pull ${{ env.IMAGE }}-final:latest || true
+    - name: Build images
+      run: |
+        docker build \
+          --target builder \
+          --cache-from ${{ env.IMAGE }}-builder:latest \
+          --tag ${{ env.IMAGE }}-builder:latest \
+          --file ./project/Dockerfile.prod \
+          "./project"
+        docker build \
+          --cache-from ${{ env.IMAGE }}-final:latest \
+          --tag ${{ env.IMAGE }}-final:latest \
+          --file ./project/Dockerfile.prod \
+          "./project"
+    - name: Run container
+      run: |
+        docker run \
+          -d \
+          --name fastapi-tdd \
+          -e PORT=8765 \
+          -e ENVIRONMENT=dev \
+          -e DATABASE_TEST_URL=sqlite://sqlite.db \
+          -p 5003:8765 \
+          ${{ env.IMAGE }}-final:latest
+    - name: Install requirements
+      run: docker exec fastapi-tdd pip install black==21.6b0 flake8==3.9.2 isort==5.9.1 pytest==6.2.4
+    - name: Pytest
+      run: docker exec fastapi-tdd python -m pytest .
+    - name: Flake8
+      run: docker exec fastapi-tdd python -m flake8 .
+    - name: Black
+      run: docker exec fastapi-tdd python -m black . --check
+    - name: isort
+      run: docker exec fastapi-tdd python -m isort . --check-only
+```
+
+- Again, commit and push your code up to GitHub to trigger a new build. Make sure it passes before moving on.
+
+## Workflow
+
+> Reference Guide.
+
+### Alias
+
+- To save some precious keystrokes, let's create an alias for the `docker-compose` command -- `dc`.
+
+- Simply add the following line to your _.bashrc_ file:
+	- `alias dc='docker-compose'` 
+
+- Save the file, then execute it:
+	- `$ source ~/.bashrc` 
+
+- Test it out!
+
+> On Windows? You will first need to create a [PowerShell Profile](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-7#how-to-use-a-profile) (if you don't already have one), and then you can add the alias to it using [Set-Alias](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-6): `Set-Alias dc docker-compose`.
+
+
+### Common Commands
+
+- Build the images:
+	- `$ docker-compose build` 
+
+- Run the containers:
+	- `$ docker-compose up -d` 
+
+- Apply the migrations:
+
+```bash
+$ docker-compose exec web aerich upgrade
+
+# prefer just to apply the latest changes to the database, without the migrations?
+# $ docker-compose exec web python app/db.py
+```
+
+- Run the tests:
+	- `$ docker-compose exec web python -m pytest` 
+
+- Run the tests with coverage:
+	- `$ docker-compose exec web python -m pytest --cov="."` 
+
+- Lint:
+	- `$ docker-compose exec web flake8 .` 
+
+- Run Black and isort with check options:
+
+```bash
+$ docker-compose exec web black . --check
+$ docker-compose exec web isort . --check-only
+```
+
+- Make code changes with Black and isort:
+
+```bash
+$ docker-compose exec web black .
+$ docker-compose exec web isort .
+```
+
+### Other Commands
+
+- To stop the containers:
+	- `$ docker-compose stop` 
+
+- To bring down the containers:
+	- `$ docker-compose down` 
+
+- Want to force a build?
+	- `$ docker-compose build --no-cache` 
+
+- Remove images:
+	- `$ docker rmi $(docker images -q)`
+
+
+### Postgres
+
+- Want to access the database via psql?
+	- `$ docker-compose exec web-db psql -U postgres` 
+
+- Then, you can connect to the database and run SQL queries. For example:
+
+```sql
+# \c web_dev
+# select * from textsummary;
+```
+
+
+## Structure
+
+For reference, your project structure should look like this:
+
+```markdown
+├── .github
+│   └── workflows
+│       └── main.yml
+├── .gitignore
+├── README.md
+├── docker-compose.yml
+├── project
+│   ├── .coverage
+│   ├── .coveragerc
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── Dockerfile.prod
+│   ├── aerich.ini
+│   ├── app
+│   │   ├── __init__.py
+│   │   ├── api
+│   │   │   ├── __init__.py
+│   │   │   ├── crud.py
+│   │   │   ├── ping.py
+│   │   │   └── summaries.py
+│   │   ├── config.py
+│   │   ├── db.py
+│   │   ├── main.py
+│   │   ├── models
+│   │   │   ├── __init__.py
+│   │   │   ├── pydantic.py
+│   │   │   └── tortoise.py
+│   │   └── summarizer.py
+│   ├── db
+│   │   ├── Dockerfile
+│   │   └── create.sql
+│   ├── entrypoint.sh
+│   ├── htmlcov
+│   ├── migrations
+│   │   └── models
+│   │       └── 1_20210704142846_None.sql
+│   ├── requirements-dev.txt
+│   ├── requirements.txt
+│   ├── setup.cfg
+│   └── tests
+│       ├── __init__.py
+│       ├── conftest.py
+│       ├── test_ping.py
+│       ├── test_summaries.py
+│       └── test_summaries_unit.py
+└── release.sh
+```
+
+- You can find the source code in the [fastapi-tdd-docker](https://github.com/testdrivenio/fastapi-tdd-docker) repo on GitHub.
+
+
+
+## Next Steps
+
+We've covered a lot in this course. Take a few minutes to step back and reflect on what you've learned. Ask yourself the following questions:
+
+1.  What were my objectives?
+2.  How far did I get? How much is left?
+3.  How was the process? Am I on the right track?
+
+Objectives:
+
+1.  Develop an asynchronous RESTful API with Python and FastAPI
+2.  Practice Test-Driven Development
+3.  Test a FastAPI app with pytest
+4.  Interact with a Postgres database asynchronously
+5.  Containerize FastAPI and Postgres inside a Docker container
+6.  Run unit and integration tests with code coverage inside a Docker container
+7.  Check your code for any code quality issues via a linter
+8.  Configure GitHub Actions for continuous integration and deployment
+9.  Use GitHub Packages to store Docker Images
+10.  Speed up a Docker-based CI build with Docker Cache
+11.  Deploy FastAPI, Uvicorn, and Postgres to Heroku with Docker
+12.  Parameterize test functions and mock functionality in tests with pytest
+13.  Run tests in parallel with pytest-xdist
+14.  Document a RESTful API with Swagger/OpenAPI
+15.  Run a background process outside the request/response flow
+
+---
+
+Now it's your turn! Spend some time refactoring and dealing with tech debt on your own.
+
+Some ideas:
+
+1.  **Test coverage**: Add more tests to increase the overall test coverage.
+2.  **DRY out the code**: There's plenty of places in the code base that could be refactored.
+3.  **CORS Middleware**: Use [CORSMiddleware](https://fastapi.tiangolo.com/tutorial/cors/) to handle cross-origin requests -- e.g., requests that originate from a different protocol, IP address, domain name, or port to prevent [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)-based attacks.
+4.  **Security Vulnerability Scanners**: Along with checking for code quality and style, linters can also be used for finding security vulnerabilities. Scan your-
+    -   Code base with [Bandit](https://bandit.readthedocs.io/)
+    -   Dependencies with [Safety](https://pyup.io/safety/)
+    -   Docker images with [Trivy](https://github.com/aquasecurity/trivy)
+5.  **Third-Party Extensions**: Try out some of the extensions from the [Awesome FastAPI](https://github.com/mjhea0/awesome-fastapi) repo. Can't find what you need? Write your own!

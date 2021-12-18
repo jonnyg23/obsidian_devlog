@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "2a671a4f19b46ee3",
+        "id": "9029d2f6c01ef0dc",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Test-Driven Development with FastAPI and Docker.md",
-            "mode": "source"
+            "file": "! 2021-12-18 Web Hosting & GraphQL.md",
+            "mode": "preview"
           }
         }
       }
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md"
+                "file": "! 2021-12-18 Web Hosting & GraphQL.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,11 +141,11 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
-                  "localJumps": 2,
+                  "localJumps": 1,
                   "localBacklinks": true,
                   "localForelinks": true,
                   "localInterlinks": false,
@@ -164,14 +164,14 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.8192600876921974,
+                  "scale": 0.9700478458252753,
                   "close": true
                 }
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 5
       },
       {
         "id": "109b48d01d39b7e5",
@@ -193,19 +193,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 321
+    "width": 457,
+    "collapsed": true
   },
-  "active": "2a671a4f19b46ee3",
+  "active": "9029d2f6c01ef0dc",
   "lastOpenFiles": [
+    "! 2021-12-18 Web Hosting & GraphQL.md",
+    "Templates/Inputs/Article.md",
+    "Templates/Inputs/Learning-Journal.md",
+    "Nextjs.md",
+    "Coding Workflow.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "TODO Lists & Kanban Work Boards.md",
     "TODO.md",
     "GoJonnyGo TODO.md",
-    "MegSewsThings TODO.md",
-    "pyenv.md",
-    "2021_10_12.md",
-    "2021_09_29.md",
-    "2021_09_27.md",
-    "2021_09_08.md"
+    "MegSewsThings TODO.md"
   ]
 }

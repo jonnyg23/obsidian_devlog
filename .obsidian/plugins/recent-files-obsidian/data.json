@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "! 2021-12-18 Web Hosting & GraphQL",
+      "path": "! 2021-12-18 Web Hosting & GraphQL.md"
+    },
+    {
+      "basename": "Article",
+      "path": "Templates/Inputs/Article.md"
+    },
+    {
+      "basename": "Learning-Journal",
+      "path": "Templates/Inputs/Learning-Journal.md"
+    },
+    {
+      "basename": "Nextjs",
+      "path": "Nextjs.md"
+    },
+    {
+      "basename": "Coding Workflow",
+      "path": "Coding Workflow.md"
+    },
+    {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
     },
@@ -113,16 +133,8 @@
       "path": "Data Structures & Algorithms.md"
     },
     {
-      "basename": "Coding Workflow",
-      "path": "Coding Workflow.md"
-    },
-    {
       "basename": "AlgoExpert",
       "path": "AlgoExpert.md"
-    },
-    {
-      "basename": "Nextjs",
-      "path": "Nextjs.md"
     },
     {
       "basename": "Yup",
@@ -141,16 +153,8 @@
       "path": "Templates/Inputs/New.md"
     },
     {
-      "basename": "Article",
-      "path": "Templates/Inputs/Article.md"
-    },
-    {
       "basename": "Book",
       "path": "Templates/Inputs/Book.md"
-    },
-    {
-      "basename": "Learning-Journal",
-      "path": "Templates/Inputs/Learning-Journal.md"
     },
     {
       "basename": "MOC",
@@ -195,10 +199,6 @@
     {
       "basename": "{ The Pentagram, Freemasonry, and the Goat",
       "path": "{ The Pentagram, Freemasonry, and the Goat.md"
-    },
-    {
-      "basename": "jsx code block",
-      "path": "Templates/Quick Adds/Code Snippets/jsx code block.md"
     }
   ],
   "omittedPaths": [],
