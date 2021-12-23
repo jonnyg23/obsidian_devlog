@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "! 2021-12-18 Web Hosting & GraphQL.md",
-            "mode": "preview"
+            "file": "Nextjs.md",
+            "mode": "preview",
+            "source": false
           }
         }
       }
@@ -94,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "! 2021-12-18 Web Hosting & GraphQL.md"
+                "file": "Nextjs.md"
               }
             }
           },
@@ -104,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
+                "file": "Nextjs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
+                "file": "Nextjs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "! 2021-12-18 Web Hosting & GraphQL.md",
+                "file": "Nextjs.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -171,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 1
       },
       {
         "id": "109b48d01d39b7e5",
@@ -193,17 +194,16 @@
       }
     ],
     "direction": "horizontal",
-    "width": 457,
-    "collapsed": true
+    "width": 457
   },
   "active": "9029d2f6c01ef0dc",
   "lastOpenFiles": [
+    "Nextjs.md",
+    "Test-Driven Development with FastAPI and Docker.md",
     "! 2021-12-18 Web Hosting & GraphQL.md",
     "Templates/Inputs/Article.md",
     "Templates/Inputs/Learning-Journal.md",
-    "Nextjs.md",
     "Coding Workflow.md",
-    "Test-Driven Development with FastAPI and Docker.md",
     "TODO Lists & Kanban Work Boards.md",
     "TODO.md",
     "GoJonnyGo TODO.md",

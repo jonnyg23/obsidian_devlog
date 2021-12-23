@@ -93,5 +93,7 @@
     "Microservice",
     "microservices"
   ],
-  "showLineNumber": false
+  "showLineNumber": false,
+  "legacyEditor": false,
+  "livePreview": true
 }
