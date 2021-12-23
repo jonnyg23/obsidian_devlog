@@ -6,7 +6,7 @@ kanban-plugin: basic
 
 ## TODO
 
-- [ ] Work on [[Test-Driven Development with FastAPI and Docker]]
+- [ ] Read all of the [Nextjs version 12 Docs](https://nextjs.org/docs/getting-started) !
 
 
 ## DOING

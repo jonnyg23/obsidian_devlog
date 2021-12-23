@@ -570,8 +570,9 @@ onSubmit: (values) => {
 
 ### Version 12
 
-* **Now, middleware is used instead of `getStaticProps` & `getServerSideProps`!**
-* Rust is now used as the Nextjs compiler which boosts speed by 3x Faster Refresh & 5x faster builds!
+* **React Server Components and Middleware is replacing `getStaticProps` & `getServerSideProps`!** [View Why Here!](https://nextjs.org/blog/next-12#react-server-components)
+* [[Rust]] is now used as the Nextjs compiler which boosts speed by 3x Faster Refresh & 5x faster builds!
+* 
 
 
 
