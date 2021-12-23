@@ -7,9 +7,11 @@
         "id": "724ab56e513ce345",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "MegSewsThings TODO.md"
+            "file": "Test-Driven Development with FastAPI and Docker.md",
+            "mode": "preview",
+            "source": false
           }
         }
       }
@@ -93,7 +95,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "MegSewsThings TODO.md"
+                "file": "Test-Driven Development with FastAPI and Docker.md"
               }
             }
           },
@@ -103,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "MegSewsThings TODO.md",
+                "file": "Test-Driven Development with FastAPI and Docker.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "MegSewsThings TODO.md",
+                "file": "Test-Driven Development with FastAPI and Docker.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +142,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "MegSewsThings TODO.md",
+                "file": "Test-Driven Development with FastAPI and Docker.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -196,15 +198,15 @@
   },
   "active": "724ab56e513ce345",
   "lastOpenFiles": [
+    "Test-Driven Development with FastAPI and Docker.md",
+    "pyenv.md",
     "MegSewsThings TODO.md",
     "Nextjs.md",
     "TODO Lists & Kanban Work Boards.md",
     "TODO.md",
-    "Test-Driven Development with FastAPI and Docker.md",
     "! 2021-12-18 Web Hosting & GraphQL.md",
     "Templates/Inputs/Article.md",
     "Templates/Inputs/Learning-Journal.md",
-    "Coding Workflow.md",
-    "GoJonnyGo TODO.md"
+    "Coding Workflow.md"
   ]
 }

@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Test-Driven Development with FastAPI and Docker",
+      "path": "Test-Driven Development with FastAPI and Docker.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "MegSewsThings TODO",
       "path": "MegSewsThings TODO.md"
     },
@@ -15,10 +23,6 @@
     {
       "basename": "TODO",
       "path": "TODO.md"
-    },
-    {
-      "basename": "Test-Driven Development with FastAPI and Docker",
-      "path": "Test-Driven Development with FastAPI and Docker.md"
     },
     {
       "basename": "! 2021-12-18 Web Hosting & GraphQL",
@@ -39,10 +43,6 @@
     {
       "basename": "GoJonnyGo TODO",
       "path": "GoJonnyGo TODO.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "2021_09_27",
