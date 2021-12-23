@@ -7,6 +7,8 @@ cssclass:
 
 # [[Nextjs]]
 
+> ✏️ Note: As of *Dec. 2021*, Nextjs is using [[#Version 12]]
+
 > A Javascript Framework for user-friendly static websites.
 
 > Helps developer create static generation [[SSG]] and server-side rendering [[SSR]] websites.
@@ -562,6 +564,15 @@ onSubmit: (values) => {
 };
 - ReactDOM.render(<WithMaterialUI />, document.getElementById('root'));
 ```
+
+
+## Version Updates
+
+### Version 12
+
+* **Now, middleware is used instead of `getStaticProps` & `getServerSideProps`!**
+* Rust is now used as the Nextjs compiler which boosts speed by 3x Faster Refresh & 5x faster builds!
+
 
 
 🔗 Links to this page:
