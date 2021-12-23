@@ -1,8 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "MegSewsThings TODO",
+      "path": "MegSewsThings TODO.md"
+    },
+    {
       "basename": "Nextjs",
       "path": "Nextjs.md"
+    },
+    {
+      "basename": "TODO Lists & Kanban Work Boards",
+      "path": "TODO Lists & Kanban Work Boards.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
     },
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
@@ -25,20 +37,8 @@
       "path": "Coding Workflow.md"
     },
     {
-      "basename": "TODO Lists & Kanban Work Boards",
-      "path": "TODO Lists & Kanban Work Boards.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
-    },
-    {
       "basename": "GoJonnyGo TODO",
       "path": "GoJonnyGo TODO.md"
-    },
-    {
-      "basename": "MegSewsThings TODO",
-      "path": "MegSewsThings TODO.md"
     },
     {
       "basename": "pyenv",

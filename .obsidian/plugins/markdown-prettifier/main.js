@@ -13859,9 +13859,9 @@ function toMarkdown$5(options) {
   }
 }
 
-var checkBullet_1 = checkBullet;
+var checkBullet_1$1 = checkBullet$1;
 
-function checkBullet(context) {
+function checkBullet$1(context) {
   var marker = context.options.bullet || '*';
 
   if (marker !== '*' && marker !== '+' && marker !== '-') {
@@ -13875,9 +13875,9 @@ function checkBullet(context) {
   return marker
 }
 
-var checkListItemIndent_1 = checkListItemIndent;
+var checkListItemIndent_1$1 = checkListItemIndent$1;
 
-function checkListItemIndent(context) {
+function checkListItemIndent$1(context) {
   var style = context.options.listItemIndent || 'tab';
 
   if (style === 1 || style === '1') {
@@ -13969,7 +13969,7 @@ function indentLines$1(value, map) {
   }
 }
 
-var listItem_1 = listItem$1;
+var listItem_1 = listItem$3;
 
 
 
@@ -13977,9 +13977,9 @@ var listItem_1 = listItem$1;
 
 
 
-function listItem$1(node, parent, context) {
-  var bullet = checkBullet_1(context);
-  var listItemIndent = checkListItemIndent_1(context);
+function listItem$3(node, parent, context) {
+  var bullet = checkBullet_1$1(context);
+  var listItemIndent = checkListItemIndent_1$1(context);
   var size;
   var value;
   var exit;
@@ -14020,10 +14020,10 @@ function listItem$1(node, parent, context) {
 var unsafe$2 = [{atBreak: true, character: '-', after: '[:|-]'}];
 
 var handlers$1 = {
-  listItem: listItemWithTaskListItem
+  listItem: listItemWithTaskListItem$1
 };
 
-function listItemWithTaskListItem(node, parent, context) {
+function listItemWithTaskListItem$1(node, parent, context) {
   var value = listItem_1(node, parent, context);
   var head = node.children[0];
 
@@ -26583,7 +26583,7 @@ var inlineCode$2 = inlineCode_1$1;
 var link$2 = link_1$1;
 var linkReference$2 = linkReference_1$1;
 var list$2 = list_1$1;
-var listItem = listItem_1;
+var listItem$2 = listItem_1;
 var paragraph$2 = paragraph_1$1;
 var root$2 = root_1$1;
 var strong$2 = strong_1$1;
@@ -26605,7 +26605,7 @@ var handle$1 = {
 	link: link$2,
 	linkReference: linkReference$2,
 	list: list$2,
-	listItem: listItem,
+	listItem: listItem$2,
 	paragraph: paragraph$2,
 	root: root$2,
 	strong: strong$2,
@@ -26939,28 +26939,28 @@ function flow(parent, context) {
 
 var indentLines_1 = indentLines;
 
-const eol = /\r?\n|\r/g;
+var eol = /\r?\n|\r/g;
 
 function indentLines(value, map) {
-    const result = [];
-    let start = 0;
-    let line = 0;
-    let match;
+  var result = [];
+  var start = 0;
+  var line = 0;
+  var match;
 
-    while ((match = eol.exec(value))) {
-        one(value.slice(start, match.index));
-        result.push(match[0]);
-        start = match.index + match[0].length;
-        line++;
-    }
+  while ((match = eol.exec(value))) {
+    one(value.slice(start, match.index));
+    result.push(match[0]);
+    start = match.index + match[0].length;
+    line++;
+  }
 
-    one(value.slice(start));
+  one(value.slice(start));
 
-    return result.join('')
+  return result.join('')
 
-    function one(value) {
-        result.push(map(value, line, !value));
-    }
+  function one(value) {
+    result.push(map(value, line, !value));
+  }
 }
 
 var blockquote_1 = blockquote$1;
@@ -26968,14 +26968,14 @@ var blockquote_1 = blockquote$1;
 
 
 
-function blockquote$1 (node, _, context) {
-  const exit = context.enter('blockquote');
-  const value = indentLines_1(containerFlow(node, context), map);
+function blockquote$1(node, _, context) {
+  var exit = context.enter('blockquote');
+  var value = indentLines_1(containerFlow(node, context), map);
   exit();
   return value
 }
 
-function map (line, index, blank) {
+function map(line, index, blank) {
   return '>' + (blank ? '' : ' ') + line
 }
 
@@ -27856,6 +27856,110 @@ function list$1(node, _, context) {
   return value
 }
 
+var checkBullet_1 = checkBullet;
+
+function checkBullet(context) {
+  var marker = context.options.bullet || '*';
+
+  if (marker !== '*' && marker !== '+' && marker !== '-') {
+    throw new Error(
+      'Cannot serialize items with `' +
+        marker +
+        '` for `options.bullet`, expected `*`, `+`, or `-`'
+    )
+  }
+
+  return marker
+}
+
+var checkListItemIndent_1 = checkListItemIndent;
+
+function checkListItemIndent(context) {
+  var style = context.options.listItemIndent || 'tab';
+
+  if (style === 1 || style === '1') {
+    return 'one'
+  }
+
+  if (style !== 'tab' && style !== 'one' && style !== 'mixed') {
+    throw new Error(
+      'Cannot serialize items with `' +
+        style +
+        '` for `options.listItemIndent`, expected `tab`, `one`, or `mixed`'
+    )
+  }
+
+  return style
+}
+
+var defaultListItem = listItem$1;
+
+
+
+
+
+
+
+function listItem$1(node, parent, context) {
+  var bullet = checkBullet_1(context);
+  var listItemIndent = checkListItemIndent_1(context);
+  var size;
+  var value;
+  var exit;
+
+  if (parent && parent.ordered) {
+    bullet =
+      (parent.start > -1 ? parent.start : 1) +
+      (context.options.incrementListMarker === false
+        ? 0
+        : parent.children.indexOf(node)) +
+      '.';
+  }
+
+  size = bullet.length + 1;
+  let separator = ' ';
+  if (
+    listItemIndent === 'tab' ||
+    (listItemIndent === 'mixed' && ((parent && parent.spread) || node.spread))
+  ) {
+    separator = '\t';
+    size = bullet.length;
+  }
+
+  exit = context.enter('listItem');
+  value = indentLines_1(containerFlow(node, context), map);
+  exit();
+
+  return value
+
+
+  function map(line, index, blank) {
+
+    if (index) {
+      return (blank ? '' : repeatString(separator, size)) + line
+    }
+
+    return (blank ? bullet : bullet + ' ') + line
+  }
+}
+
+function listItemWithTaskListItemPatch(node, parent, context) {
+  var value = defaultListItem(node, parent, context);
+  var head = node.children[0];
+
+  if (typeof node.checked === 'boolean' && head && head.type === 'paragraph') {
+    value = value.replace(/^(?:[*+-]|\d+\.)([\r\n]| {1,3})/, check);
+  }
+
+  return value
+
+  function check($0) {
+    return $0 + '[' + (node.checked ? 'x' : ' ') + '] '
+  }
+}
+
+var listItemWithTaskListItem = listItemWithTaskListItemPatch;
+
 var paragraph_1 = paragraph$1;
 
 
@@ -27984,6 +28088,7 @@ var inlineCode = inlineCode_1;
 var link = link_1;
 var linkReference = linkReference_1;
 var list = list_1;
+var listItem = listItemWithTaskListItem;
 var paragraph = paragraph_1;
 var root = root_1;
 var strong = strong_1;
@@ -28005,6 +28110,7 @@ var handle = {
 	link: link,
 	linkReference: linkReference,
 	list: list,
+	listItem: listItem,
 	paragraph: paragraph,
 	root: root,
 	strong: strong,
@@ -28058,7 +28164,7 @@ var mdastUtilToMarkdownPatch = toMarkdown;
 
 var defaultUnsafe = [];
 
-function toMarkdown(tree, options) {
+function toMarkdown (tree, options) {
   var settings = options || {};
   var context = {
     enter: enter,
@@ -28087,7 +28193,7 @@ function toMarkdown(tree, options) {
     handlers: context.handlers
   });
 
-  result = context.handle(tree, null, context, {before: '\n', after: '\n'});
+  result = context.handle(tree, null, context, { before: '\n', after: '\n' });
 
   if (
     result &&
@@ -28099,25 +28205,25 @@ function toMarkdown(tree, options) {
 
   return result
 
-  function enter(name) {
+  function enter (name) {
     context.stack.push(name);
     return exit
 
-    function exit() {
+    function exit () {
       context.stack.pop();
     }
   }
 }
 
-function invalid(value) {
+function invalid (value) {
   throw new Error('Cannot handle value `' + value + '`, expected node')
 }
 
-function unknown(node) {
+function unknown (node) {
   throw new Error('Cannot handle unknown node `' + node.type + '`')
 }
 
-function joinDefinition(left, right) {
+function joinDefinition (left, right) {
   // No blank line between adjacent definitions.
   if (left.type === 'definition' && left.type === right.type) {
     return 0
@@ -28147,10 +28253,14 @@ function prettifier(content, userOptions, frontMatterData) {
             },
         ];
     }
+    //https://github.com/cristianvasquez/obsidian-prettify/issues/19
+    stringifyOptions.handlers = {
+        listItem: listItemWithTaskListItem
+    };
     processor = processor
+        .use(remarkGfm)
         .use(wikiLinkPlugin)
         .use(remarkMath)
-        .use(remarkGfm)
         // @ts-ignore
         .use(stringify, stringifyOptions);
     return processor.process(content);
@@ -28363,9 +28473,9 @@ var MarkdownPrettifierSettingsTab = /** @class */ (function (_super) {
             .setName("List indent")
             .setDesc("Whether to use small or big spaces to indent lists")
             .addDropdown(function (dropdown) {
-            dropdown.addOption('one', "small");
+            dropdown.addOption('one', "space");
             // dropdown.addOption('mixed', "mixed");
-            dropdown.addOption('tab', "big");
+            dropdown.addOption('tab', "tab");
             dropdown.setValue(String(_this.plugin.settings.listItemIndent))
                 .onChange(function (value) { return __awaiter(_this, void 0, void 0, function () {
                 return __generator(this, function (_a) {

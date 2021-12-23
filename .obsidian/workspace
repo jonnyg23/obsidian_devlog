@@ -4,14 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "9029d2f6c01ef0dc",
+        "id": "724ab56e513ce345",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "Nextjs.md",
-            "mode": "preview",
-            "source": false
+            "file": "MegSewsThings TODO.md"
           }
         }
       }
@@ -95,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nextjs.md"
+                "file": "MegSewsThings TODO.md"
               }
             }
           },
@@ -105,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Nextjs.md",
+                "file": "MegSewsThings TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Nextjs.md",
+                "file": "MegSewsThings TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +140,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Nextjs.md",
+                "file": "MegSewsThings TODO.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -196,17 +194,17 @@
     "direction": "horizontal",
     "width": 457
   },
-  "active": "9029d2f6c01ef0dc",
+  "active": "724ab56e513ce345",
   "lastOpenFiles": [
+    "MegSewsThings TODO.md",
     "Nextjs.md",
+    "TODO Lists & Kanban Work Boards.md",
+    "TODO.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "! 2021-12-18 Web Hosting & GraphQL.md",
     "Templates/Inputs/Article.md",
     "Templates/Inputs/Learning-Journal.md",
     "Coding Workflow.md",
-    "TODO Lists & Kanban Work Boards.md",
-    "TODO.md",
-    "GoJonnyGo TODO.md",
-    "MegSewsThings TODO.md"
+    "GoJonnyGo TODO.md"
   ]
 }

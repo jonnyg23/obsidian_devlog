@@ -3297,10 +3297,11 @@ function generateColorVariables(key, format, colorStr, opacity, altFormats = [])
         case "hsl-values": {
             const hsl = parsedColor.hsl();
             const alpha = opacity ? `,${parsedColor.alpha()}` : "";
+            const h = isNaN(hsl[0]) ? 0 : hsl[0];
             return [
                 {
                     key,
-                    value: `${hsl[0]},${hsl[1] * 100}%,${hsl[2] * 100}%${alpha}`,
+                    value: `${h},${hsl[1] * 100}%,${hsl[2] * 100}%${alpha}`,
                 },
                 ...alts,
             ];
@@ -3733,6 +3734,103 @@ var pickr_min = createCommonjsModule(function (module, exports) {
 
 var Pickr = /*@__PURE__*/getDefaultExportFromCjs(pickr_min);
 
+const ar = {};
+
+const cz = {};
+
+const da = {};
+
+const de = {
+    "Default:": "Standard:",
+    "Error:": "Fehler:",
+    "missing default light value, or value is not in a valid color format": "Fehlender heller standard Wert oder Wert ist in keinem validen Farb-Format",
+    "missing default dark value, or value is not in a valid color format": "Fehlender dunkler standard Wert oder Wert ist in keinem validen Farb-Format",
+    "missing default value, or value is not in a valid color format": "Fehlender standard Wert oder Wert ist in keinem validen Farb-Format",
+    "missing default value": "Fehlender standard Wert",
+};
+
+const en = {
+    "Default:": "Default:",
+    "Error:": "Error:",
+    "missing default light value, or value is not in a valid color format": "missing default light value, or value is not in a valid color format",
+    "missing default dark value, or value is not in a valid color format": "missing default dark value, or value is not in a valid color format",
+    "missing default value, or value is not in a valid color format": "missing default value, or value is not in a valid color format",
+    "missing default value": "missing default value",
+};
+
+const es = {};
+
+const fr = {};
+
+const hi = {};
+
+const id = {};
+
+const it = {};
+
+const ja = {};
+
+const ko = {};
+
+const nl = {};
+
+const no = {};
+
+const pl = {};
+
+const pt = {};
+
+const ptBr = {};
+
+const ro = {};
+
+const ru = {};
+
+const sq = {};
+
+const tr = {};
+
+const uk = {};
+
+const zh = {};
+
+const zhTw = {};
+
+const lang = window.localStorage.getItem("language");
+const localeMap = {
+    ar,
+    cz,
+    da,
+    de,
+    en,
+    es,
+    fr,
+    hi,
+    id,
+    it,
+    ja,
+    ko,
+    nl,
+    no,
+    pl,
+    "pt-BR": ptBr,
+    pt,
+    ro,
+    ru,
+    sq,
+    tr,
+    uk,
+    "zh-TW": zhTw,
+    zh,
+};
+const locale = localeMap[lang || "en"];
+function t(str) {
+    if (!locale) {
+        console.error("Error: Style Settings locale not found", lang);
+    }
+    return (locale && locale[str]) || en[str];
+}
+
 const resetTooltip = "Restore default";
 function sanitizeText(str) {
     if (str === "") {
@@ -3747,7 +3845,7 @@ function createDescription(description, def, defLabel) {
     }
     if (def) {
         const small = createEl("small");
-        small.appendChild(createEl("strong", { text: "Default: " }));
+        small.appendChild(createEl("strong", { text: `${t("Default:")} ` }));
         small.appendChild(document.createTextNode(defLabel || def));
         const div = createEl("div");
         div.appendChild(small);
@@ -3755,12 +3853,25 @@ function createDescription(description, def, defLabel) {
     }
     return fragment;
 }
+function getTitle(config) {
+    if (lang) {
+        return config[`title.${lang}`] || config.title;
+    }
+    return config.title;
+}
+function getDescription(config) {
+    if (lang) {
+        return (config[`description.${lang}`] ||
+            config.description);
+    }
+    return config.description;
+}
 function createHeading(opts) {
     new obsidian.Setting(opts.containerEl)
         .setHeading()
         .setClass("style-settings-heading")
-        .setName(opts.config.title)
-        .setDesc(opts.config.description ? opts.config.description : "")
+        .setName(getTitle(opts.config))
+        .setDesc(getDescription(opts.config) ? getDescription(opts.config) : "")
         .then((setting) => {
         if (opts.config.collapsed)
             setting.settingEl.addClass("is-collapsed");
@@ -3787,9 +3898,9 @@ function createHeading(opts) {
                 .then((b) => {
                 b.extraSettingsEl.onClickEvent((e) => {
                     e.stopPropagation();
-                    const title = opts.sectionName === opts.config.title
-                        ? opts.config.title
-                        : `${opts.sectionName} > ${opts.config.title}`;
+                    const title = opts.sectionName === getTitle(opts.config)
+                        ? getTitle(opts.config)
+                        : `${opts.sectionName} > ${getTitle(opts.config)}`;
                     opts.settingsManager.export(title, opts.settingsManager.getSettings(opts.sectionId, opts.children));
                 });
             });
@@ -3800,8 +3911,8 @@ function createClassToggle(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let toggleComponent;
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(config.description || "")
+        .setName(getTitle(config))
+        .setDesc(getDescription(config) || "")
         .addToggle((toggle) => {
         const value = settingsManager.getSetting(sectionId, config.id);
         toggle
@@ -3840,7 +3951,7 @@ function createClassMultiToggle(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let dropdownComponent;
     if (typeof config.default !== "string") {
-        return console.error(`Error: ${config.title} missing default value`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value")}`);
     }
     let prevValue = settingsManager.getSetting(sectionId, config.id);
     if (prevValue === undefined && !!config.default) {
@@ -3865,8 +3976,8 @@ function createClassMultiToggle(opts) {
         defaultLabel = defaultOption.label;
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default, defaultLabel))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default, defaultLabel))
         .addDropdown((dropdown) => {
         if (config.allowEmpty) {
             dropdown.addOption("none", "");
@@ -3914,11 +4025,11 @@ function createVariableText(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let textComponent;
     if (typeof config.default !== "string") {
-        return console.error(`Error: ${config.title} missing default value`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value")}`);
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default))
         .addText((text) => {
         const value = settingsManager.getSetting(sectionId, config.id);
         const onChange = obsidian.debounce((value) => {
@@ -3945,11 +4056,11 @@ function createVariableNumber(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let textComponent;
     if (typeof config.default !== "number") {
-        return console.error(`Error: ${config.title} missing default value`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value")}`);
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default.toString(10)))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default.toString(10)))
         .addText((text) => {
         const value = settingsManager.getSetting(sectionId, config.id);
         const onChange = obsidian.debounce((value) => {
@@ -3977,11 +4088,11 @@ function createVariableNumberSlider(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let sliderComponent;
     if (typeof config.default !== "number") {
-        return console.error(`Error: ${config.title} missing default value`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value")}`);
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default.toString(10)))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default.toString(10)))
         .addSlider((slider) => {
         const value = settingsManager.getSetting(sectionId, config.id);
         const onChange = obsidian.debounce((value) => {
@@ -4010,7 +4121,7 @@ function createVariableSelect(opts) {
     const { sectionId, config, containerEl, settingsManager } = opts;
     let dropdownComponent;
     if (typeof config.default !== "string") {
-        return console.error(`Error: ${config.title} missing default value`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value")}`);
     }
     const defaultOption = config.default
         ? config.options.find((o) => {
@@ -4028,8 +4139,8 @@ function createVariableSelect(opts) {
         defaultLabel = defaultOption.label;
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default, defaultLabel))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default, defaultLabel))
         .addDropdown((dropdown) => {
         const value = settingsManager.getSetting(sectionId, config.id);
         config.options.forEach((o) => {
@@ -4060,10 +4171,10 @@ function createVariableSelect(opts) {
     });
 }
 function getPickrSettings(opts) {
-    const { el, containerEl, swatches, opacity, defaultColor } = opts;
+    const { el, isView, containerEl, swatches, opacity, defaultColor } = opts;
     return {
         el,
-        container: containerEl,
+        container: isView ? document.body : containerEl,
         theme: "nano",
         swatches,
         lockOpacity: !opacity,
@@ -4090,10 +4201,10 @@ function isValidDefaultColor(color) {
     return /^(#|rgb)/.test(color);
 }
 function createVariableColor(opts) {
-    const { sectionId, config, containerEl, settingsManager } = opts;
+    const { isView, sectionId, config, containerEl, settingsManager } = opts;
     if (typeof config.default !== "string" ||
         !isValidDefaultColor(config.default)) {
-        return console.error(`Error: ${config.title} missing default value, or value is not in a valid color format`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default value, or value is not in a valid color format")}`);
     }
     const value = settingsManager.getSetting(sectionId, config.id);
     const swatches = [];
@@ -4105,11 +4216,12 @@ function createVariableColor(opts) {
         swatches.push(value);
     }
     new obsidian.Setting(containerEl)
-        .setName(config.title)
-        .setDesc(createDescription(config.description, config.default))
+        .setName(getTitle(config))
+        .setDesc(createDescription(getDescription(config), config.default))
         .then((setting) => {
         setting.settingEl.dataset.id = opts.config.id;
         pickr = Pickr.create(getPickrSettings({
+            isView,
             el: setting.controlEl.createDiv({ cls: "picker" }),
             containerEl,
             swatches,
@@ -4140,14 +4252,14 @@ function createVariableColor(opts) {
     return () => pickr.destroyAndRemove();
 }
 function createVariableThemedColor(opts) {
-    const { sectionId, config, containerEl, settingsManager } = opts;
+    const { sectionId, isView, config, containerEl, settingsManager } = opts;
     if (typeof config["default-light"] !== "string" ||
         !isValidDefaultColor(config["default-light"])) {
-        return console.error(`Error: ${config.title} missing default light value, or value is not in a valid color format`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default light value, or value is not in a valid color format")}`);
     }
     if (typeof config["default-dark"] !== "string" ||
         !isValidDefaultColor(config["default-dark"])) {
-        return console.error(`Error: ${config.title} missing default dark value, or value is not in a valid color format`);
+        return console.error(`${t("Error:")} ${getTitle(config)} ${t("missing default dark value, or value is not in a valid color format")}`);
     }
     const idLight = `${config.id}@@light`;
     const idDark = `${config.id}@@dark`;
@@ -4177,13 +4289,13 @@ function createVariableThemedColor(opts) {
         instance.addSwatch(color.toHEXA().toString());
     };
     new obsidian.Setting(containerEl)
-        .setName(config.title)
+        .setName(getTitle(config))
         .then((setting) => {
         setting.settingEl.dataset.id = opts.config.id;
         // Construct description
         setting.descEl.createSpan({}, (span) => {
-            if (config.description) {
-                span.appendChild(document.createTextNode(config.description));
+            if (getDescription(config)) {
+                span.appendChild(document.createTextNode(getDescription(config)));
             }
         });
         setting.descEl.createDiv({}, (div) => {
@@ -4203,6 +4315,7 @@ function createVariableThemedColor(opts) {
             // Create light color picker
             wrapper.createDiv({ cls: "theme-light" }, (themeWrapper) => {
                 pickrLight = Pickr.create(getPickrSettings({
+                    isView,
                     el: themeWrapper.createDiv({ cls: "picker" }),
                     containerEl,
                     swatches: swatchesLight,
@@ -4228,6 +4341,7 @@ function createVariableThemedColor(opts) {
             // Create dark color picker
             wrapper.createDiv({ cls: "theme-dark" }, (themeWrapper) => {
                 pickrDark = Pickr.create(getPickrSettings({
+                    isView,
                     el: themeWrapper.createDiv({ cls: "picker" }),
                     containerEl,
                     swatches: swatchesDark,
@@ -4258,7 +4372,7 @@ function createVariableThemedColor(opts) {
     };
 }
 function createSettings(opts) {
-    const { containerEl, sectionId, settings, settingsManager, sectionName } = opts;
+    const { isView, containerEl, sectionId, settings, settingsManager, sectionName, } = opts;
     const containerStack = [containerEl];
     const idStack = [sectionId];
     const cleanup = [];
@@ -4405,6 +4519,7 @@ function createSettings(opts) {
                     config: setting,
                     containerEl: getTargetContainer(containerStack),
                     settingsManager,
+                    isView,
                 }));
                 break;
             }
@@ -4416,6 +4531,7 @@ function createSettings(opts) {
                     config: setting,
                     containerEl: getTargetContainer(containerStack),
                     settingsManager,
+                    isView,
                 }));
                 break;
             }
@@ -8431,6 +8547,8 @@ const nameRegExp = /^name:\s*(.+)$/m;
 class CSSSettingsPlugin extends obsidian.Plugin {
     constructor() {
         super(...arguments);
+        this.settingsList = [];
+        this.errorList = [];
         this.debounceTimer = 0;
     }
     onload() {
@@ -8439,6 +8557,14 @@ class CSSSettingsPlugin extends obsidian.Plugin {
             yield this.settingsManager.load();
             this.settingsTab = new CSSSettingsTab(this.app, this);
             this.addSettingTab(this.settingsTab);
+            this.registerView(viewType, (leaf) => new SettingsView(this, leaf));
+            this.addCommand({
+                id: "show-style-settings-leaf",
+                name: "Show style settings view",
+                callback: () => {
+                    this.activateView();
+                },
+            });
             this.registerEvent(this.app.workspace.on("css-change", () => {
                 this.parseCSS();
             }));
@@ -8451,10 +8577,10 @@ class CSSSettingsPlugin extends obsidian.Plugin {
     }
     parseCSS() {
         clearTimeout(this.debounceTimer);
+        this.settingsList = [];
+        this.errorList = [];
         this.debounceTimer = window.setTimeout(() => {
             const styleSheets = document.styleSheets;
-            const settingsList = [];
-            const errorList = [];
             for (let i = 0, len = styleSheets.length; i < len; i++) {
                 const sheet = styleSheets.item(i);
                 const text = sheet.ownerNode.textContent.trim();
@@ -8471,38 +8597,57 @@ class CSSSettingsPlugin extends obsidian.Plugin {
                             const settings = jsYaml.load(str.replace(/\t/g, indent.type === "space" ? indent.indent : "    "), {
                                 filename: name,
                             });
-                            settings.settings = settings.settings.filter(setting => setting);
+                            settings.settings = settings.settings.filter((setting) => setting);
                             if (typeof settings === "object" &&
                                 settings.name &&
                                 settings.id &&
                                 settings.settings &&
                                 settings.settings.length) {
-                                settingsList.push(settings);
+                                this.settingsList.push(settings);
                             }
                         }
                         catch (e) {
-                            errorList.push({ name, error: `${e}` });
+                            this.errorList.push({ name, error: `${e}` });
                         }
                     } while ((match = settingRegExp.exec(text)) !== null);
                 }
             }
-            this.settingsTab.setSettings(settingsList, errorList);
+            this.settingsTab.settingsMarkup.setSettings(this.settingsList, this.errorList);
+            this.app.workspace.getLeavesOfType(viewType).forEach((leaf) => {
+                leaf.view.settingsMarkup.setSettings(this.settingsList, this.errorList);
+            });
             this.settingsManager.initClasses();
         }, 100);
     }
     onunload() {
-        this.settingsManager.cleanup();
-        this.settingsTab.cleanup();
         document.body.classList.remove("css-settings-manager");
+        this.settingsManager.cleanup();
+        this.settingsTab.settingsMarkup.cleanup();
+        this.deactivateView();
+    }
+    deactivateView() {
+        this.app.workspace.detachLeavesOfType(viewType);
+    }
+    activateView() {
+        return __awaiter(this, void 0, void 0, function* () {
+            this.deactivateView();
+            const leaf = this.app.workspace.createLeafBySplit(this.app.workspace.activeLeaf, "vertical");
+            yield leaf.setViewState({
+                type: viewType,
+            });
+            leaf.view.settingsMarkup.setSettings(this.settingsList, this.errorList);
+        });
     }
 }
-class CSSSettingsTab extends obsidian.PluginSettingTab {
-    constructor(app, plugin) {
-        super(app, plugin);
+class SettingsMarkup {
+    constructor(app, plugin, containerEl, isView) {
         this.cleanupFns = [];
         this.settings = [];
         this.errorList = [];
+        this.app = app;
         this.plugin = plugin;
+        this.containerEl = containerEl;
+        this.isView = !!isView;
     }
     display() {
         this.generate(this.settings);
@@ -8599,6 +8744,7 @@ class CSSSettingsTab extends obsidian.PluginSettingTab {
             ];
             const cleanup = createSettings({
                 containerEl,
+                isView: this.isView,
                 sectionId: s.id,
                 sectionName: s.name,
                 settings: options,
@@ -8608,6 +8754,42 @@ class CSSSettingsTab extends obsidian.PluginSettingTab {
                 cleanupFns.push(...cleanup);
         });
         this.cleanupFns = cleanupFns;
+    }
+}
+class CSSSettingsTab extends obsidian.PluginSettingTab {
+    constructor(app, plugin) {
+        super(app, plugin);
+        this.settingsMarkup = new SettingsMarkup(app, plugin, this.containerEl);
+    }
+    display() {
+        this.settingsMarkup.display();
+    }
+}
+const viewType = "style-settings";
+class SettingsView extends obsidian.ItemView {
+    constructor(plugin, leaf) {
+        super(leaf);
+        this.plugin = plugin;
+        this.settingsMarkup = new SettingsMarkup(plugin.app, plugin, this.contentEl, true);
+    }
+    getViewType() {
+        return viewType;
+    }
+    getIcon() {
+        return "gear";
+    }
+    getDisplayText() {
+        return "Style Settings";
+    }
+    onOpen() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.settingsMarkup.display();
+        });
+    }
+    onClose() {
+        return __awaiter(this, void 0, void 0, function* () {
+            return this.settingsMarkup.cleanup();
+        });
     }
 }
 

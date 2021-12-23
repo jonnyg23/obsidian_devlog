@@ -6,6 +6,9 @@ if you want to view the source visit the plugins github repository
 'use strict';
 
 var obsidian = require('obsidian');
+var state = require('@codemirror/state');
+var language = require('@codemirror/language');
+var streamParser = require('@codemirror/stream-parser');
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
@@ -218,11 +221,11 @@ const greaterThanOrEqualTo = {
     matchRegExp: />=$/,
     performUpdate: (instance, delta, settings) => {
         delta.update({ line: delta.from.line, ch: delta.from.ch - 1 }, delta.to, [
-            settings.greaterThanOrEqualTo,
+            "≥",
         ]);
     },
     performRevert: (instance, delta, settings) => {
-        if (instance.getRange(delta.from, delta.to) === settings.greaterThanOrEqualTo) {
+        if (instance.getRange(delta.from, delta.to) === "≥") {
             delta.update(delta.from, delta.to, [">="]);
         }
     },
@@ -232,11 +235,11 @@ const lessThanOrEqualTo = {
     matchRegExp: /<=$/,
     performUpdate: (instance, delta, settings) => {
         delta.update({ line: delta.from.line, ch: delta.from.ch - 1 }, delta.to, [
-            settings.lessThanOrEqualTo,
+            "≤",
         ]);
     },
     performRevert: (instance, delta, settings) => {
-        if (instance.getRange(delta.from, delta.to) === settings.lessThanOrEqualTo) {
+        if (instance.getRange(delta.from, delta.to) === "≤") {
             delta.update(delta.from, delta.to, ["<="]);
         }
     },
@@ -246,11 +249,11 @@ const notEqualTo = {
     matchRegExp: /\/=$/,
     performUpdate: (instance, delta, settings) => {
         delta.update({ line: delta.from.line, ch: delta.from.ch - 1 }, delta.to, [
-            settings.notEqualTo,
+            "≠",
         ]);
     },
     performRevert: (instance, delta, settings) => {
-        if (instance.getRange(delta.from, delta.to) === settings.notEqualTo) {
+        if (instance.getRange(delta.from, delta.to) === "≠") {
             delta.update(delta.from, delta.to, ["/="]);
         }
     },
@@ -283,9 +286,9 @@ const leftGuillemet = {
         }
     },
 };
-const dashRules = [enDash, emDash, trippleDash];
-const ellipsisRules = [ellipsis];
-const smartQuoteRules = [
+const legacyDashRules = [enDash, emDash, trippleDash];
+const legacyEllipsisRules = [ellipsis];
+const legacySmartQuoteRules = [
     openDoubleQuote,
     closeDoubleQuote,
     pairedDoubleQuote,
@@ -295,46 +298,302 @@ const smartQuoteRules = [
     pairedSingleQuote,
     wrappedSingleQuote,
 ];
-const comparisonRules = [
+const legacyComparisonRules = [
     lessThanOrEqualTo,
     greaterThanOrEqualTo,
     notEqualTo,
 ];
-const arrowRules = [leftArrow, rightArrow];
-const guillemetRules = [leftGuillemet, rightGuillemet];
+const legacyArrowRules = [leftArrow, rightArrow];
+const legacyGuillemetRules = [leftGuillemet, rightGuillemet];
+
+// Dashes
+const dashRules = [
+    // en dash
+    {
+        trigger: "-",
+        from: "--",
+        to: "–",
+        contextMatch: /-$/,
+    },
+    // em dash
+    {
+        trigger: "-",
+        from: "–-",
+        to: "—",
+        contextMatch: /–$/,
+    },
+    // tripple dash
+    {
+        trigger: "-",
+        from: "—-",
+        to: "---",
+        contextMatch: /—$/,
+    },
+];
+const dashRulesSansEnDash = [
+    // em dash
+    {
+        trigger: "-",
+        from: "--",
+        to: "—",
+        contextMatch: /-$/,
+    },
+    // tripple dash
+    {
+        trigger: "-",
+        from: "—-",
+        to: "---",
+        contextMatch: /—$/,
+    },
+];
+// Ellipsis
+const ellipsisRules = [
+    {
+        trigger: ".",
+        from: "...",
+        to: "…",
+        contextMatch: /\.\.$/,
+    },
+];
+// Quotes
+const smartQuoteRules = [
+    // Open double
+    {
+        trigger: '"',
+        from: '"',
+        to: (settings) => settings.openDouble,
+        contextMatch: /[\s\{\[\(\<'"\u2018\u201C]$/,
+    },
+    // Close double
+    {
+        trigger: '"',
+        from: '"',
+        to: (settings) => settings.closeDouble,
+        contextMatch: /.*$/,
+    },
+    // Paired double
+    {
+        trigger: '""',
+        from: '""',
+        to: (settings) => settings.openDouble + settings.closeDouble,
+        contextMatch: /.*$/,
+    },
+    // Open single
+    {
+        trigger: "'",
+        from: "'",
+        to: (settings) => settings.openSingle,
+        contextMatch: /[\s\{\[\(\<'"\u2018\u201C]$/,
+    },
+    // Close single
+    {
+        trigger: "'",
+        from: "'",
+        to: (settings) => settings.closeSingle,
+        contextMatch: /.*$/,
+    },
+    // Paired single
+    {
+        trigger: "''",
+        from: "''",
+        to: (settings) => settings.openSingle + settings.closeSingle,
+        contextMatch: /.*$/,
+    },
+];
+// Arrows
+const arrowRules = [
+    {
+        trigger: "-",
+        from: "<-",
+        to: (settings) => settings.leftArrow,
+        contextMatch: /<$/,
+    },
+    {
+        trigger: ">",
+        from: "->",
+        to: (settings) => settings.rightArrow,
+        contextMatch: /-$/,
+    },
+];
+// Guillemet
+const guillemetRules = [
+    {
+        trigger: "<",
+        from: "<<",
+        to: "«",
+        contextMatch: /<$/,
+    },
+    {
+        trigger: ">",
+        from: ">>",
+        to: "»",
+        contextMatch: />$/,
+    },
+];
+// Comparisons
+const comparisonRules = [
+    {
+        trigger: "=",
+        from: ">=",
+        to: "≥",
+        contextMatch: />$/,
+    },
+    {
+        trigger: "=",
+        from: "<=",
+        to: "≤",
+        contextMatch: /<$/,
+    },
+    {
+        trigger: "=",
+        from: "/=",
+        to: "≠",
+        contextMatch: /\/$/,
+    },
+];
+// Fractions
+const fractionRules = [
+    {
+        trigger: "2",
+        from: "1/2",
+        to: "½",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "3",
+        from: "1/3",
+        to: "⅓",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "3",
+        from: "2/3",
+        to: "⅔",
+        contextMatch: /(?:^|\s)2\/$/,
+    },
+    {
+        trigger: "4",
+        from: "1/4",
+        to: "¼",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "4",
+        from: "3/4",
+        to: "¾",
+        contextMatch: /(?:^|\s)3\/$/,
+    },
+    {
+        trigger: "5",
+        from: "1/5",
+        to: "⅕",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "5",
+        from: "2/5",
+        to: "⅖",
+        contextMatch: /(?:^|\s)2\/$/,
+    },
+    {
+        trigger: "5",
+        from: "3/5",
+        to: "⅗",
+        contextMatch: /(?:^|\s)3\/$/,
+    },
+    {
+        trigger: "5",
+        from: "4/5",
+        to: "⅘",
+        contextMatch: /(?:^|\s)4\/$/,
+    },
+    {
+        trigger: "6",
+        from: "1/6",
+        to: "⅙",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "6",
+        from: "5/6",
+        to: "⅚",
+        contextMatch: /(?:^|\s)5\/$/,
+    },
+    {
+        trigger: "7",
+        from: "1/7",
+        to: "⅐",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "8",
+        from: "1/8",
+        to: "⅛",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "8",
+        from: "3/8",
+        to: "⅜",
+        contextMatch: /(?:^|\s)3\/$/,
+    },
+    {
+        trigger: "8",
+        from: "5/8",
+        to: "⅝",
+        contextMatch: /(?:^|\s)5\/$/,
+    },
+    {
+        trigger: "8",
+        from: "7/8",
+        to: "⅞",
+        contextMatch: /(?:^|\s)7\/$/,
+    },
+    {
+        trigger: "9",
+        from: "1/9",
+        to: "⅑",
+        contextMatch: /(?:^|\s)1\/$/,
+    },
+    {
+        trigger: "0",
+        from: "1/10",
+        to: "⅒",
+        contextMatch: /(?:^|\s)1\/1$/,
+    },
+];
 
 const DEFAULT_SETTINGS = {
     curlyQuotes: true,
     emDash: true,
     ellipsis: true,
     arrows: true,
-    guillemets: false,
     comparisons: true,
+    fractions: false,
+    guillemets: false,
+    skipEnDash: false,
     openSingle: "‘",
     closeSingle: "’",
     openDouble: "“",
     closeDouble: "”",
     leftArrow: "←",
     rightArrow: "→",
-    lessThanOrEqualTo: "≤",
-    greaterThanOrEqualTo: "≥",
-    notEqualTo: "≠",
 };
 class SmartTypography extends obsidian.Plugin {
     constructor() {
         super(...arguments);
         this.beforeChangeHandler = (instance, delta) => {
-            if (this.lastUpdate.has(instance) && delta.origin === "+delete") {
-                const revert = this.lastUpdate.get(instance).performRevert;
+            if (this.legacyLastUpdate.has(instance) && delta.origin === "+delete") {
+                const revert = this.legacyLastUpdate.get(instance).performRevert;
                 if (revert) {
                     revert(instance, delta, this.settings);
-                    this.lastUpdate.delete(instance);
+                    this.legacyLastUpdate.delete(instance);
                 }
                 return;
             }
             if (delta.origin === undefined && delta.text.length === 1) {
                 const input = delta.text[0];
-                for (let rule of this.inputRules) {
+                for (let rule of this.legacyInputRules) {
                     if (!(rule.matchTrigger instanceof RegExp)) {
                         continue;
                     }
@@ -347,12 +606,12 @@ class SmartTypography extends obsidian.Plugin {
             }
             if (delta.origin === "+input" && delta.text.length === 1) {
                 const input = delta.text[0];
-                const rules = this.inputRules.filter((r) => {
+                const rules = this.legacyInputRules.filter((r) => {
                     return typeof r.matchTrigger === "string" && r.matchTrigger === input;
                 });
                 if (rules.length === 0) {
-                    if (this.lastUpdate.has(instance)) {
-                        this.lastUpdate.delete(instance);
+                    if (this.legacyLastUpdate.has(instance)) {
+                        this.legacyLastUpdate.delete(instance);
                     }
                     return;
                 }
@@ -364,53 +623,198 @@ class SmartTypography extends obsidian.Plugin {
                     if (rule.matchRegExp && rule.matchRegExp.test(str)) {
                         if (shouldCheckTextAtPos(instance, delta.from) &&
                             shouldCheckTextAtPos(instance, delta.to)) {
-                            this.lastUpdate.set(instance, rule);
+                            this.legacyLastUpdate.set(instance, rule);
                             rule.performUpdate(instance, delta, this.settings);
                         }
                         return;
                     }
                 }
             }
-            if (this.lastUpdate.has(instance)) {
-                this.lastUpdate.delete(instance);
+            if (this.legacyLastUpdate.has(instance)) {
+                this.legacyLastUpdate.delete(instance);
             }
         };
     }
     buildInputRules() {
+        this.legacyInputRules = [];
         this.inputRules = [];
+        this.inputRuleMap = {};
         if (this.settings.emDash) {
-            this.inputRules.push(...dashRules);
+            if (this.settings.skipEnDash) {
+                this.inputRules.push(...dashRulesSansEnDash);
+            }
+            else {
+                this.inputRules.push(...dashRules);
+            }
+            this.legacyInputRules.push(...legacyDashRules);
         }
         if (this.settings.ellipsis) {
             this.inputRules.push(...ellipsisRules);
+            this.legacyInputRules.push(...legacyEllipsisRules);
         }
         if (this.settings.curlyQuotes) {
             this.inputRules.push(...smartQuoteRules);
+            this.legacyInputRules.push(...legacySmartQuoteRules);
         }
         if (this.settings.arrows) {
             this.inputRules.push(...arrowRules);
+            this.legacyInputRules.push(...legacyArrowRules);
         }
         if (this.settings.guillemets) {
             this.inputRules.push(...guillemetRules);
+            this.legacyInputRules.push(...legacyGuillemetRules);
         }
         if (this.settings.comparisons) {
             this.inputRules.push(...comparisonRules);
+            this.legacyInputRules.push(...legacyComparisonRules);
         }
+        if (this.settings.fractions) {
+            this.inputRules.push(...fractionRules);
+        }
+        this.inputRules.forEach((rule) => {
+            if (this.inputRuleMap[rule.trigger] === undefined) {
+                this.inputRuleMap[rule.trigger] = [];
+            }
+            this.inputRuleMap[rule.trigger].push(rule);
+        });
     }
     onload() {
         return __awaiter(this, void 0, void 0, function* () {
-            this.lastUpdate = new WeakMap();
             yield this.loadSettings();
             this.addSettingTab(new SmartTypographySettingTab(this.app, this));
-            this.app.workspace.onLayoutReady(() => {
-                this.registerCodeMirror((cm) => {
-                    cm.on("beforeChange", this.beforeChangeHandler);
-                });
+            // Codemirror 6
+            //
+            // When smart typography overrides changes, we want to keep a record
+            // so we can undo them when the user presses backspace
+            const storeTransaction = state.StateEffect.define();
+            const prevTransactionState = state.StateField.define({
+                create() {
+                    return null;
+                },
+                update(oldVal, tr) {
+                    for (let e of tr.effects) {
+                        if (e.is(storeTransaction)) {
+                            return e.value;
+                        }
+                    }
+                    if (!oldVal ||
+                        tr.isUserEvent("input") ||
+                        tr.isUserEvent("delete.forward") ||
+                        tr.isUserEvent("delete.cut") ||
+                        tr.isUserEvent("move") ||
+                        tr.isUserEvent("select") ||
+                        tr.isUserEvent("undo")) {
+                        return null;
+                    }
+                    return oldVal;
+                },
+            });
+            this.registerEditorExtension([
+                prevTransactionState,
+                state.EditorState.transactionFilter.of((tr) => {
+                    // Revert any stored changes on delete
+                    if (tr.isUserEvent("delete.backward") ||
+                        tr.isUserEvent("delete.selection")) {
+                        return tr.startState.field(prevTransactionState, false) || tr;
+                    }
+                    // If the user hasn't typed, or the doc hasn't changed, return early
+                    if (!tr.isUserEvent("input.type") || !tr.docChanged) {
+                        return tr;
+                    }
+                    // Cache the syntax tree if we end up accessing it
+                    let tree = null;
+                    // Memoize any positions we check so we can avoid some work
+                    const seenPositions = {};
+                    const canPerformReplacement = (pos) => {
+                        if (seenPositions[pos] !== undefined) {
+                            return seenPositions[pos];
+                        }
+                        if (!tree)
+                            tree = language.syntaxTree(tr.state);
+                        const nodeProps = tree
+                            .resolveInner(pos, 1)
+                            .type.prop(streamParser.tokenClassNodeProp);
+                        if (nodeProps && ignoreListRegEx.test(nodeProps)) {
+                            seenPositions[pos] = false;
+                        }
+                        else {
+                            seenPositions[pos] = true;
+                        }
+                        return seenPositions[pos];
+                    };
+                    // Store a list of changes and specs to revert these changes
+                    const changes = [];
+                    const reverts = [];
+                    const registerChange = (change, revert) => {
+                        changes.push(change);
+                        reverts.push(revert);
+                    };
+                    const contextCache = {};
+                    let newSelection = tr.selection;
+                    tr.changes.iterChanges((fromA, toA, fromB, toB, inserted) => {
+                        const insertedText = inserted.sliceString(0, 0 + inserted.length);
+                        const matchedRules = this.inputRuleMap[insertedText];
+                        if (!matchedRules) {
+                            return;
+                        }
+                        for (let rule of matchedRules) {
+                            // If we're in a codeblock, etc, return early, no need to continue checking
+                            if (!canPerformReplacement(fromA))
+                                return;
+                            // Grab and cache three chars before the one being inserted
+                            if (contextCache[fromA] === undefined) {
+                                contextCache[fromA] = tr.newDoc.sliceString(fromB - 3, fromB);
+                            }
+                            const context = contextCache[fromA];
+                            if (!rule.contextMatch.test(context)) {
+                                continue;
+                            }
+                            const insert = typeof rule.to === "string" ? rule.to : rule.to(this.settings);
+                            const replacementLength = rule.from.length - rule.trigger.length;
+                            const insertionPoint = fromA - replacementLength;
+                            const reversionPoint = fromB - replacementLength;
+                            registerChange({
+                                from: insertionPoint,
+                                to: insertionPoint + replacementLength,
+                                insert,
+                            }, {
+                                from: reversionPoint,
+                                to: reversionPoint + insert.length,
+                                insert: rule.from,
+                            });
+                            const selectionAdjustment = rule.from.length - insert.length;
+                            newSelection = state.EditorSelection.create(newSelection.ranges.map((r) => state.EditorSelection.range(r.anchor - selectionAdjustment, r.head - selectionAdjustment)));
+                            return;
+                        }
+                    }, false);
+                    // If we have any changes, construct a transaction spec
+                    if (changes.length) {
+                        return [
+                            {
+                                effects: storeTransaction.of({
+                                    effects: storeTransaction.of(null),
+                                    selection: tr.selection,
+                                    scrollIntoView: tr.scrollIntoView,
+                                    changes: reverts,
+                                }),
+                                selection: newSelection,
+                                scrollIntoView: tr.scrollIntoView,
+                                changes,
+                            },
+                        ];
+                    }
+                    return tr;
+                }),
+            ]);
+            // Codemirror 5
+            this.legacyLastUpdate = new WeakMap();
+            this.registerCodeMirror((cm) => {
+                cm.on("beforeChange", this.beforeChangeHandler);
             });
         });
     }
     onunload() {
-        this.lastUpdate = null;
+        this.legacyLastUpdate = null;
         this.app.workspace.iterateCodeMirrors((cm) => {
             cm.off("beforeChange", this.beforeChangeHandler);
         });
@@ -521,6 +925,17 @@ class SmartTypographySettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
+            .setName("Skip en-dash")
+            .setDesc("When enabled, two dashes will be converted to an em-dash rather than an en-dash.")
+            .addToggle((toggle) => {
+            toggle
+                .setValue(this.plugin.settings.skipEnDash)
+                .onChange((value) => __awaiter(this, void 0, void 0, function* () {
+                this.plugin.settings.skipEnDash = value;
+                yield this.plugin.saveSettings();
+            }));
+        });
+        new obsidian.Setting(containerEl)
             .setName("Ellipsis")
             .setDesc("Three periods (...) will be converted to an ellipses (…)")
             .addToggle((toggle) => {
@@ -591,50 +1006,13 @@ class SmartTypographySettingTab extends obsidian.PluginSettingTab {
             }));
         });
         new obsidian.Setting(containerEl)
-            .setName("Less than or equal to character")
-            .addText((text) => {
-            text
-                .setValue(this.plugin.settings.lessThanOrEqualTo)
+            .setName("Fractions")
+            .setDesc("1/2 will be converted to ½. Supported UTF-8 fractions: ½, ⅓, ⅔, ¼, ¾, ⅕, ⅖, ⅗, ⅘, ⅙, ⅚, ⅐, ⅛, ⅜, ⅝, ⅞, ⅑, ⅒")
+            .addToggle((toggle) => {
+            toggle
+                .setValue(this.plugin.settings.fractions)
                 .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                if (!value)
-                    return;
-                if (value.length > 1) {
-                    text.setValue(value[0]);
-                    return;
-                }
-                this.plugin.settings.lessThanOrEqualTo = value;
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(containerEl)
-            .setName("Greater than or equal to character")
-            .addText((text) => {
-            text
-                .setValue(this.plugin.settings.greaterThanOrEqualTo)
-                .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                if (!value)
-                    return;
-                if (value.length > 1) {
-                    text.setValue(value[0]);
-                    return;
-                }
-                this.plugin.settings.greaterThanOrEqualTo = value;
-                yield this.plugin.saveSettings();
-            }));
-        });
-        new obsidian.Setting(containerEl)
-            .setName("Not equal to character")
-            .addText((text) => {
-            text
-                .setValue(this.plugin.settings.notEqualTo)
-                .onChange((value) => __awaiter(this, void 0, void 0, function* () {
-                if (!value)
-                    return;
-                if (value.length > 1) {
-                    text.setValue(value[0]);
-                    return;
-                }
-                this.plugin.settings.notEqualTo = value;
+                this.plugin.settings.fractions = value;
                 yield this.plugin.saveSettings();
             }));
         });
