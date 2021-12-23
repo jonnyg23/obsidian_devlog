@@ -11,6 +11,8 @@ $ mkdir fastapi-tdd-docker && cd fastapi-tdd-docker
 $ mkdir project && cd project
 $ mkdir app
 $ python3.9 -m venv env
+# Use [[pyenv]] Obsidian steps if the above line doesn't work
+
 $ source env/bin/activate
 
 (env)$ pip install fastapi==0.65.3
@@ -164,7 +166,7 @@ Run the server. Now, at http://localhost:8000/ping, you should see:
 - With the server running, navigate to [http://localhost:8000/ping](http://localhost:8000/ping) and then refresh a few times. Back in your terminal, you should see several log messages for:
 	- `Loading config settings from the environment...` 
 
-- Essentially, `get_settings` gets called for each request. If we refactored the config so that the settings were read from a file, instead of from environment variables, it would be much too slow.
+- **Essentially, `get_settings` gets called for each request. If we refactored the config so that the settings were read from a file, instead of from environment variables, it would be much too slow.**
 
 - Let's use [lru_cache](https://docs.python.org/3/library/functools.html#functools.lru_cache) to cache the settings so `get_settings` is only called once.
 
@@ -217,7 +219,7 @@ async def pong(settings: Settings = Depends(get_settings)):
 
 ```
 fastapi==0.65.3
-uvicorn==0.14.0`
+uvicorn==0.14.0
 ```
 
 Finally, add a `.gitignore` to the project root:
@@ -292,12 +294,12 @@ COPY . .
 - We then installed the dependencies and copied over the app.
 
 > Depending on your environment, you may need to add `RUN mkdir -p /usr/src/app` just before you set the working directory:
->
-	``` bash
-	> # set working directory
-	> RUN mkdir -p /usr/src/app
-	> WORKDIR /usr/src/app
-	```
+
+```bash
+> # set working directory
+> RUN mkdir -p /usr/src/app
+> WORKDIR /usr/src/app
+```
 
 - Add a _.dockerignore_ file to the "project" directory as well:
 
@@ -343,14 +345,12 @@ services:
 - Take note of the [Docker compose file version](https://docs.docker.com/compose/compose-file/) used -- `3.8`. Keep in mind that this version does _not_ directly relate back to the version of Docker Compose installed; it simply specifies the file format that you want to use.
 
 - Build the image:
-
-`$ docker-compose build` 
+	- `$ docker-compose build` 
 
 - This will take a few minutes the first time. Subsequent builds will be much faster since Docker caches the results. If you'd like to learn more about Docker caching, review the [Order Dockerfile commands](https://mherman.org/presentations/dockercon-2018/#46) slide.
 
 - Once the build is done, fire up the container in [detached mode](https://docs.docker.com/engine/reference/run/#detached--d):
-
-`$ docker-compose up -d` 
+	- `$ docker-compose up -d` 
 
 - Navigate to [http://localhost:8004/ping](http://localhost:8004/ping). Make sure you see the same JSON response as before:
 
@@ -372,7 +372,7 @@ services:
 > You also may need to add `COMPOSE_CONVERT_WINDOWS_PATHS=1` to the `environment` portion of your Docker Compose file. Review [Declare default environment variables in file](https://docs.docker.com/compose/env-file/) for more info.
 
 - You should now have:
-	```
+	```markdown
 	- .gitignore
 	- docker-compose.yml
 	- project
@@ -413,7 +413,7 @@ ADD create.sql /docker-entrypoint-initdb.d
 
 - Next, add a new service called `web-db` to _docker-compose.yml_:
 
-```dockerfile
+```yaml
 version: '3.8'
 
 services:
@@ -535,8 +535,7 @@ $ docker-compose up -d --build
 ```
 
 - Once done, check the logs for the `web` service:
-
-`$ docker-compose logs web` 
+	- `$ docker-compose logs web` 
 
 - You should see:
 
@@ -554,8 +553,7 @@ web_1     | INFO:     Application startup complete.
 > Depending on your environment, you may need to [chmod 755 or 777 instead of +x](https://github.com/testdrivenio/testdriven-app-2.3/issues/17#issuecomment-405422949). If you still get a "permission denied", review the [docker entrypoint running bash script gets "permission denied"](https://stackoverflow.com/questions/38882654/docker-entrypoint-running-bash-script-gets-permission-denied) Stack Overflow question.
 
 - Want to access the database via psql?
-
-`$ docker-compose exec web-db psql -U postgres` 
+	- `$ docker-compose exec web-db psql -U postgres` 
 
 - Then, you can connect to the database:
 
@@ -572,7 +570,7 @@ postgres=# \q
 - Add the dependency to the _requirements.txt_ file:
 	- `tortoise-orm==0.17.4` 
 
-- Next, create a new folder called "models" within "project/app". Add two files to "models": ___init__.py_ and _tortoise.py_.
+- Next, create a new folder called "models" within "project/app". Add two files to "models": `___init__.py` and `tortoise.py`.
 
 - In _tortoise.py_, add:
 
@@ -680,6 +678,8 @@ web_dev=# \q
 ```
 
 
+> ✏️ Note: **I was unable to get the above `\dt` command to yield the same results & the localhost URL also does not work at this point, however, It should after following the migrations steps below.**
+
 ### Migrations
 
 - Tortoise supports [[Database Migrations]](https://tortoise-orm.readthedocs.io/en/latest/migration.html) via [[Aerich]](https://github.com/tortoise/aerich). Let's take a few steps back and configure it.
@@ -745,16 +745,37 @@ TORTOISE_ORM = {
 
 - Now we're ready to start using Aerich.
 
+---
+
+- I have updated this section of the tutorial where the versions I am using of the dependecies at this point (*as of 12-23-2021*) are:
+	- fastapi==0.65.3
+	- uvicorn==0.16.0
+	- asyncpg==0.25.0
+	- tortoise-orm==0.17.8
+	- aerich==0.6.1
+
+> ❗Breaking changes! the line below does not work with aerich v0.6.1 as the config file has changed to using [[TOML]] (Tom's Obvious Minimal Language) and the config file is renamed to `pyproject.toml`. *Version 0.6.1 of Aerich is not yet compatible with tortoise-orm v0.18.0 so I used 0.17.8 instead!* 
 - Init:
 	- `$ docker-compose exec web aerich init -t app.db.TORTOISE_ORM` 
 
 - This will create a config file called _project/aerich.ini_:
 
-```mardown
+```ini
 [aerich]
 tortoise_orm = app.db.TORTOISE_ORM
 location = ./migrations
 ```
+> ✏️ Note: If using aerich v0.6.1+, then the config file will not be a `.ini` but a `.toml` file with the following shown below.
+
+```toml
+# The contents of the `pyproject.toml` export will look like this
+[tool.aerich]
+tortoise_orm = "app.db.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+```
+
+---
 
 - Create the first migration:
 
@@ -805,7 +826,7 @@ web_dev=# \dt
 web_dev=# \q
 ```
 
-- Be sure to review the [documentation](https://tortoise-orm.readthedocs.io/en/latest/migration.html) to learn more about the available commands. Take note of the `downgrade`, `history`, and `upgrade` commands.
+- **Be sure to review the [documentation](https://tortoise-orm.readthedocs.io/en/latest/migration.html) to learn more about the available commands. Take note of the `downgrade`, `history`, and `upgrade` commands.**
 
 ## Pytest Setup
 
@@ -887,6 +908,7 @@ def test_app():
 
 - Then, add pytest and Requests to the requirements file:
 
+>✏️ Note: In this section I used **pytest==6.2.5** & **requests==2.26.0**
 ```txt
 pytest==6.2.4
 requests==2.25.1
