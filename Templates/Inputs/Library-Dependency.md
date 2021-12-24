@@ -1,7 +1,7 @@
 ---
 tags: 💽
 aliases: 
-	-
+  - <%tp.file.title%>
 cssclass:
 ---
 

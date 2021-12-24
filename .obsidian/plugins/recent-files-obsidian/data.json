@@ -5,6 +5,18 @@
       "path": "Test-Driven Development with FastAPI and Docker.md"
     },
     {
+      "basename": "Podia",
+      "path": "Podia.md"
+    },
+    {
+      "basename": "Library-Dependency",
+      "path": "Templates/Inputs/Library-Dependency.md"
+    },
+    {
+      "basename": "GoJonnyGo TODO",
+      "path": "GoJonnyGo TODO.md"
+    },
+    {
       "basename": "pyenv",
       "path": "pyenv.md"
     },
@@ -39,10 +51,6 @@
     {
       "basename": "Coding Workflow",
       "path": "Coding Workflow.md"
-    },
-    {
-      "basename": "GoJonnyGo TODO",
-      "path": "GoJonnyGo TODO.md"
     },
     {
       "basename": "2021_09_27",
@@ -87,10 +95,6 @@
     {
       "basename": "Coding Tag Taxonomy",
       "path": "Coding Tag Taxonomy.md"
-    },
-    {
-      "basename": "Library-Dependency",
-      "path": "Templates/Inputs/Library-Dependency.md"
     },
     {
       "basename": "meta",
@@ -195,10 +199,6 @@
     {
       "basename": "separator",
       "path": "Templates/Quick Adds/separator.md"
-    },
-    {
-      "basename": "{ The Pentagram, Freemasonry, and the Goat",
-      "path": "{ The Pentagram, Freemasonry, and the Goat.md"
     }
   ],
   "omittedPaths": [],
