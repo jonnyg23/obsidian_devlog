@@ -1,6 +1,70 @@
 {
   "recentFiles": [
     {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
+      "basename": "! 2021-12-18 Web Hosting & GraphQL",
+      "path": "! 2021-12-18 Web Hosting & GraphQL.md"
+    },
+    {
+      "basename": "2021_08_18",
+      "path": "2021_08_18.md"
+    },
+    {
+      "basename": "github_packages",
+      "path": "Images/github_packages.png"
+    },
+    {
+      "basename": "gunicorn",
+      "path": "gunicorn.md"
+    },
+    {
+      "basename": "Data Structures & Algorithms",
+      "path": "Data Structures & Algorithms.md"
+    },
+    {
+      "basename": "swagger-ui-error",
+      "path": "Images/swagger-ui-error.png"
+    },
+    {
+      "basename": "github-secrets",
+      "path": "Images/github-secrets.png"
+    },
+    {
+      "basename": "github_personal_access_token",
+      "path": "Images/github_personal_access_token.png"
+    },
+    {
+      "basename": "Python",
+      "path": "Python.md"
+    },
+    {
+      "basename": "Yup",
+      "path": "Yup.md"
+    },
+    {
+      "basename": "SEO",
+      "path": "SEO.md"
+    },
+    {
+      "basename": "Stripe",
+      "path": "Stripe.md"
+    },
+    {
+      "basename": "2021_08_19",
+      "path": "2021_08_19.md"
+    },
+    {
+      "basename": "INDEX",
+      "path": "INDEX.md"
+    },
+    {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
     },
@@ -13,32 +77,12 @@
       "path": "Templates/Inputs/Library-Dependency.md"
     },
     {
-      "basename": "GoJonnyGo TODO",
-      "path": "GoJonnyGo TODO.md"
-    },
-    {
       "basename": "pyenv",
       "path": "pyenv.md"
     },
     {
-      "basename": "MegSewsThings TODO",
-      "path": "MegSewsThings TODO.md"
-    },
-    {
       "basename": "Nextjs",
       "path": "Nextjs.md"
-    },
-    {
-      "basename": "TODO Lists & Kanban Work Boards",
-      "path": "TODO Lists & Kanban Work Boards.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
-    },
-    {
-      "basename": "! 2021-12-18 Web Hosting & GraphQL",
-      "path": "! 2021-12-18 Web Hosting & GraphQL.md"
     },
     {
       "basename": "Article",
@@ -55,10 +99,6 @@
     {
       "basename": "2021_09_27",
       "path": "2021_09_27.md"
-    },
-    {
-      "basename": "Stripe",
-      "path": "Stripe.md"
     },
     {
       "basename": "2021_08_31",
@@ -81,32 +121,12 @@
       "path": "2021_08_20.md"
     },
     {
-      "basename": "2021_08_19",
-      "path": "2021_08_19.md"
-    },
-    {
-      "basename": "2021_08_18",
-      "path": "2021_08_18.md"
-    },
-    {
-      "basename": "INDEX",
-      "path": "INDEX.md"
-    },
-    {
       "basename": "Coding Tag Taxonomy",
       "path": "Coding Tag Taxonomy.md"
     },
     {
       "basename": "meta",
       "path": "Templates/meta.md"
-    },
-    {
-      "basename": "SEO",
-      "path": "SEO.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Python.md"
     },
     {
       "basename": "Programming Languages",
@@ -117,36 +137,12 @@
       "path": "Material-ui.md"
     },
     {
-      "basename": "gunicorn",
-      "path": "gunicorn.md"
-    },
-    {
       "basename": "Framer Motion",
       "path": "Framer Motion.md"
     },
     {
       "basename": "Formik",
       "path": "Formik.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker.md"
-    },
-    {
-      "basename": "Data Structures & Algorithms",
-      "path": "Data Structures & Algorithms.md"
-    },
-    {
-      "basename": "AlgoExpert",
-      "path": "AlgoExpert.md"
-    },
-    {
-      "basename": "Yup",
-      "path": "Yup.md"
-    },
-    {
-      "basename": "git",
-      "path": "git.md"
     },
     {
       "basename": "Language",
@@ -183,22 +179,6 @@
     {
       "basename": "Video",
       "path": "Templates/Inputs/Video.md"
-    },
-    {
-      "basename": "b tag",
-      "path": "Templates/Quick Adds/b tag.md"
-    },
-    {
-      "basename": "break tab",
-      "path": "Templates/Quick Adds/break tab.md"
-    },
-    {
-      "basename": "sup",
-      "path": "Templates/Quick Adds/sup.md"
-    },
-    {
-      "basename": "separator",
-      "path": "Templates/Quick Adds/separator.md"
     }
   ],
   "omittedPaths": [],
