@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Test-Driven Development with FastAPI and Docker",
+      "path": "Test-Driven Development with FastAPI and Docker.md"
+    },
+    {
       "basename": "Docker",
       "path": "Docker.md"
     },
@@ -63,10 +67,6 @@
     {
       "basename": "INDEX",
       "path": "INDEX.md"
-    },
-    {
-      "basename": "Test-Driven Development with FastAPI and Docker",
-      "path": "Test-Driven Development with FastAPI and Docker.md"
     },
     {
       "basename": "Podia",
