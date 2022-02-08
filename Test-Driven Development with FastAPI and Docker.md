@@ -499,7 +499,7 @@ ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
 
 - Add asyncpg to _project/requirements.txt_:
 
-`asyncpg==0.23.0` 
+`asyncpg==0.23.0` or whatever version is newer that doesn't cause errors.
 
 - Next, update _config.py_ to read the `DATABASE_URL` and assign the value to `database_url`:
 
@@ -570,7 +570,7 @@ postgres=# \q
 - Add the dependency to the _requirements.txt_ file:
 	- `tortoise-orm==0.17.4` 
 
-- Next, create a new folder called "models" within "project/app". Add two files to "models": `___init__.py` and `tortoise.py`.
+- Next, create a new folder called "models" within "project/app". Add two files to "models": `__init__.py` and `tortoise.py`.
 
 - In _tortoise.py_, add:
 
@@ -678,7 +678,7 @@ web_dev=# \q
 ```
 
 
-> ✏️ Note: **I was unable to get the above `\dt` command to yield the same results & the localhost URL also does not work at this point, however, It should after following the migrations steps below.**
+> ✏️ Note: **I was unable to get the above `\dt` command to yield the same results & the localhost URL also does not work at this point, however, It should after following the migrations steps below.** Edit: It worked for me on 2/3/2022 despite the previous note.
 
 ### Migrations
 
@@ -748,11 +748,11 @@ TORTOISE_ORM = {
 ---
 
 - I have updated this section of the tutorial where the versions I am using of the dependecies at this point (*as of 12-23-2021*) are:
-	- fastapi==0.65.3
-	- uvicorn==0.16.0
-	- asyncpg==0.25.0
-	- tortoise-orm==0.17.8
-	- aerich==0.6.1
+	- `fastapi==0.65.3`
+	- `uvicorn==0.16.0`
+	- `asyncpg==0.25.0`
+	- `tortoise-orm==0.17.8`
+	- `aerich==0.6.1`
 
 > ❗Breaking changes! the line below does not work with aerich v0.6.1 as the config file has changed to using [[TOML]] (Tom's Obvious Minimal Language) and the config file is renamed to `pyproject.toml`. *Version 0.6.1 of Aerich is not yet compatible with tortoise-orm v0.18.0 so I used 0.17.8 instead!* 
 - Init:
@@ -834,9 +834,9 @@ web_dev=# \q
 
 - Add a "tests" directory to the "project" directory, and then create the following files inside the newly created directory:
 
-1.  ___init__.py_
-2.  _conftest.py_
-3.  _test_ping.py_
+1.  `__init__.py`
+2.  `conftest.py`
+3.  `test_ping.py`
 
 - By default, pytest will auto-discover test files that start or end with `test` -- e.g., `test_*.py` or `*_test.py`. Test functions must begin with `test_`, and if you want to use classes they must also begin with `Test`.
 
@@ -908,7 +908,7 @@ def test_app():
 
 - Then, add pytest and Requests to the requirements file:
 
->✏️ Note: In this section I used **pytest==6.2.5** & **requests==2.26.0**
+>✏️ Note: In this section I used `pytest==6.2.5` & `requests==2.26.0`
 ```txt
 pytest==6.2.4
 requests==2.25.1
@@ -978,7 +978,7 @@ tests/test_ping.py .                                                        [100
 | --------- | ------------------------------------------------- | ------------------------------------ |
 | Given     | the state of the application before the test runs | setup code, fixtures, database state |
 | When      | the behavior/logic being tested                   | code under test                      |
-| Then      | the expected changes based on the behavior        | asserts                              | 
+| Then      | the expected changes based on the behavior        | asserts                              |
 
 Example:
 
@@ -1003,7 +1003,7 @@ With tests in place, let's refactor the app, adding in FastAPI's `APIRouter`, a 
 
 ### APIRouter
 
-- First, add a new folder called "api" to the "app" folder. Add an ___init__.py_ file to the newly created folder.
+- First, add a new folder called "api" to the "app" folder. Add an `__init__.py` file to the newly created folder.
 
 - Now we can move the `/ping` route to a new file called _project/app/api/ping.py_:
 
@@ -1303,7 +1303,7 @@ web_dev=# \dt
 web_dev=# \q
 ```
 
-- Finally, since we do want to use Aerich in dev to manage the database schema, bring the containers and volumes down again:
+- **Finally, since we do want to use Aerich in dev to manage the database schema, bring the containers and volumes down again:**
 	- `$ docker-compose down -v` 
 
 - bring the containers back up:
@@ -1663,7 +1663,7 @@ def test_read_summary(test_app_with_db):
     assert response_dict["created_at"]
 ```
 
-- Ensure the test fails:
+- Ensure the test fails with `docker-compose exec web python -m pytest`:
 
 ```
 >       assert response.status_code == 200
@@ -1671,7 +1671,7 @@ E       assert 404 == 200
 E        +  where 404 = <Response [404]>.status_code
 ```
 
-- Add the following handler:
+- Add the following handler to `summaries.py`:
 
 ```python
 @router.get("/{id}/", response_model=SummarySchema)
@@ -1689,7 +1689,7 @@ async def read_summary(id: int) -> SummarySchema:
 async def get(id: int) -> Union[dict, None]:
     summary = await TextSummary.filter(id=id).first().values()
     if summary:
-        return summary[0]
+        return summary
     return None
 ```
 
@@ -1917,7 +1917,7 @@ $ docker-compose exec web python -m pytest --durations=2
 
 ```dockerfile
 # pull official base image
-FROM python:3.8.11-slim-buster
+FROM python:3.8.12-slim-buster
 
 # create directory for the app user
 RUN mkdir -p /home/app
@@ -1963,7 +1963,7 @@ CMD gunicorn --bind 0.0.0.0:$PORT app.main:app -k uvicorn.workers.UvicornWorker
 
 - What's different here from the original _Dockerfile_?
 
-- First, we started with a Python 3.8.11 image rather than 3.9.6 since [uvloop](https://github.com/MagicStack/uvloop), which `uvicorn.workers.UvicornWorker` uses, [does not support Python 3.9 yet](https://github.com/MagicStack/uvloop/issues/365).
+- First, we started with a Python 3.8.12 image rather than 3.9.6 since [uvloop](https://github.com/MagicStack/uvloop), which `uvicorn.workers.UvicornWorker` uses, [does not support Python 3.9 yet](https://github.com/MagicStack/uvloop/issues/365).
 
 - Next, we added a `CMD` to run Gunicorn (with a [uvicorn worker class](https://www.uvicorn.org/#running-with-gunicorn)) and configured two new environment variables:
 
@@ -2151,7 +2151,9 @@ TOTAL                      103     13      6      1    87%
 
 ### [[Code Quality]]
 
-- [[Linting]](https://stackoverflow.com/a/8503586/1799408) is the process of checking your code for stylistic or programming errors. Although there are a [number](https://github.com/vintasoftware/python-linters-and-code-analysis) of commonly used linters for Python, we'll use [[Flake8]](https://gitlab.com/pycqa/flake8) since it combines two other popular linters -- [pep8](https://pypi.python.org/pypi/pep8) and [pyflakes](https://pypi.python.org/pypi/pyflakes).
+- [Linting](https://stackoverflow.com/a/8503586/1799408) is the process of checking your code for stylistic or programming errors. Although there are a [number](https://github.com/vintasoftware/python-linters-and-code-analysis) of commonly used linters for Python, we'll use [Flake8](https://gitlab.com/pycqa/flake8) since it combines two other popular linters -- [pep8](https://pypi.python.org/pypi/pep8) and [pyflakes](https://pypi.python.org/pypi/pyflakes).
+	- [[Linting]]
+	- [[Flake8]]
 
 - Add Flake8 to the _requirements.txt_ file:
 	- `flake8==3.9.2` 
@@ -2175,15 +2177,15 @@ Were any errors found?
 
 **Correct any issues before moving on.**
 
-- Next, let's add [[Black]](https://black.readthedocs.io/), which is used for formatting your code so that "code looks the same regardless of the project you're reading". This helps to speed up code reviews. "Formatting becomes transparent after a while and you can focus on the content instead."
+- Next, let's add [Black](https://black.readthedocs.io/), which is used for formatting your code so that "code looks the same regardless of the project you're reading". This helps to speed up code reviews. "Formatting becomes transparent after a while and you can focus on the content instead."
+	- [[Black]]
 
 - Add the dependency to the requirements file:
 	- `black==21.6b0` 
 
-- Update the containers, and then run Black:
+- Update the containers with `docker-compose up -d --build`, and then run Black with the following:
 
 ```bash
-$ docker-compose up -d --build
 $ docker-compose exec web black . --check
 ```
 
@@ -2264,7 +2266,7 @@ Next, we'll add continuous integration (CI), via [GitHub Actions](https://github
 $ docker build -f project/Dockerfile.prod -t docker.pkg.github.com/<USERNAME>/<REPOSITORY_NAME>/summarizer:latest ./project
 
 # example:
-# docker build -f project/Dockerfile -t docker.pkg.github.com/testdrivenio/fastapi-tdd-docker/summarizer:latest ./project
+# docker build -f project/Dockerfile -t docker.pkg.github.com/jonnyg23/fastapi-tdd-docker/summarizer:latest ./project
 ```
 
 - Next, using your personal access token, [authenticate](https://help.github.com/en/packages/using-github-packages-with-your-projects-ecosystem/configuring-docker-for-use-with-github-packages#authenticating-to-github-packages) to GitHub Packages with Docker:
@@ -2273,7 +2275,7 @@ $ docker build -f project/Dockerfile.prod -t docker.pkg.github.com/<USERNAME>/<R
 $ docker login docker.pkg.github.com -u <USERNAME> -p <TOKEN>
 
 # example:
-# docker login docker.pkg.github.com -u testdrivenio -p 3f18407a02445cb1837d0851f21a9757eccfdc8a
+# docker login docker.pkg.github.com -u jonnyg23 -p 3f18407a02445cb1837d0851f21a9757eccfdc8a
 ```
 
 - Push the image to the Docker registry on GitHub Packages:
@@ -2310,8 +2312,10 @@ jobs:
     name: Build Docker Image
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2.3.4
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          ref: main
       - name: Log in to GitHub Packages
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
@@ -2335,8 +2339,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Checkout master
-        uses: actions/checkout@v2.3.4
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+        with:
+          ref: main
       - name: Log in to GitHub Packages
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
@@ -2358,6 +2364,7 @@ jobs:
             --name fastapi-tdd \
             -e PORT=8765 \
             -e ENVIRONMENT=dev \
+            -e DATABASE_URL=sqlite://sqlite.db \
             -e DATABASE_TEST_URL=sqlite://sqlite.db \
             -p 5003:8765 \
             ${{ env.IMAGE }}:latest
@@ -2387,10 +2394,8 @@ jobs:
 
 - Once done, add a _README.md_ file to the project root, adding the GitHub status badge:
 
-```
-# Test-Driven Development with FastAPI and Docker
-
-![Continuous Integration and Delivery](https://github.com/YOUR_GITHUB_NAMESPACE/fastapi-tdd-docker/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+```markdown
+![Continuouse Integration and Delivery](https://github.com/jonnyg23/meg-sews-things-co/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=main)
 ```
 
 > Be sure to replace `YOUR_GITHUB_NAMESPACE` with your actual GitHub username or organization.
