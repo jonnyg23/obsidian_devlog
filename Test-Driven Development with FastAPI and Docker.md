@@ -2315,7 +2315,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
         with:
-          ref: main
+          ref: master
       - name: Log in to GitHub Packages
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
@@ -2342,7 +2342,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
         with:
-          ref: main
+          ref: master
       - name: Log in to GitHub Packages
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
@@ -2417,7 +2417,7 @@ jobs:
 
 - Next, add a new `deploy` job to the GitHub config file inside of `jobs` in line vertically with `build`:
 
-```
+```yaml
 deploy:
   name: Deploy to Heroku
   runs-on: ubuntu-latest
@@ -2426,8 +2426,10 @@ deploy:
     HEROKU_APP_NAME: <APP_NAME>
     HEROKU_REGISTRY_IMAGE: registry.heroku.com/${HEROKU_APP_NAME}/summarizer
   steps:
-    - name: Checkout master
-      uses: actions/checkout@v2.3.4
+    - name: Checkout
+      uses: actions/checkout@v2.4.0
+      with:
+        ref: master
     - name: Log in to GitHub Packages
       run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
       env:
