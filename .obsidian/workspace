@@ -10,8 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Test-Driven Development with FastAPI and Docker.md",
-            "mode": "source",
-            "source": false
+            "mode": "preview"
           }
         }
       }

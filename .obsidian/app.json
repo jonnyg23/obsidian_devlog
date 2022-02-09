@@ -94,6 +94,6 @@
     "microservices"
   ],
   "showLineNumber": false,
-  "legacyEditor": false,
+  "legacyEditor": true,
   "livePreview": true
 }
