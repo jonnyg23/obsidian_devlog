@@ -2460,7 +2460,7 @@ deploy:
         ./release.sh
 ```
 
-> Make sure to replace `<APP_NAME>` with your Heroku app's actual name.
+> Make sure to replace `<APP_NAME>` with your Heroku app's actual name. As well as the file path under *docker build* and `release.sh` so it points to the files specified. For example: I had all of the backend in a folder titled "backend" so I had to use this path `./backend/project/Dockerfile.prod`. Do this for the `"./project"` section as well. When using this tutorial/course, the section called `ref`  said `main`, however, I had to change this to `master` since that was the branch I was using.
 
 - Add _release.sh_ to the project root:
 
