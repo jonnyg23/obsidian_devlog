@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Test-Driven Development with FastAPI and Docker.md",
+            "file": "Yoast SEO for Everyone.md",
             "mode": "source"
           }
         }
@@ -94,7 +94,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md"
+                "file": "Yoast SEO for Everyone.md"
               }
             }
           },
@@ -104,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "Yoast SEO for Everyone.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "Yoast SEO for Everyone.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Test-Driven Development with FastAPI and Docker.md",
+                "file": "Yoast SEO for Everyone.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -197,15 +197,15 @@
   },
   "active": "3c6de4da52bd2b33",
   "lastOpenFiles": [
+    "Yoast SEO for Everyone.md",
+    "Personal/GoJonnyGo TODO.md",
+    "git.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "Docker.md",
-    "git.md",
     "! 2021-12-18 Web Hosting & GraphQL.md",
     "2021_08_18.md",
     "Images/github_packages.png",
     "gunicorn.md",
-    "Data Structures & Algorithms.md",
-    "Personal/AlgoExpert.md",
-    "Images/swagger-ui-error.png"
+    "Data Structures & Algorithms.md"
   ]
 }
