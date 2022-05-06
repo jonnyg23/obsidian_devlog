@@ -77,14 +77,7 @@
     }
   ],
   "app:go-back": [],
-  "app:go-forward": [
-    {
-      "modifiers": [
-        "Shift"
-      ],
-      "key": "ArrowRight"
-    }
-  ],
+  "app:go-forward": [],
   "editor:unfold-all": [
     {
       "modifiers": [
@@ -174,5 +167,10 @@
       ],
       "key": "U"
     }
-  ]
+  ],
+  "note-refactor-obsidian:app:extract-selection-first-line": [],
+  "obsidian-outliner:fold": [],
+  "obsidian-outliner:unfold": [],
+  "obsidian-excalidraw-plugin:insert-link-to-element": [],
+  "obsidian-citation-plugin:insert-citation": []
 }

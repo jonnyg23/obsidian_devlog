@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "Vuetify",
+      "path": "Vuetify.md"
+    },
+    {
+      "basename": "Coding Workflow",
+      "path": "Coding Workflow.md"
+    },
+    {
+      "basename": "KTS TODO",
+      "path": "KTS TODO.md"
+    },
+    {
+      "basename": "TODO Lists & Kanban Work Boards",
+      "path": "TODO Lists & Kanban Work Boards.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
       "basename": "Yoast SEO for Everyone",
       "path": "Yoast SEO for Everyone.md"
     },
@@ -101,10 +121,6 @@
       "path": "Templates/Inputs/Learning-Journal.md"
     },
     {
-      "basename": "Coding Workflow",
-      "path": "Coding Workflow.md"
-    },
-    {
       "basename": "2021_09_27",
       "path": "2021_09_27.md"
     },
@@ -183,10 +199,6 @@
     {
       "basename": "Podcast",
       "path": "Templates/Inputs/Podcast.md"
-    },
-    {
-      "basename": "Video",
-      "path": "Templates/Inputs/Video.md"
     }
   ],
   "omittedPaths": [],

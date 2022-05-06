@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Yoast SEO for Everyone.md",
-            "mode": "source"
+            "file": "Vuetify.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -47,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "checkout",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,20 +82,12 @@
         "dimension": 73.14172447968286,
         "children": [
           {
-            "id": "9120bd1d968e42f1",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
             "id": "597be3f49efc3f4c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Yoast SEO for Everyone.md"
+                "file": "Vuetify.md"
               }
             }
           },
@@ -104,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Yoast SEO for Everyone.md",
+                "file": "Vuetify.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Yoast SEO for Everyone.md",
+                "file": "Vuetify.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Yoast SEO for Everyone.md",
+                "file": "Vuetify.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -170,8 +163,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "109b48d01d39b7e5",
@@ -193,19 +185,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310
+    "width": 201.5
   },
   "active": "3c6de4da52bd2b33",
   "lastOpenFiles": [
+    "Vuetify.md",
+    "Coding Workflow.md",
+    "KTS TODO.md",
+    "TODO Lists & Kanban Work Boards.md",
+    "KTS TODO 1.md",
+    "KTS TODO.md",
+    "TODO.md",
     "Yoast SEO for Everyone.md",
     "Personal/GoJonnyGo TODO.md",
-    "git.md",
-    "Test-Driven Development with FastAPI and Docker.md",
-    "Docker.md",
-    "! 2021-12-18 Web Hosting & GraphQL.md",
-    "2021_08_18.md",
-    "Images/github_packages.png",
-    "gunicorn.md",
-    "Data Structures & Algorithms.md"
+    "git.md"
   ]
 }
