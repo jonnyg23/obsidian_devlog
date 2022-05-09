@@ -6,18 +6,20 @@ kanban-plugin: basic
 
 ## TODO 💭
 
-- [ ] Added Hamburger Menu with Reallocated Buttons.
+- [ ] Add Hamburger Menu with Reallocated Buttons.
 - [ ] 1. Need to Check on how to add the :loading prop to each list item once clicked.
-- [ ] 2. Need to make dialog box appear when clicking "Show Usages" and perform the logic on the intersection of current part being observed with towers it is being used in. Make "Delete" or "Show Usages" disabled depending on computed results. We may have to perform this logic in the "computed" section of the vue file.
+- [ ] 2. Add "Show Usages" Button with a badge that shows how many references to towers the current turbine, design basis, inventory, materials, & bolts has with towers.
+- [ ] 3. Add the meta-data feature that is within the "Delete" request in main.py to the "Get" request section. This will be used to perform Step 2 above by getting references for each tower using the object.
 
 
 ## DOING ⚙️
 
-- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component.
 
 
 ## IN REVIEW 🔍
 
+- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component.
+- [ ] Added Website Shortcut Icon
 
 
 ## REPORT 📎

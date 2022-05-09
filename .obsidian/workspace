@@ -160,6 +160,14 @@
               "type": "todo",
               "state": {}
             }
+          },
+          {
+            "id": "d2e5272b729bf545",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
         ]
       },
