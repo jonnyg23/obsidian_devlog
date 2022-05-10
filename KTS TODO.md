@@ -14,17 +14,19 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
+- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component. **Reviewed: Update LibrarySelect so we don't need turbine-select. Also add a mixin for the routeTo. Call this mixin "routeToLibrary". Then remove routeTo from methods & chips.**
 
 
 ## IN REVIEW 🔍
 
-- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component.
-- [ ] Added Website Shortcut Icon
 
 
 ## REPORT 📎
 
 - [ ] Working on creating links for each tower attribute for shortcuts to where they are defined.
+- [ ] Added Website Shortcut Icon
+- [ ] Fixed local docker setup & was able to run it. The fix was **running the makefile commands in a git bash terminal window rather than a powershell window** Also, Gage helped me authenticate into the towerdesign library.
+- [ ] Learned git rebasing to keep my local master and feature branches up to date with remote master.
 
 
 ***

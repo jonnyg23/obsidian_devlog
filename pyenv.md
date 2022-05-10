@@ -1,6 +1,7 @@
 # Pyenv
 
 > **pyenv** is used in the workflow for managing python environments:
+> **Used mainly with macOS & NOT WINDOWS.** Use [[virtualenv]] instead for Windows OS.
 
 ## Installing new python versions in pyenv
 
