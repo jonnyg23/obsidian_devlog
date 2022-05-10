@@ -1,8 +1,24 @@
 {
   "recentFiles": [
     {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
+    },
+    {
+      "basename": "Test-Driven Development with FastAPI and Docker",
+      "path": "Test-Driven Development with FastAPI and Docker.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
     },
     {
       "basename": "Vuetify",
@@ -27,18 +43,6 @@
     {
       "basename": "GoJonnyGo TODO",
       "path": "Personal/GoJonnyGo TODO.md"
-    },
-    {
-      "basename": "git",
-      "path": "git.md"
-    },
-    {
-      "basename": "Test-Driven Development with FastAPI and Docker",
-      "path": "Test-Driven Development with FastAPI and Docker.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker.md"
     },
     {
       "basename": "! 2021-12-18 Web Hosting & GraphQL",
@@ -103,10 +107,6 @@
     {
       "basename": "Library-Dependency",
       "path": "Templates/Inputs/Library-Dependency.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "Nextjs",
