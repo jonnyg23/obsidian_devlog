@@ -1,8 +1,8 @@
 {
   "recentFiles": [
     {
-      "basename": "git",
-      "path": "git.md"
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
     },
     {
       "basename": "KTS TODO",
@@ -11,6 +11,10 @@
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
+    },
+    {
+      "basename": "git",
+      "path": "git.md"
     },
     {
       "basename": "Docker",
@@ -195,10 +199,6 @@
     {
       "basename": "Person",
       "path": "Templates/Inputs/Person.md"
-    },
-    {
-      "basename": "Podcast",
-      "path": "Templates/Inputs/Podcast.md"
     }
   ],
   "omittedPaths": [],
