@@ -1,24 +1,52 @@
 {
   "recentFiles": [
     {
-      "basename": "Yoast SEO for Everyone",
-      "path": "Yoast SEO for Everyone.md"
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
     },
     {
-      "basename": "GoJonnyGo TODO",
-      "path": "Personal/GoJonnyGo TODO.md"
-    },
-    {
-      "basename": "git",
-      "path": "git.md"
+      "basename": "KTS TODO",
+      "path": "KTS TODO.md"
     },
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
     },
     {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
       "basename": "Docker",
       "path": "Docker.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
+      "basename": "Vuetify",
+      "path": "Vuetify.md"
+    },
+    {
+      "basename": "Coding Workflow",
+      "path": "Coding Workflow.md"
+    },
+    {
+      "basename": "TODO Lists & Kanban Work Boards",
+      "path": "TODO Lists & Kanban Work Boards.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "Yoast SEO for Everyone",
+      "path": "Yoast SEO for Everyone.md"
+    },
+    {
+      "basename": "GoJonnyGo TODO",
+      "path": "Personal/GoJonnyGo TODO.md"
     },
     {
       "basename": "! 2021-12-18 Web Hosting & GraphQL",
@@ -85,10 +113,6 @@
       "path": "Templates/Inputs/Library-Dependency.md"
     },
     {
-      "basename": "pyenv",
-      "path": "pyenv.md"
-    },
-    {
       "basename": "Nextjs",
       "path": "Nextjs.md"
     },
@@ -99,10 +123,6 @@
     {
       "basename": "Learning-Journal",
       "path": "Templates/Inputs/Learning-Journal.md"
-    },
-    {
-      "basename": "Coding Workflow",
-      "path": "Coding Workflow.md"
     },
     {
       "basename": "2021_09_27",
@@ -179,14 +199,6 @@
     {
       "basename": "Person",
       "path": "Templates/Inputs/Person.md"
-    },
-    {
-      "basename": "Podcast",
-      "path": "Templates/Inputs/Podcast.md"
-    },
-    {
-      "basename": "Video",
-      "path": "Templates/Inputs/Video.md"
     }
   ],
   "omittedPaths": [],
