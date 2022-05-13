@@ -7,11 +7,9 @@
         "id": "7747d6c8bb58e06e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "virtualenv.md",
-            "mode": "source",
-            "source": false
+            "file": "KTS TODO.md"
           }
         }
       }
@@ -66,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -87,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "virtualenv.md"
+                "file": "KTS TODO.md"
               }
             }
           },
@@ -97,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "virtualenv.md",
+                "file": "KTS TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "virtualenv.md",
+                "file": "KTS TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "virtualenv.md",
+                "file": "KTS TODO.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -198,8 +196,8 @@
   },
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
-    "virtualenv.md",
     "KTS TODO.md",
+    "virtualenv.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "git.md",
     "Docker.md",

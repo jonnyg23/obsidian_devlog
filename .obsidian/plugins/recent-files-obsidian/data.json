@@ -1,12 +1,12 @@
 {
   "recentFiles": [
     {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
-    },
-    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
     },
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
