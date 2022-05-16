@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Remap Windows Shortcuts to Mac Equivalents",
+      "path": "Remap Windows Shortcuts to Mac Equivalents.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Paper",
       "path": "Templates/Inputs/Paper.md"
-    },
-    {
-      "basename": "Person",
-      "path": "Templates/Inputs/Person.md"
     }
   ],
   "omittedPaths": [],
