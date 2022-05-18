@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Remap Windows Shortcuts to Mac Equivalents.md",
+            "file": "Acadia - Hazard Communication.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 220
+    "width": 100
   },
   "right": {
     "id": "202de2eaf0ff0f11",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Remap Windows Shortcuts to Mac Equivalents.md"
+                "file": "Acadia - Hazard Communication.md"
               }
             }
           },
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Remap Windows Shortcuts to Mac Equivalents.md",
+                "file": "Acadia - Hazard Communication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Remap Windows Shortcuts to Mac Equivalents.md",
+                "file": "Acadia - Hazard Communication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Remap Windows Shortcuts to Mac Equivalents.md",
+                "file": "Acadia - Hazard Communication.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -198,15 +198,15 @@
   },
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
-    "Remap Windows Shortcuts to Mac Equivalents.md",
+    "Acadia - Hazard Communication.md",
+    "Acadia Quizzes.md",
     "KTS TODO.md",
+    "Remap Windows Shortcuts to Mac Equivalents.md",
     "virtualenv.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "git.md",
     "Docker.md",
     "pyenv.md",
-    "Vuetify.md",
-    "Coding Workflow.md",
-    "TODO Lists & Kanban Work Boards.md"
+    "Vuetify.md"
   ]
 }

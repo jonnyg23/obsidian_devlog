@@ -1,12 +1,20 @@
 {
   "recentFiles": [
     {
-      "basename": "Remap Windows Shortcuts to Mac Equivalents",
-      "path": "Remap Windows Shortcuts to Mac Equivalents.md"
+      "basename": "Acadia - Hazard Communication",
+      "path": "Acadia - Hazard Communication.md"
+    },
+    {
+      "basename": "Acadia Quizzes",
+      "path": "Acadia Quizzes.md"
     },
     {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
+    },
+    {
+      "basename": "Remap Windows Shortcuts to Mac Equivalents",
+      "path": "Remap Windows Shortcuts to Mac Equivalents.md"
     },
     {
       "basename": "virtualenv",
@@ -191,14 +199,6 @@
     {
       "basename": "MOC",
       "path": "Templates/Inputs/MOC.md"
-    },
-    {
-      "basename": "test",
-      "path": "Templates/test.md"
-    },
-    {
-      "basename": "Paper",
-      "path": "Templates/Inputs/Paper.md"
     }
   ],
   "omittedPaths": [],
