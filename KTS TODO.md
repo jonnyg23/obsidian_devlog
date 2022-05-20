@@ -14,7 +14,8 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Speed up Tower List page by changing the list_items def on the main.py backend
+- [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
+- [ ] Backend use query instead of scan (Only when there is a global secondary index)
 
 
 ## IN REVIEW 🔍
