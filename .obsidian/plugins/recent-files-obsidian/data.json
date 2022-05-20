@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "KTS TODO",
+      "path": "KTS TODO.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "Acadia - Hazard Communication",
       "path": "Acadia - Hazard Communication.md"
     },
@@ -9,16 +21,8 @@
       "path": "Acadia Quizzes.md"
     },
     {
-      "basename": "KTS TODO",
-      "path": "KTS TODO.md"
-    },
-    {
       "basename": "Remap Windows Shortcuts to Mac Equivalents",
       "path": "Remap Windows Shortcuts to Mac Equivalents.md"
-    },
-    {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
     },
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
@@ -31,10 +35,6 @@
     {
       "basename": "Docker",
       "path": "Docker.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "Vuetify",
