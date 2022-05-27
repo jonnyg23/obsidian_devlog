@@ -197,6 +197,7 @@
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
     "KTS TODO.md",
+    "DynamoDB.md",
     "virtualenv.md",
     "pyenv.md",
     "Acadia - Hazard Communication.md",
@@ -204,7 +205,6 @@
     "Remap Windows Shortcuts to Mac Equivalents.md",
     "Test-Driven Development with FastAPI and Docker.md",
     "git.md",
-    "Docker.md",
-    "Vuetify.md"
+    "Docker.md"
   ]
 }

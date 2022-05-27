@@ -5,6 +5,10 @@
       "path": "KTS TODO.md"
     },
     {
+      "basename": "DynamoDB",
+      "path": "DynamoDB.md"
+    },
+    {
       "basename": "virtualenv",
       "path": "virtualenv.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Book",
       "path": "Templates/Inputs/Book.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "Templates/Inputs/MOC.md"
     }
   ],
   "omittedPaths": [],
