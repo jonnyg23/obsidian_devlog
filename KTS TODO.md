@@ -16,6 +16,9 @@ kanban-plugin: basic
 
 - [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
 - [ ] Backend use query instead of scan (Only when there is a global secondary index)
+- [ ] [[DynamoDB]] Info
+- [ ] Reminder: Ask Eric about grant time charging.
+- [ ] Study original patent & look into python code for geometry calculations to see if they exist. They should be similar to the code in Matlab. Look over the matlab and solidworks code as well.
 
 
 ## IN REVIEW 🔍
