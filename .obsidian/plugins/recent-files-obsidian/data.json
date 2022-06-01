@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Matlab",
+      "path": "Matlab.md"
+    },
+    {
       "basename": "Vue.js",
       "path": "Vue.js.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Language",
       "path": "Templates/Inputs/Language.md"
-    },
-    {
-      "basename": "New",
-      "path": "Templates/Inputs/New.md"
     }
   ],
   "omittedPaths": [],
