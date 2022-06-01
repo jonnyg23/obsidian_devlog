@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Vue.js",
+      "path": "Vue.js.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "New",
       "path": "Templates/Inputs/New.md"
-    },
-    {
-      "basename": "Book",
-      "path": "Templates/Inputs/Book.md"
     }
   ],
   "omittedPaths": [],

@@ -7,9 +7,11 @@
         "id": "7747d6c8bb58e06e",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "KTS TODO.md"
+            "file": "Vue.js.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -85,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTS TODO.md"
+                "file": "Vue.js.md"
               }
             }
           },
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -196,6 +198,7 @@
   },
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
+    "Vue.js.md",
     "KTS TODO.md",
     "DynamoDB.md",
     "virtualenv.md",
@@ -204,7 +207,6 @@
     "Acadia Quizzes.md",
     "Remap Windows Shortcuts to Mac Equivalents.md",
     "Test-Driven Development with FastAPI and Docker.md",
-    "git.md",
-    "Docker.md"
+    "git.md"
   ]
 }
