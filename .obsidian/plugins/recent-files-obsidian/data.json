@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "KTS TODO",
+      "path": "KTS TODO.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
       "basename": "Matlab",
       "path": "Matlab.md"
     },
@@ -9,16 +21,8 @@
       "path": "Vue.js.md"
     },
     {
-      "basename": "KTS TODO",
-      "path": "KTS TODO.md"
-    },
-    {
       "basename": "DynamoDB",
       "path": "DynamoDB.md"
-    },
-    {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
     },
     {
       "basename": "pyenv",
@@ -59,10 +63,6 @@
     {
       "basename": "TODO Lists & Kanban Work Boards",
       "path": "TODO Lists & Kanban Work Boards.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
     },
     {
       "basename": "Yoast SEO for Everyone",

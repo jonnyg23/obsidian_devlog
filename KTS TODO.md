@@ -10,6 +10,8 @@ kanban-plugin: basic
 - [ ] 1. Need to Check on how to add the :loading prop to each list item once clicked.
 - [ ] Add loading progress bar on top of page when going to different page routes.
 - [ ] Question: **Materials & Bolts don't have tower refs even though they should?** ==This is a separate task==
+- [ ] Question: **What is the `L` column in the test matrix?**
+- [ ] Why do we not have Dt and just base Diameters in each section? It doesn't match up with the matlab code if staggered where the bottom diameter of the second is the top diameter of the first.
 
 
 ## DOING ⚙️
