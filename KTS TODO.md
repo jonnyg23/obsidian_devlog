@@ -10,17 +10,19 @@ kanban-plugin: basic
 - [ ] 1. Need to Check on how to add the :loading prop to each list item once clicked.
 - [ ] Add loading progress bar on top of page when going to different page routes.
 - [ ] Question: **Materials & Bolts don't have tower refs even though they should?** ==This is a separate task==
+- [ ] **Bug**: Tower Intent Sketch only shows after pressing the back button and selecting "no" on leaving the tower with unsaved changes. (Unless the sketch takes longer to load? but it shouldn't since it is being read from dynamoDB)
 
 
 ## DOING ⚙️
 
 - [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
-- [ ] Add these questions to tower list speedup review:<br>1. Line 402-404 main.py I am not sure if it will export the items correctly as I cannot test it without the GSI table. But I followed the way list_items returns the response items.<br>2. I don't know what the name of the GSI will be so I set the index name on line 399 of main.py to IndexName='turbine-uuid-index'<br>3. I added a route watcher on TowerList.vue and re-added the dispatch(fetchTowersByTurbine) to the mounted section. This way it will rerun a dispatch if there is a route change and if someone navigates directly to a specific tower/turbine_id route.<br>4. I created the dispatch method "fetchTowersByTurbine" imitating the "fetchTowers" dispatch. Because of this, I'm unsure if Line 85 of front-end/src/store/index.js should have context.commit("updateTowers")
+- [ ] Changing annotations for better visibility on blueprint pdfs and tower sketches.
 
 
 ## IN REVIEW 🔍
 
 - [ ] Remove white space in Design Basis Analyzers; Add elevation to each card to distinguish them from one another
+- [ ] **T31** Add thickness of trap at bottom of each section to output.
 
 
 ## REPORT 📎
