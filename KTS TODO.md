@@ -16,7 +16,11 @@ kanban-plugin: basic
 ## DOING ⚙️
 
 - [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
-- [ ] Changing annotations for better visibility on blueprint pdfs and tower sketches.
+- [ ] Tower Sketch: <br>1. For sections bigger than a certain amount, just move the two side dimensions to be under one another. For smaller than that, stack-rotate-&shrink font to fit small sections.
+- [ ] Tower Sketch:<br>2. Keep where Section numbers are but shrink the text AND/OR Abbreviate smaller sections to just say "Sec. 4"
+- [ ] Tower Sketch:<br>3. Shrink and possible rotate 45deg the D<sub>m</sub> annotations
+- [ ] Blueprint:<br>1. Rotate the D<sub>m</sub> on page 1. if the section is too small & Potentially shrink font size of the upper dimensions if the section is too small and the number doesn't fit.
+- [ ] Blueprint:<br>2. ==Page 3+== Position bottom D<sub>m</sub> so the arrow and text is pointing UP&LEFT with the text below the section--similar to the top D<sub>m</sub> & extend out the far right annotations more so the thickness dimensions fits.
 
 
 ## IN REVIEW 🔍

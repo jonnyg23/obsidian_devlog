@@ -5,12 +5,12 @@
       "path": "KTS TODO.md"
     },
     {
-      "basename": "TODO",
-      "path": "TODO.md"
-    },
-    {
       "basename": "virtualenv",
       "path": "virtualenv.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
     },
     {
       "basename": "Matlab",
