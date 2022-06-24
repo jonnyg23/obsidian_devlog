@@ -14,15 +14,17 @@ kanban-plugin: basic
 ## DOING ⚙️
 
 - [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
-- [ ] Adding highlights to srf<1 summary report
+- [ ] Add links to certification report
 
 
 ## IN REVIEW 🔍
 
+- [ ] Adding highlights to srf<1 summary report
 
 
 ## REPORT 📎
 
+- [ ] PR design basis one analyzer task
 
 
 ***

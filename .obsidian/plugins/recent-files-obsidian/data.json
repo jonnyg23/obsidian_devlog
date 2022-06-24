@@ -5,6 +5,10 @@
       "path": "KTS TODO.md"
     },
     {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
       "basename": "virtualenv",
       "path": "virtualenv.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
-    },
-    {
-      "basename": "git",
-      "path": "git.md"
     },
     {
       "basename": "Docker",

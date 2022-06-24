@@ -197,6 +197,7 @@
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
     "KTS TODO.md",
+    "git.md",
     "virtualenv.md",
     "TODO.md",
     "Matlab.md",
@@ -204,7 +205,6 @@
     "DynamoDB.md",
     "pyenv.md",
     "Acadia - Hazard Communication.md",
-    "Acadia Quizzes.md",
-    "Remap Windows Shortcuts to Mac Equivalents.md"
+    "Acadia Quizzes.md"
   ]
 }
