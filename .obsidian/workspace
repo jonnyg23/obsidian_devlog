@@ -7,9 +7,11 @@
         "id": "7747d6c8bb58e06e",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "KTS TODO.md"
+            "file": "pytest.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -85,7 +87,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTS TODO.md"
+                "file": "pytest.md"
               }
             }
           },
@@ -95,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pytest.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pytest.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +126,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pytest.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -196,6 +198,8 @@
   },
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
+    "pytest.md",
+    "Vuetify.md",
     "KTS TODO.md",
     "virtualenv.md",
     "git.md",
@@ -203,8 +207,6 @@
     "Matlab.md",
     "Vue.js.md",
     "DynamoDB.md",
-    "pyenv.md",
-    "Acadia - Hazard Communication.md",
-    "Acadia Quizzes.md"
+    "pyenv.md"
   ]
 }

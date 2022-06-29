@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "pytest",
+      "path": "pytest.md"
+    },
+    {
+      "basename": "Vuetify",
+      "path": "Vuetify.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
@@ -51,10 +59,6 @@
     {
       "basename": "Docker",
       "path": "Docker.md"
-    },
-    {
-      "basename": "Vuetify",
-      "path": "Vuetify.md"
     },
     {
       "basename": "Coding Workflow",
@@ -195,10 +199,6 @@
     {
       "basename": "Formik",
       "path": "Formik.md"
-    },
-    {
-      "basename": "Language",
-      "path": "Templates/Inputs/Language.md"
     }
   ],
   "omittedPaths": [],
