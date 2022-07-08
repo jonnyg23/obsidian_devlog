@@ -6,27 +6,28 @@ kanban-plugin: basic
 
 ## TODO 💭
 
-- [ ] Add Hamburger Menu with Reallocated Buttons.
-- [ ] 1. Need to Check on how to add the :loading prop to each list item once clicked.
-- [ ] 3. Add the meta-data feature that is within the "Delete" request in main.py to the "Get" request section. This will be used to perform Step 2 above by getting references for each tower using the object.
+- [ ] Add loading progress bar on top of page when going to different page routes.
+- [ ] Question: **Materials & Bolts don't have tower refs even though they should?** ==This is a separate task==
+- [ ] **Bug**: Tower Intent Sketch only shows after pressing the back button and selecting "no" on leaving the tower with unsaved changes. (Unless the sketch takes longer to load? but it shouldn't since it is being read from dynamoDB)
 
 
 ## DOING ⚙️
 
-- [ ] 2. Add "Show Usages" Button with a badge that shows how many references to towers the current turbine, design basis, inventory, materials, & bolts has with towers.
+- [ ] Speed up tower list page task <br>1. Add crud rules for adding projection information to top level of db response. <br>2. metadata: sections (data.sections), hub_height (data.hub_height) , turbine uuid (data.turbine), pure boto3 command-line no python. <br> 3. On terraform end: Global secondary index
+- [ ] Add backend api to main.py of tdweb using model_number
+- [ ] Questions: <br>1. Will model_number use a validation schema?<br>2. How do you want me to test model_number? I don't have the ability to delete a model_number in the back end so should I add one and delete it manually from dynamodb even though it doesn't have a validation schema?
+- [ ] ⚠️ Look into the new Turbine and new Design Basis buttons since they don't pop up the create new component modal.
 
 
 ## IN REVIEW 🔍
 
+- [ ] Adding highlights to srf<1 summary report
+- [ ] Add links to certification report
 
 
 ## REPORT 📎
 
-- [ ] Working on creating links for each tower attribute for shortcuts to where they are defined.
-- [ ] Added Website Shortcut Icon
-- [ ] Fixed local docker setup & was able to run it. The fix was **running the makefile commands in a git bash terminal window rather than a powershell window** Also, Gage helped me authenticate into the towerdesign library.
-- [ ] Learned git rebasing to keep my local master and feature branches up to date with remote master.
-- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component. **Reviewed: Update LibrarySelect so we don't need turbine-select. Also add a mixin for the routeTo. Call this mixin "routeToLibrary". Then remove routeTo from methods & chips.**
+- [ ] PR design basis one analyzer task
 
 
 ***
