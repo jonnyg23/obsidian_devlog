@@ -5,6 +5,14 @@
       "path": "KTS TODO.md"
     },
     {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "git",
+      "path": "git.md"
+    },
+    {
       "basename": "pytest",
       "path": "pytest.md"
     },
@@ -15,14 +23,6 @@
     {
       "basename": "virtualenv",
       "path": "virtualenv.md"
-    },
-    {
-      "basename": "git",
-      "path": "git.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
     },
     {
       "basename": "Matlab",
