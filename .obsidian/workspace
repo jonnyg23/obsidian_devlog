@@ -68,7 +68,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 204.5
+    "width": 204.5,
+    "collapsed": true
   },
   "right": {
     "id": "202de2eaf0ff0f11",
@@ -196,6 +197,7 @@
   },
   "active": "7747d6c8bb58e06e",
   "lastOpenFiles": [
+    "Python.md",
     "KTS TODO.md",
     "git.md",
     "TODO.md",
@@ -204,7 +206,6 @@
     "virtualenv.md",
     "Matlab.md",
     "Vue.js.md",
-    "DynamoDB.md",
-    "pyenv.md"
+    "DynamoDB.md"
   ]
 }

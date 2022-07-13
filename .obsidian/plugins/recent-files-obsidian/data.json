@@ -5,6 +5,10 @@
       "path": "KTS TODO.md"
     },
     {
+      "basename": "Python",
+      "path": "Python.md"
+    },
+    {
       "basename": "git",
       "path": "git.md"
     },
@@ -107,10 +111,6 @@
     {
       "basename": "github_personal_access_token",
       "path": "Images/github_personal_access_token.png"
-    },
-    {
-      "basename": "Python",
-      "path": "Python.md"
     },
     {
       "basename": "Yup",

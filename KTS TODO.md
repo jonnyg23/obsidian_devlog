@@ -13,8 +13,8 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Update **main.py** to use new `TowerCrud.list` method.
-- [ ] Also update **main.py** to return from `ModelNumberCrud.create` call
+- [ ] Update **main.py** to use new `TowerCrud.query` method. **Review TODOs**
+- [ ] Update backend and frontend to make use of TowerCrud.query
 
 
 ## IN REVIEW 🔍
@@ -27,11 +27,15 @@ kanban-plugin: basic
 - [ ] 3. Move turbine v-select above model number combobox in the NewTowerDialog
 - [ ] 4. When implementing the Step 2, Make sure to also make a change to tdstore's ModelNumberCrud for create feature. Return the object which was added to the db as a dictionary object.
 - [ ] 5. Rename "All" in NavList to "Other"
+- [ ] Ensure model number selections are filtered by turbine before showing in combobox
+- [ ] Also update **main.py** to return from `ModelNumberCrud.create` call
 
 
 ## REPORT 📎
 
-- [ ] PR design basis one analyzer task
+- [ ] PR in tdstore for TowerCrud.list operation
+- [ ] ALso added comments for an implementation for using the query on GSI.
+- [ ] Today Working on make use of this new operation in the backend and frontend NavList
 
 
 ***
