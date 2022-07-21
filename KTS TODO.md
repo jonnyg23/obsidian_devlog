@@ -13,8 +13,9 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Update **main.py** to use new `TowerCrud.query` method. **Review TODOs**
-- [ ] Update backend and frontend to make use of TowerCrud.query
+- [ ] Update Model Number combobox to have visual feedback when adding a new model number. Make it blue or something when its a new number and doesn't match any of the ones in Vuex store and change it back to black once it is added.
+- [ ] Use the new model number once created by calling addModelNumber or something which will append the new model number result to the Vuex store modelNumbers
+- [ ] Use TowerCrud.update method as a quick way to add the top level "turbine" "hub_height""etc" attributes to **only my personal Tower** that I'm testing on. In this way, I can test the NavList on my specific tower
 
 
 ## IN REVIEW 🔍
