@@ -15,13 +15,14 @@ kanban-plugin: basic
 
 - [ ] Use the new model number once created by calling addModelNumber or something which will append the new model number result to the Vuex store modelNumbers
 - [ ] Use TowerCrud.update method as a quick way to add the top level "turbine" "hub_height""etc" attributes to **only my personal Tower** that I'm testing on. In this way, I can test the NavList on my specific tower
-- [ ] ***Remove white space from the outsides of any combobox input**
-- [ ] Rerun docker so that the tdstore 0.12.5 update will be used
+- [ ] Test TowerCrud.list when tower has all the needed top level attributes
 
 
 ## Done
 
-- [ ] Update Model Number combobox to have visual feedback when adding a new model number. Make it blue or something when its a new number and doesn't match any of the ones in Vuex store and change it back to black once it is added.
+- [ ] Update Model Number combobox to have ***visual feedback** when adding a new model number. Make it blue or something when its a new number and doesn't match any of the ones in Vuex store and change it back to black once it is added.
+- [ ] ***Trimmed white space from the outsides of any combobox input**
+- [ ] Tested NewTowerDialog's use of model number.
 
 
 ## IN REVIEW 🔍
