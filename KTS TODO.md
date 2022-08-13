@@ -6,14 +6,25 @@ kanban-plugin: basic
 
 ## TODO 💭
 
-- [ ] Add Hamburger Menu with Reallocated Buttons.
-- [ ] 1. Need to Check on how to add the :loading prop to each list item once clicked.
-- [ ] 3. Add the meta-data feature that is within the "Delete" request in main.py to the "Get" request section. This will be used to perform Step 2 above by getting references for each tower using the object.
+- [ ] Add loading progress bar on top of page when going to different page routes.
+- [ ] Question: **Materials & Bolts don't have tower refs even though they should?** ==This is a separate task==
+- [ ] **Bug**: Tower Intent Sketch only shows after pressing the back button and selecting "no" on leaving the tower with unsaved changes. (Unless the sketch takes longer to load? but it shouldn't since it is being read from dynamoDB)
 
 
 ## DOING ⚙️
 
-- [ ] 2. Add "Show Usages" Button with a badge that shows how many references to towers the current turbine, design basis, inventory, materials, & bolts has with towers.
+- [ ] Fix "Other" so it shows all towers that don't have a top level model number.
+- [ ] Auto expand NavList to specified turbine & model number on page refresh
+
+
+## Done
+
+- [ ] Add some `oneoff` scripts that will<br>1. Read and Update and tower with the projected attributes. (Use the pytest you already created for most of this code.) <br> 2. Another script that will list all towers that don't have a model number in the top level or data.model_number level.
+- [ ] Change to sorting in alphabetical order in model number combobox select
+- [ ] Put in new **Jira Task** for automatically navigating and opening the NavList to the appropriate turbine & model number that is in the params/query of the URL.
+- [ ] Create a **check_schema** method in the super class `DynamoCrud` that will perform the validation schema operations and error return as shown in main.py>create_item. Then, call this super class method in TowerCrud.create&.update passing `data` into this method before any db operations are performed.
+- [ ] Add a new add_crud_rules2() in `main.py` that will use the new TowerCrud operations. You might be able to get rid of the `/tower` endpoint in favor of `/towers`. In this way, you will have 2 GET requests. One to `/tower` that returns a specific tower and uses `TowerCrud.read` and another that is `/towers` which lists all towers will certain params using `TowerCrud.list`
+- [ ] Check on NavList to make sure it renders the data table correctly with both refresh and clicking through from the main screen!
 
 
 ## IN REVIEW 🔍
@@ -22,11 +33,6 @@ kanban-plugin: basic
 
 ## REPORT 📎
 
-- [ ] Working on creating links for each tower attribute for shortcuts to where they are defined.
-- [ ] Added Website Shortcut Icon
-- [ ] Fixed local docker setup & was able to run it. The fix was **running the makefile commands in a git bash terminal window rather than a powershell window** Also, Gage helped me authenticate into the towerdesign library.
-- [ ] Learned git rebasing to keep my local master and feature branches up to date with remote master.
-- [ ] Refactor Linking Feature to its own Component - Just need to refactor into separate component. **Reviewed: Update LibrarySelect so we don't need turbine-select. Also add a mixin for the routeTo. Call this mixin "routeToLibrary". Then remove routeTo from methods & chips.**
 
 
 ***
