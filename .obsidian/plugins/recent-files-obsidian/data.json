@@ -1,32 +1,68 @@
 {
   "recentFiles": [
     {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
-    },
-    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
     {
-      "basename": "Test-Driven Development with FastAPI and Docker",
-      "path": "Test-Driven Development with FastAPI and Docker.md"
+      "basename": "Python",
+      "path": "Python.md"
     },
     {
       "basename": "git",
       "path": "git.md"
     },
     {
-      "basename": "Docker",
-      "path": "Docker.md"
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "pytest",
+      "path": "pytest.md"
+    },
+    {
+      "basename": "Vuetify",
+      "path": "Vuetify.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
+      "basename": "Matlab",
+      "path": "Matlab.md"
+    },
+    {
+      "basename": "Vue.js",
+      "path": "Vue.js.md"
+    },
+    {
+      "basename": "DynamoDB",
+      "path": "DynamoDB.md"
     },
     {
       "basename": "pyenv",
       "path": "pyenv.md"
     },
     {
-      "basename": "Vuetify",
-      "path": "Vuetify.md"
+      "basename": "Acadia - Hazard Communication",
+      "path": "Acadia - Hazard Communication.md"
+    },
+    {
+      "basename": "Acadia Quizzes",
+      "path": "Acadia Quizzes.md"
+    },
+    {
+      "basename": "Remap Windows Shortcuts to Mac Equivalents",
+      "path": "Remap Windows Shortcuts to Mac Equivalents.md"
+    },
+    {
+      "basename": "Test-Driven Development with FastAPI and Docker",
+      "path": "Test-Driven Development with FastAPI and Docker.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
     },
     {
       "basename": "Coding Workflow",
@@ -35,10 +71,6 @@
     {
       "basename": "TODO Lists & Kanban Work Boards",
       "path": "TODO Lists & Kanban Work Boards.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
     },
     {
       "basename": "Yoast SEO for Everyone",
@@ -79,10 +111,6 @@
     {
       "basename": "github_personal_access_token",
       "path": "Images/github_personal_access_token.png"
-    },
-    {
-      "basename": "Python",
-      "path": "Python.md"
     },
     {
       "basename": "Yup",
@@ -171,34 +199,6 @@
     {
       "basename": "Formik",
       "path": "Formik.md"
-    },
-    {
-      "basename": "Language",
-      "path": "Templates/Inputs/Language.md"
-    },
-    {
-      "basename": "New",
-      "path": "Templates/Inputs/New.md"
-    },
-    {
-      "basename": "Book",
-      "path": "Templates/Inputs/Book.md"
-    },
-    {
-      "basename": "MOC",
-      "path": "Templates/Inputs/MOC.md"
-    },
-    {
-      "basename": "test",
-      "path": "Templates/test.md"
-    },
-    {
-      "basename": "Paper",
-      "path": "Templates/Inputs/Paper.md"
-    },
-    {
-      "basename": "Person",
-      "path": "Templates/Inputs/Person.md"
     }
   ],
   "omittedPaths": [],

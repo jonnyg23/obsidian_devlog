@@ -4,7 +4,7 @@ aliases:
   - 
 cssclass:
 type: language
-status: 🟥
+status: 🟧
 ---
 
 # [[Python]]
@@ -18,6 +18,11 @@ status: 🟥
 
 - [[pyenv]] - Manage python environments
 
+## Functions 
+
+### Input Parameters
+
+- [Using `*Args` & `**Kwargs`](https://www.programiz.com/python-programming/args-and-kwargs#:~:text=*args%20passes%20variable%20number%20of,a%20dictionary%20can%20be%20performed.)
 
 ## Libraries
 
