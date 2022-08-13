@@ -7,9 +7,11 @@
         "id": "7747d6c8bb58e06e",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "KTS TODO.md"
+            "file": "pyenv.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -86,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTS TODO.md"
+                "file": "pyenv.md"
               }
             }
           },
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pyenv.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pyenv.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "pyenv.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -155,18 +157,18 @@
             }
           },
           {
-            "id": "adb61716df3ca2cd",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          },
-          {
             "id": "d2e5272b729bf545",
             "type": "leaf",
             "state": {
               "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "69a51e3dab385bfd",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
               "state": {}
             }
           }
@@ -195,10 +197,10 @@
     "width": 260.5,
     "collapsed": true
   },
-  "active": "7747d6c8bb58e06e",
+  "active": "69a51e3dab385bfd",
   "lastOpenFiles": [
-    "Python.md",
     "KTS TODO.md",
+    "Python.md",
     "git.md",
     "TODO.md",
     "pytest.md",

@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
@@ -39,10 +43,6 @@
     {
       "basename": "DynamoDB",
       "path": "DynamoDB.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "Acadia - Hazard Communication",
