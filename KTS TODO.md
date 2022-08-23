@@ -13,22 +13,22 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Fix "Other" so it shows all towers that don't have a top level model number.
-- [ ] Auto expand NavList to specified turbine & model number on page refresh
+- [ ] Fix Title so changelog history is on a new line for the History Modal
+- [ ] Make a removed piece of data look better rather than being blank
+- [ ] Make loadset changes look better and have a name instead of just the loadset number - check for other things that need a name instead of uuids
+- [ ] on TowerCrud.create add revision number 1 when tower is made
+- [ ] When tower is moved to release increment revision number up by one
+- [ ] Add revision number to projections top level for towers from tower intent
 
 
 ## Done
 
-- [ ] Add some `oneoff` scripts that will<br>1. Read and Update and tower with the projected attributes. (Use the pytest you already created for most of this code.) <br> 2. Another script that will list all towers that don't have a model number in the top level or data.model_number level.
-- [ ] Change to sorting in alphabetical order in model number combobox select
-- [ ] Put in new **Jira Task** for automatically navigating and opening the NavList to the appropriate turbine & model number that is in the params/query of the URL.
-- [ ] Create a **check_schema** method in the super class `DynamoCrud` that will perform the validation schema operations and error return as shown in main.py>create_item. Then, call this super class method in TowerCrud.create&.update passing `data` into this method before any db operations are performed.
-- [ ] Add a new add_crud_rules2() in `main.py` that will use the new TowerCrud operations. You might be able to get rid of the `/tower` endpoint in favor of `/towers`. In this way, you will have 2 GET requests. One to `/tower` that returns a specific tower and uses `TowerCrud.read` and another that is `/towers` which lists all towers will certain params using `TowerCrud.list`
-- [ ] Check on NavList to make sure it renders the data table correctly with both refresh and clicking through from the main screen!
 
 
 ## IN REVIEW 🔍
 
+- [ ] Figure out copy button bug in tower, ensure that you can delete as well
+- [ ] add release info task
 
 
 ## REPORT 📎
