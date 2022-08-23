@@ -5,20 +5,24 @@
       "path": "KTS TODO.md"
     },
     {
-      "basename": "Python",
-      "path": "Python.md"
+      "basename": "AWS DynamoDB",
+      "path": "AWS DynamoDB.md"
     },
     {
       "basename": "git",
       "path": "git.md"
     },
     {
+      "basename": "pytest",
+      "path": "pytest.md"
+    },
+    {
       "basename": "TODO",
       "path": "TODO.md"
     },
     {
-      "basename": "pytest",
-      "path": "pytest.md"
+      "basename": "Python",
+      "path": "Python.md"
     },
     {
       "basename": "Vuetify",
@@ -195,10 +199,6 @@
     {
       "basename": "Framer Motion",
       "path": "Framer Motion.md"
-    },
-    {
-      "basename": "Formik",
-      "path": "Formik.md"
     }
   ],
   "omittedPaths": [],

@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "7747d6c8bb58e06e",
+        "id": "908d0ec60044ee5d",
         "type": "leaf",
         "state": {
           "type": "kanban",
@@ -195,17 +195,17 @@
     "width": 260.5,
     "collapsed": true
   },
-  "active": "7747d6c8bb58e06e",
+  "active": "908d0ec60044ee5d",
   "lastOpenFiles": [
-    "Python.md",
-    "KTS TODO.md",
+    "AWS DynamoDB.md",
     "git.md",
-    "TODO.md",
+    "KTS TODO.md",
     "pytest.md",
+    "TODO.md",
+    "Python.md",
     "Vuetify.md",
     "virtualenv.md",
     "Matlab.md",
-    "Vue.js.md",
-    "DynamoDB.md"
+    "Vue.js.md"
   ]
 }
