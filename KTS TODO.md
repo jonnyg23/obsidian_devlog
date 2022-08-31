@@ -13,16 +13,18 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Fix Title so changelog history is on a new line for the History Modal
-- [ ] Make a removed piece of data look better rather than being blank
-- [ ] Make loadset changes look better and have a name instead of just the loadset number - check for other things that need a name instead of uuids
-- [ ] on TowerCrud.create add revision number 1 when tower is made
-- [ ] When tower is moved to release increment revision number up by one
-- [ ] Add revision number to projections top level for towers from tower intent
+- [ ] Question on Store Revision Numbers on Tower Release: We need to add “previous_release” as a field to model_number table. You can read that number, add one, and update it when we’re releasing a new tower. **How should this be implemented?**
+- [ ] We will need to add rev# and status_dates to GSI projected attrs
+- [ ] Add dropdown popover menu to status button with ability to change status.
+- [ ] Add error handler in main.py for any operations that need to trigger and error, review past project for this.
 
 
 ## Done
 
+- [ ] Fix Title so changelog history is on a new line for the History Modal
+- [ ] Make a removed piece of data look better rather than being blank
+- [ ] Make loadset changes look better and have a name instead of just the loadset number - check for other things that need a name instead of uuids
+- [ ] When tower is moved to release increment revision number up by one
 
 
 ## IN REVIEW 🔍
