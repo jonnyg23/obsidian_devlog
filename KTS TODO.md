@@ -15,8 +15,8 @@ kanban-plugin: basic
 
 - [ ] Question on Store Revision Numbers on Tower Release: We need to add “previous_release” as a field to model_number table. You can read that number, add one, and update it when we’re releasing a new tower. **How should this be implemented?**
 - [ ] We will need to add rev# and status_dates to GSI projected attrs
-- [ ] Add dropdown popover menu to status button with ability to change status.
 - [ ] Add error handler in main.py for any operations that need to trigger and error, review past project for this.
+- [ ] **Make StatusModal responsive to status changes** This bug is stemming from original.status_dates not updated as a prop in Intent.vue
 
 
 ## Done
@@ -25,6 +25,7 @@ kanban-plugin: basic
 - [ ] Make a removed piece of data look better rather than being blank
 - [ ] Make loadset changes look better and have a name instead of just the loadset number - check for other things that need a name instead of uuids
 - [ ] When tower is moved to release increment revision number up by one
+- [ ] Add dropdown popover menu to status button with ability to change status.
 
 
 ## IN REVIEW 🔍

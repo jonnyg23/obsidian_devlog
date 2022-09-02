@@ -5,6 +5,14 @@
       "path": "KTS TODO.md"
     },
     {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "AWS DynamoDB",
       "path": "AWS DynamoDB.md"
     },
@@ -29,10 +37,6 @@
       "path": "Vuetify.md"
     },
     {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
-    },
-    {
       "basename": "Matlab",
       "path": "Matlab.md"
     },
@@ -43,10 +47,6 @@
     {
       "basename": "DynamoDB",
       "path": "DynamoDB.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "Acadia - Hazard Communication",

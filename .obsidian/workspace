@@ -197,15 +197,15 @@
   },
   "active": "908d0ec60044ee5d",
   "lastOpenFiles": [
+    "virtualenv.md",
+    "pyenv.md",
+    "KTS TODO.md",
     "AWS DynamoDB.md",
     "git.md",
-    "KTS TODO.md",
     "pytest.md",
     "TODO.md",
     "Python.md",
     "Vuetify.md",
-    "virtualenv.md",
-    "Matlab.md",
-    "Vue.js.md"
+    "Matlab.md"
   ]
 }
