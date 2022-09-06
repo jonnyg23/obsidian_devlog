@@ -14,9 +14,9 @@ kanban-plugin: basic
 ## DOING ⚙️
 
 - [ ] Question on Store Revision Numbers on Tower Release: We need to add “previous_release” as a field to model_number table. You can read that number, add one, and update it when we’re releasing a new tower. **How should this be implemented?**
-- [ ] We will need to add rev# and status_dates to GSI projected attrs
+- [ ] We will need to add rev# and status_dates to GSI projected attrs & add upgrade rev# when selecting **copyTower** on tower intent & tower list
 - [ ] Add error handler in main.py for any operations that need to trigger and error, review past project for this.
-- [ ] **Make StatusModal responsive to status changes** This bug is stemming from original.status_dates not updated as a prop in Intent.vue
+- [ ] `saveTower()` works if forcing a "BadRequest" error on the backend>main.py>update_tower(). This is because there is a catch statement on the dispatch. I think we need to add catch statements to the problem dispatches.
 
 
 ## Done
