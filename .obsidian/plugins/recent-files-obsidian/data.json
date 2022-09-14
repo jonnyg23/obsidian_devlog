@@ -1,16 +1,20 @@
 {
   "recentFiles": [
     {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
     {
       "basename": "virtualenv",
       "path": "virtualenv.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "AWS DynamoDB",
@@ -63,10 +67,6 @@
     {
       "basename": "Test-Driven Development with FastAPI and Docker",
       "path": "Test-Driven Development with FastAPI and Docker.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker.md"
     },
     {
       "basename": "Coding Workflow",
