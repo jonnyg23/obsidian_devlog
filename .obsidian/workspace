@@ -7,11 +7,9 @@
         "id": "908d0ec60044ee5d",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "kanban",
           "state": {
-            "file": "Docker.md",
-            "mode": "source",
-            "source": false
+            "file": "KTS TODO.md"
           }
         }
       }
@@ -87,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker.md"
+                "file": "KTS TODO.md"
               }
             }
           },
@@ -97,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +124,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -198,6 +196,7 @@
   },
   "active": "908d0ec60044ee5d",
   "lastOpenFiles": [
+    "Docker.md",
     "pyenv.md",
     "KTS TODO.md",
     "virtualenv.md",
@@ -206,7 +205,6 @@
     "pytest.md",
     "TODO.md",
     "Python.md",
-    "Vuetify.md",
-    "Matlab.md"
+    "Vuetify.md"
   ]
 }
