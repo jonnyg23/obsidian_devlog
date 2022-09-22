@@ -12,11 +12,17 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Update to new tower list layout once gsi is updated for projected attrs such as rev and statuses.
+- [ ] Fix display Errors and add special .catch statements checking MainAlert for anywhere we can add more error details for easier bug identification.
+- [ ] Change Last Modified on released towers to Released Date
+- [ ] Remove revision numbers from released table expansion, as well as status.
+- [ ] Remove Edit icons and make tower name a blue hyperlink.
+- [ ] Remove expanded item subtitle
+- [ ] Add Revision number span next to Tower Drafts
 
 
 ## Done
 
+- [ ] Fix pdf reports bug - blank reports
 
 
 ## IN REVIEW 🔍
