@@ -7,9 +7,11 @@
         "id": "908d0ec60044ee5d",
         "type": "leaf",
         "state": {
-          "type": "kanban",
+          "type": "markdown",
           "state": {
-            "file": "KTS TODO.md"
+            "file": "Vue.js.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -86,7 +88,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "KTS TODO.md"
+                "file": "Vue.js.md"
               }
             }
           },
@@ -96,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +127,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "KTS TODO.md",
+                "file": "Vue.js.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -148,7 +150,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.9700478458252753,
+                  "scale": 0.8206453466006371,
                   "close": true
                 }
               }
@@ -170,7 +172,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "109b48d01d39b7e5",
@@ -192,20 +195,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.5,
-    "collapsed": true
+    "width": 260.5
   },
   "active": "908d0ec60044ee5d",
   "lastOpenFiles": [
-    "Docker.md",
+    "INDEX.md",
     "KTS TODO.md",
+    "Docker.md",
     "pyenv.md",
     "virtualenv.md",
     "AWS DynamoDB.md",
     "git.md",
     "pytest.md",
     "TODO.md",
-    "Python.md",
-    "Vuetify.md"
+    "Python.md"
   ]
 }

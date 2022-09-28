@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Vue.js",
+      "path": "Vue.js.md"
+    },
+    {
+      "basename": "INDEX",
+      "path": "INDEX.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
@@ -43,10 +51,6 @@
     {
       "basename": "Matlab",
       "path": "Matlab.md"
-    },
-    {
-      "basename": "Vue.js",
-      "path": "Vue.js.md"
     },
     {
       "basename": "DynamoDB",
@@ -131,10 +135,6 @@
     {
       "basename": "2021_08_19",
       "path": "2021_08_19.md"
-    },
-    {
-      "basename": "INDEX",
-      "path": "INDEX.md"
     },
     {
       "basename": "Podia",
