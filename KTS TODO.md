@@ -13,16 +13,17 @@ kanban-plugin: basic
 ## DOING ⚙️
 
 - [ ] Fix display Errors and add special .catch statements checking MainAlert for anywhere we can add more error details for easier bug identification.
-- [ ] Change Last Modified on released towers to Released Date
-- [ ] Remove revision numbers from released table expansion, as well as status.
-- [ ] Remove Edit icons and make tower name a blue hyperlink.
-- [ ] Remove expanded item subtitle
-- [ ] Add Revision number span next to Tower Drafts
+- [ ] Questions: 1. Do we use the `constraints` in `SectionIntent` for the min_thickness? Or should I add a separate function for this? **Note:** I cannot add them where they are specified in `compute.py` because the each section is an immutable tuple.
 
 
 ## Done
 
 - [ ] Fix pdf reports bug - blank reports
+- [ ] Change Last Modified on released towers to Released Date
+- [ ] Remove revision numbers from released table expansion, as well as status.
+- [ ] Add Revision number span next to Tower Drafts
+- [ ] Remove expanded item subtitle
+- [ ] Remove Edit icons and make tower name a blue hyperlink.
 
 
 ## IN REVIEW 🔍
