@@ -76,8 +76,9 @@ export default {
 	- Methods can also have arguments so that's where you'd put a function that needs to take in arguments from things in the template and give back a result.
 	- ✏️ Note: Use computed for small things like sorting data.
 
-- What is a `watch`er? Should I use it?
-	- A watcher is 
+- `@input` is the standard and should be used in props for any component that is receiving an input (value change) from its child component.
+
+- 
 
 
 ---

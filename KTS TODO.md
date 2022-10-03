@@ -10,7 +10,7 @@ kanban-plugin: basic
 
 ## DOING ⚙️
 
-- [ ] Questions: 1. Do we use the `constraints` in `SectionIntent` for the min_thickness? Or should I add a separate function for this? **Note:** I cannot add them where they are specified in `compute.py` because the each section is an immutable tuple.
+- [ ] Meet about Optimization still showing the same thickness of sheets.
 
 
 ## Done
