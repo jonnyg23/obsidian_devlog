@@ -5,16 +5,16 @@
       "path": "Vue.js.md"
     },
     {
-      "basename": "INDEX",
-      "path": "INDEX.md"
-    },
-    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
     {
       "basename": "Docker",
       "path": "Docker.md"
+    },
+    {
+      "basename": "INDEX",
+      "path": "INDEX.md"
     },
     {
       "basename": "pyenv",

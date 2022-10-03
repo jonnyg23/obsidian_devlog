@@ -199,15 +199,15 @@
   },
   "active": "908d0ec60044ee5d",
   "lastOpenFiles": [
-    "INDEX.md",
     "KTS TODO.md",
     "Docker.md",
+    "Vue.js.md",
+    "INDEX.md",
     "pyenv.md",
     "virtualenv.md",
     "AWS DynamoDB.md",
     "git.md",
     "pytest.md",
-    "TODO.md",
-    "Python.md"
+    "TODO.md"
   ]
 }
