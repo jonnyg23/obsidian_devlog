@@ -17,6 +17,7 @@ status: 🟧
 ## Environment & Workflow
 
 - [[pyenv]] - Manage python environments
+- [[virtualenv|venv]]
 
 ## Functions 
 
@@ -34,6 +35,12 @@ status: 🟧
 ### Data Analysis
 
 - [[pandas]] - Powerful data structures for data analysis, time series, and statistics.
+
+## Testing
+
+- [[pytest]] - Run unit tests
+- [[tox]] - Runs tests with multiple python versions (3.7, 3.8, 3.9, etc)
+- 
 
 
 
