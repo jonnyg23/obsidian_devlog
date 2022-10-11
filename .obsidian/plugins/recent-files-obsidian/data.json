@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "tox",
+      "path": "tox.md"
+    },
+    {
+      "basename": "Podia",
+      "path": "Podia.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Python.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
       "basename": "Vue.js",
       "path": "Vue.js.md"
     },
@@ -9,20 +29,12 @@
       "path": "KTS TODO.md"
     },
     {
-      "basename": "Docker",
-      "path": "Docker.md"
-    },
-    {
       "basename": "INDEX",
       "path": "INDEX.md"
     },
     {
       "basename": "pyenv",
       "path": "pyenv.md"
-    },
-    {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
     },
     {
       "basename": "AWS DynamoDB",
@@ -39,10 +51,6 @@
     {
       "basename": "TODO",
       "path": "TODO.md"
-    },
-    {
-      "basename": "Python",
-      "path": "Python.md"
     },
     {
       "basename": "Vuetify",
@@ -137,10 +145,6 @@
       "path": "2021_08_19.md"
     },
     {
-      "basename": "Podia",
-      "path": "Podia.md"
-    },
-    {
       "basename": "Library-Dependency",
       "path": "Templates/Inputs/Library-Dependency.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "Material-ui",
       "path": "Material-ui.md"
-    },
-    {
-      "basename": "Framer Motion",
-      "path": "Framer Motion.md"
     }
   ],
   "omittedPaths": [],
