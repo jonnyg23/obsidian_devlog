@@ -4,16 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "058a2455d157edb9",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Docker.md",
-            "mode": "source",
-            "source": false
+        "id": "d699f64fa38b72ef",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "058a2455d157edb9",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "KTS TODO.md"
+              }
+            }
           }
-        }
+        ]
       }
     ],
     "direction": "vertical"
@@ -39,7 +43,9 @@
             "type": "leaf",
             "state": {
               "type": "file-explorer",
-              "state": {}
+              "state": {
+                "sortOrder": "alphabetical"
+              }
             }
           },
           {
@@ -48,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "pip",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,12 +72,11 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 204.5,
-    "collapsed": true
+    "width": 204.5
   },
   "right": {
     "id": "202de2eaf0ff0f11",
@@ -88,7 +93,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Docker.md"
+                "file": "KTS TODO.md"
               }
             }
           },
@@ -98,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +132,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Docker.md",
+                "file": "KTS TODO.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -202,13 +207,13 @@
   "lastOpenFiles": [
     "Region Cases.md",
     "KTS TODO.md",
+    "Python.md",
+    "Docker.md",
+    "tempFile.md",
     "virtualenv.md",
     "pyenv.md",
     "tox.md",
     "Podia.md",
-    "Python.md",
-    "Docker.md",
-    "Vue.js.md",
-    "INDEX.md"
+    "Vue.js.md"
   ]
 }

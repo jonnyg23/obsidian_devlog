@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "KTS TODO",
+      "path": "KTS TODO.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Python.md"
+    },
+    {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
+      "basename": "virtualenv",
+      "path": "virtualenv.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
       "basename": "tox",
       "path": "tox.md"
     },
@@ -9,32 +29,12 @@
       "path": "Podia.md"
     },
     {
-      "basename": "Python",
-      "path": "Python.md"
-    },
-    {
-      "basename": "virtualenv",
-      "path": "virtualenv.md"
-    },
-    {
-      "basename": "Docker",
-      "path": "Docker.md"
-    },
-    {
       "basename": "Vue.js",
       "path": "Vue.js.md"
     },
     {
-      "basename": "KTS TODO",
-      "path": "KTS TODO.md"
-    },
-    {
       "basename": "INDEX",
       "path": "INDEX.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "AWS DynamoDB",
@@ -191,14 +191,6 @@
     {
       "basename": "meta",
       "path": "Templates/meta.md"
-    },
-    {
-      "basename": "Programming Languages",
-      "path": "Programming Languages.md"
-    },
-    {
-      "basename": "Material-ui",
-      "path": "Material-ui.md"
     }
   ],
   "omittedPaths": [],

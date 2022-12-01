@@ -1,5 +1,6 @@
 {
   "baseFontSize": 15,
   "cssTheme": "LYT Mode",
-  "theme": "obsidian"
+  "theme": "obsidian",
+  "accentColor": ""
 }
