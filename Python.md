@@ -19,6 +19,24 @@ status: 🟧
 - [[pyenv]] - Manage python environments
 - [[virtualenv|venv]]
 
+### Pip Dependency Installation
+
+Installing pip dependencies from **setup.py** files or from **requirements.txt** files:
+
+```bash
+# Ran in root directory where setup.py or requirements.txt is located
+pip install -e .
+
+# For install from requirements
+pip install -r requirements.txt
+```
+
+Create **requirements.txt** from current python environment:
+
+```bash
+pip freeze > requirements.txt
+```
+
 ## Functions 
 
 ### Input Parameters
