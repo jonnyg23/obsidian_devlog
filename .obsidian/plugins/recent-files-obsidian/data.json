@@ -5,16 +5,16 @@
       "path": "KTS TODO.md"
     },
     {
-      "basename": "Python",
-      "path": "Python.md"
-    },
-    {
       "basename": "Docker",
       "path": "Docker.md"
     },
     {
       "basename": "virtualenv",
       "path": "virtualenv.md"
+    },
+    {
+      "basename": "Python",
+      "path": "Python.md"
     },
     {
       "basename": "pyenv",

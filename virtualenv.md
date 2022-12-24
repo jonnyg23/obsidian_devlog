@@ -16,6 +16,7 @@ cssclass:
 - `py -3.9 -m venv c:\path\to\wherever\you\want\it` 
 - Example:
 	- `py -3.9 -m venv venv` will use Python version 3.6 and store the virtual environment in a location called "venv"
+	- Ensure you run `pip install --upgrade pip` to update pip
 
 ```bash
 # activate the virtual environment 
