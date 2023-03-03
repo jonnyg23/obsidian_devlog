@@ -1,12 +1,28 @@
 {
   "recentFiles": [
     {
+      "basename": "Docker",
+      "path": "Docker.md"
+    },
+    {
       "basename": "KTS TODO",
       "path": "KTS TODO.md"
     },
     {
-      "basename": "Docker",
-      "path": "Docker.md"
+      "basename": "bash code block",
+      "path": "Templates/Quick Adds/Code Snippets/bash code block.md"
+    },
+    {
+      "basename": "pyenv",
+      "path": "pyenv.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "git",
+      "path": "git.md"
     },
     {
       "basename": "virtualenv",
@@ -15,10 +31,6 @@
     {
       "basename": "Python",
       "path": "Python.md"
-    },
-    {
-      "basename": "pyenv",
-      "path": "pyenv.md"
     },
     {
       "basename": "tox",
@@ -41,16 +53,8 @@
       "path": "AWS DynamoDB.md"
     },
     {
-      "basename": "git",
-      "path": "git.md"
-    },
-    {
       "basename": "pytest",
       "path": "pytest.md"
-    },
-    {
-      "basename": "TODO",
-      "path": "TODO.md"
     },
     {
       "basename": "Vuetify",
