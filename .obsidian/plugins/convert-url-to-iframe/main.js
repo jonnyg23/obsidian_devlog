@@ -5476,7 +5476,7 @@ var require_main = __commonJS({
     var fetchEmbed = require_fetchEmbed();
     var provider = require_provider();
     var {
-      setRequestOptions: setRequestOptions2
+      setRequestOptions
     } = require_config();
     var extract2 = (_0, ..._1) => __async(exports, [_0, ..._1], function* (url, params = {}) {
       if (!isValidURL(url)) {
@@ -5494,7 +5494,7 @@ var require_main = __commonJS({
       hasProvider: provider.has,
       findProvider: provider.find,
       setProviderList: provider.set,
-      setRequestOptions: setRequestOptions2
+      setRequestOptions
     };
   }
 });
@@ -5503,53 +5503,38 @@ var require_main = __commonJS({
 var require_package = __commonJS({
   "node_modules/oembed-parser/package.json"(exports, module2) {
     module2.exports = {
-      _args: [
-        [
-          "oembed-parser@2.0.0",
-          "/Users/floranhachez/Documents/projects/obsidian-convert-url-to-iframe"
-        ]
-      ],
-      _from: "oembed-parser@2.0.0",
-      _id: "oembed-parser@2.0.0",
-      _inBundle: false,
-      _integrity: "sha512-VuEGFjLBDaydO+6ZzHXBAzc7jwletgsFTHi8UT3Zdt13xT2JzXM0R3XfafKDsZVloPxGC2Ad+ubNjEDT6lN3Gg==",
-      _location: "/oembed-parser",
-      _phantomChildren: {},
-      _requested: {
-        type: "version",
-        registry: true,
-        raw: "oembed-parser@2.0.0",
-        name: "oembed-parser",
-        escapedName: "oembed-parser",
-        rawSpec: "2.0.0",
-        saveSpec: null,
-        fetchSpec: "2.0.0"
+      version: "2.0.0",
+      name: "oembed-parser",
+      description: "Get oEmbed data from given URL.",
+      homepage: "https://www.npmjs.com/package/oembed-parser",
+      repository: {
+        type: "git",
+        url: "git@github.com:ndaidong/oembed-parser.git"
       },
-      _requiredBy: [
-        "/"
-      ],
-      _resolved: "https://registry.npmjs.org/oembed-parser/-/oembed-parser-2.0.0.tgz",
-      _spec: "2.0.0",
-      _where: "/Users/floranhachez/Documents/projects/obsidian-convert-url-to-iframe",
-      author: {
-        name: "@ndaidong"
+      author: "@ndaidong",
+      main: "./index.js",
+      types: "./index.d.ts",
+      engines: {
+        node: ">= 10.14.2"
       },
-      bugs: {
-        url: "https://github.com/ndaidong/oembed-parser/issues"
+      scripts: {
+        lint: "standard .",
+        pretest: "npm run lint",
+        test: "jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
+        eval: "node eval",
+        sync: "node sync",
+        tsc: "tsc --init",
+        build: "tsc",
+        reset: "node reset"
       },
       dependencies: {
         axios: "^0.24.0",
         bellajs: "^10.0.2"
       },
-      description: "Get oEmbed data from given URL.",
       devDependencies: {
         jest: "^27.4.5",
         nock: "^13.2.1"
       },
-      engines: {
-        node: ">= 10.14.2"
-      },
-      homepage: "https://www.npmjs.com/package/oembed-parser",
       keywords: [
         "oembed",
         "extractor",
@@ -5557,24 +5542,9 @@ var require_package = __commonJS({
         "util"
       ],
       license: "MIT",
-      main: "./index.js",
-      name: "oembed-parser",
-      repository: {
-        type: "git",
-        url: "git+ssh://git@github.com/ndaidong/oembed-parser.git"
-      },
-      scripts: {
-        build: "tsc",
-        eval: "node eval",
-        lint: "standard .",
-        pretest: "npm run lint",
-        reset: "node reset",
-        sync: "node sync",
-        test: "jest --verbose --coverage=true --unhandled-rejections=strict --detectOpenHandles",
-        tsc: "tsc --init"
-      },
-      types: "./index.d.ts",
-      version: "2.0.0"
+      _resolved: "https://registry.npmjs.org/oembed-parser/-/oembed-parser-2.0.0.tgz",
+      _integrity: "sha512-VuEGFjLBDaydO+6ZzHXBAzc7jwletgsFTHi8UT3Zdt13xT2JzXM0R3XfafKDsZVloPxGC2Ad+ubNjEDT6lN3Gg==",
+      _from: "oembed-parser@2.0.0"
     };
   }
 });
@@ -6430,7 +6400,7 @@ var import_obsidian3 = __toModule(require("obsidian"));
 var import_oembed_parser = __toModule(require_oembed_parser());
 var DOMPurify = __toModule(require_purify());
 var buildDefaultIframe = (url) => {
-  return `<iframe src=${url} allow="fullscreen" style="height:100%;width:100%; aspect-ratio: 16 / 9;"></iframe>`;
+  return `<iframe src=${url} allow="fullscreen" allowfullscreen style="height:100%;width:100%; aspect-ratio: 16 / 9; "></iframe>`;
 };
 var getIframeGeneratorFromSanitize = (sanitize2) => (url) => __async(void 0, null, function* () {
   const defaultHtml = buildDefaultIframe(url);
@@ -6519,7 +6489,8 @@ function createIframeContainerEl(contentEl, iframeHtml) {
     iframe.style.height = "100%";
   };
   resetToDefaultWidth();
-  console.log(iframeHtml, iframe);
+  iframe.allowFullscreen = true;
+  iframe.allow = "fullscreen";
   return {
     iframeContainer,
     updateAspectRatio: (value) => {

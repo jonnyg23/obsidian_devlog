@@ -157,18 +157,18 @@
             }
           },
           {
-            "id": "adb61716df3ca2cd",
-            "type": "leaf",
-            "state": {
-              "type": "todo",
-              "state": {}
-            }
-          },
-          {
             "id": "d2e5272b729bf545",
             "type": "leaf",
             "state": {
               "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "69a51e3dab385bfd",
+            "type": "leaf",
+            "state": {
+              "type": "todo",
               "state": {}
             }
           }
