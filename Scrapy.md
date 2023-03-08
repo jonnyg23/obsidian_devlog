@@ -321,6 +321,14 @@ The `parse_author` callback defines a helper function to extract and cleanup t
 
 **Another interesting thing this spider demonstrates is that, even if there are many quotes from the same author, we don’t need to worry about visiting the same author page multiple times. By default, Scrapy filters out duplicated requests to URLs already visited, avoiding the problem of hitting servers too much because of a programming mistake.** This can be configured by the setting [`DUPEFILTER_CLASS`](https://docs.scrapy.org/en/latest/topics/settings.html#std-setting-DUPEFILTER_CLASS).
 
+## Q/A
+
+- **Does Scrapy respect the site's robots.txt file?** [link](https://stackoverflow.com/questions/55297976/scrapy-and-respect-of-robots-txt)
+	- According to the docs, it's enabled by default only when you create a project using `scrapy startproject` command, otherwise should be default `False`.
+	- Answering your question, yes, `scrapy shell` command does respect `robots.txt` configuration defined in `settings.py`. If `ROBOTSTXT_OBEY = True`, trying to use `scrapy shell` command on a protected URL will generate a response `None`.
+	- You can also test it passing robots.txt settings via command line:
+		- `scrapy shell https://www.netflix.com --set="ROBOTSTXT_OBEY=True"
+
 
 
 
