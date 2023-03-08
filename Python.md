@@ -24,7 +24,7 @@ status: 🟧
 Installing pip dependencies from **setup.py** files or from **requirements.txt** files:
 
 ```bash
-# Ran in root directory where setup.py or requirements.txt is located
+# Ran in root directory where setup.py is located
 pip install -e .
 
 # For install from requirements
@@ -36,6 +36,16 @@ Create **requirements.txt** from current python environment:
 ```bash
 pip freeze > requirements.txt
 ```
+
+### Pip Dependency Uninstallation
+
+Refer to [StackOverflow Post](https://stackoverflow.com/questions/11248073/how-do-i-remove-all-packages-installed-by-pip) for more information on packages that are installed via VCS or from github/gitlab which have a `@`.
+
+```bash
+# Removes all pip packages from python environment
+pip freeze | xargs pip uninstall -y
+```
+
 
 ## Functions 
 
