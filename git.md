@@ -28,3 +28,12 @@ Before submitting new PR do the following:
 3. Then run a `git merge master` (this will merge your feature branch with any recent master branch changes that were pulled in).
 4. NOTE: If there are any conflicts with merging in this step, ensure to fix each conflict before it will successfully merge latest master into feature branch.
 5. You're done!! Now, test your feature branch before submitting a pull request.
+
+
+## Remove a Git Branch (Locally)
+
+```bash
+git branch --delete BRANCH_NAME
+```
+
+
