@@ -13,7 +13,7 @@ Hi there, my name is Jonathan Gutierrez! Welcome to the left-half of my brain.
 
 ## Main MOCs (Maps of Content)
 
-- [[TODO Lists & Kanban Work Boards]]
+- [[TODO Lists & Kanban Work Boards 1]]
 - [[Programming Languages]]
 - [[CS Concepts]]
 
