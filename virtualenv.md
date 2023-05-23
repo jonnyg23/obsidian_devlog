@@ -32,6 +32,22 @@ pip list
 deactivate
 ```
 
+## Setting up venv with MacOS
+
+```bash
+# Initialize virtual environment
+python3.9 -m venv .venv
+
+# Enter the venv
+source .venv/bin/activate
+
+# Update pip
+pip install --upgrade pip
+
+# Connect to remote aws pip
+./connect_pip.sh
+```
+
 
 🔗 Links to this page:
 [[Python]]

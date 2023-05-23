@@ -37,3 +37,25 @@ git branch --delete BRANCH_NAME
 ```
 
 
+## .gitignore file
+
+- .gitignore command [guide](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
+
+
+## Troubleshooting
+
+### Git Push is frozen
+
+- Fix: Use this in order to increase the buffer size
+
+```bash
+git config --global http.postBuffer 157286400
+```
+
+
+### How to remove files that are listed in the .gitignore but still on the repository?
+
+[source: StackOverflow](https://stackoverflow.com/questions/13541615/how-to-remove-files-that-are-listed-in-the-gitignore-but-still-on-the-repositor)
+```bash
+git rm --cached `git ls-files -i -c --exclude-from=.gitignore`
+```
