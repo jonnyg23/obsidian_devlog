@@ -18,9 +18,18 @@ docker rmi -f $(docker images -aq)
 
 ## Workflow
 
-### Check to see if docker is installed & what version you have.
 
 ```bash
 # Checks docker version
 docker -v
+
+# Navigate to project
+cd /path/to/project
+
+# Build the Docker Image
+docker build -t myimage:latest .
+
+# Run Docker container
+docker run -d --name mycontainer myimage:latest
 ```
+
