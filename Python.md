@@ -68,7 +68,7 @@ pip freeze | xargs pip uninstall -y
 
 - [[pytest]] - Run unit tests
 - [[tox]] - Runs tests with multiple python versions (3.7, 3.8, 3.9, etc)
-- 
+- [[logging]] - Logs info related to warnings, debug, info, & exceptions
 
 
 
