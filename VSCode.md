@@ -19,9 +19,11 @@ cssclass:
 - [[isort]]`.args` - For sorting imports
 	- ✏️ Note:  Ensure [[isort#Setting up auto import sorting in VSCode |follow instructions]] for this to work.
 - `editor.defaultFormatter` - Sets the default Python formatter to `black`
-- `recommendations` - VSCode workspace extensions that are recommended for viewing and editing the repo.
-	- ✏️ Note: **To see names of installed VSCode extensions, execute the following in the terminal:** `code --list-extensions`
 - `python.testing.pytestArgs` - List of folder names that contain pytests.
+- These settings will automatically set your venv when opening repo similar to manually running `source .venv/bin/activate`
+	- `"python.terminal.activateEnvInCurrentTerminal": true` 
+	  `"python.defaultInterpreterPath": "~/venv/bin/python"`
+	- 🔗 Link: [Stackoverflow - Auto-activate virtual environment in visual studio code](https://stackoverflow.com/questions/58433333/auto-activate-virtual-environment-in-visual-studio-code#:~:text=Actually%20the%20earlier%20suggested%20solutions%20didn%27t%20work%20for%20me%2C%20instead%20I%20added%20the%20following%20in%20my%20settings%3A)
 
 ```json
 {
@@ -50,7 +52,22 @@ cssclass:
 	],
 	"python.testing.unittestEnabled": false,
 	"python.testing.pytestEnabled": true,
-	"recommendations": [
+	"python.terminal.activateEnvInCurrentTerminal": true,
+	"python.defaultInterpreterPath": "~/venv/bin/python"
+	
+}
+```
+
+## Creating `extensions.json` file
+
+- Put this file inside of .vscode directory. These are the extensions that vscode will recommend that you use.
+	- `recommendations` - VSCode workspace extensions that are recommended for viewing and editing the repo.
+	- ✏️ Note: **To see names of installed VSCode extensions, execute the following in the terminal:** 
+		- `code --list-extensions`
+
+```json
+{
+"recommendations": [
 		"ms-python.black-formatter",
 		"ms-python.flake8",
 		"ms-python.isort",
@@ -62,8 +79,6 @@ cssclass:
 	]
 }
 ```
-
----
 
 
 
