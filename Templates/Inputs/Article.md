@@ -4,7 +4,7 @@ aliases:
   - 
 cssclass:
 type: article
-status: 🟥
+status: 🟧
 ---
 
 # Title: [[<%tp.file.title%>]]
@@ -17,7 +17,8 @@ status: 🟥
 - `Link:`
 - `Reference:`
 - `Publish Date:`
-- `Reviewed Date:` [[<%tp.date.now()%>]]
+- `Creation Date:` `$= dv.current().file.ctime`
+- `Last Modified Date:` `$= dv.current().file.mtime`
 
 ---
 

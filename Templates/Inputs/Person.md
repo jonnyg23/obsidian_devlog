@@ -8,14 +8,19 @@ status: 🟧
 ---
 
 ## Metadata
-- `Tags:`
+- `Tags:` 
 - `Type:` [[@]]
-- `Keywords:`
-- `Profession:`
+- `Keywords:` 
+- `Profession:` 
+- `Reviewed Date:` `$= dv.current().file.mtime`
 
 ---
 
 ## Person - NAME
+
+> Full Name at birth → **Name**
+
+image
 
 ### How I know this person?
 
@@ -23,9 +28,15 @@ status: 🟧
 (Ensure to cite your source of information if possible!)
 
 * **Born:** 
-* **Died:**
+	* **Location:** 
+* **Died:** 
+	* **Cause of Death:** 
+	* **Place of Burial:** 
+* **Religion:** 
 
 #### Personal
+
+##### Profession(s)
 
 ##### Family
 
@@ -36,6 +47,9 @@ status: 🟧
 ### Works
 
 #### Books
+
+
+#### Online Presence
 
 
 🔗 Links to this page:

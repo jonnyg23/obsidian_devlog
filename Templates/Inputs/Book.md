@@ -1,36 +1,35 @@
 ---
-tags: 📥/📚
+tags: 📥/📚/🟧
 aliases:
   - 
 cssclass:
 type: book
-status: 🟥
+cover: 
+status: 🟧
 ---
 
 # Title: [[<%tp.file.title%>]]
 
 ## Metadata
 
-- `Tags:`
+- `Tags:` 
 - `Type:` [[{]]
-- `Author:`
-	- `Notable Authors:`
-- `General Subject:`
-- `Specific Subject`
-- `ISBN:`
-- `DOI:`
-- `Publish Date:`
-- `Reviewed Date:` [[<%tp.date.now()%>]]
+- `Author:` 
+	- `Notable Authors:` 
+- `General Subject:` 
+- `Specific Subject:` 
+- `ISBN:` 
+- `DOI:` 
+- `Page Count:` 
+- `Publish Date:`  (YYYY-MM-DD)
+- `Creation Date:` `$= dv.current().file.ctime`
+- `Last Modified Date:` `$= dv.current().file.mtime`
 
 ## Citation:
 
-```latex
+> Note: `#` represents a page number.
 
-```
-
-## Notes:
-
-- 
+**USE CITATION GENERATOR SCRIPT**
 
 ## Summary of Key Points:
 
@@ -62,6 +61,12 @@ to follow up on (cite those obviously related to your topic AND any papers frequ
 - 
 
 ## Highlights
+
+### Table of Contents
+
+Chapter Title…………………..Page #
+
+- 
 
 ### 1. Chapter Name Here
 

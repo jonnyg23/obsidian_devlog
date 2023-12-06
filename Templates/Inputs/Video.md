@@ -5,18 +5,21 @@ aliases:
   - 
 cssclass:
 type: video
-status: 🟥
+status: 🟧
 ---
 
 # Title: [[<%tp.file.title%>]]
+
 ## Metadata
+
+- `Tags:`
 - `Title:` <%tp.file.title%>
 - `Type:` [[+]]
-- `Tags:`
 - `Channel/Host:`
 - `Reference:`
 - `Publish Date:`
-- `Reviewed Date:` <%tp.date.now()%>
+- `Creation Date:` `$= dv.current().file.ctime`
+- `Last Modified Date:` `$= dv.current().file.mtime`
 
 ---
 ## Embedded Video

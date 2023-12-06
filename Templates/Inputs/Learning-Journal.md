@@ -11,7 +11,8 @@ status: 🟧
 - `Title:` [[<%tp.file.title%>]]
 - `Type:` [[!]]
 - `Tags:`
-- `Formation Date:` [[<%tp.date.now()%>]]
+- `Creation Date:` `$= dv.current().file.ctime`
+- `Last Modified Date:` `$= dv.current().file.mtime`
 
 ---
 

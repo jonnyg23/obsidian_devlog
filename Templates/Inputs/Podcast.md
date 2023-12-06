@@ -4,19 +4,20 @@ aliases:
   - 
 cssclass:
 type: podcast
-status: 🟥
+status: 🟧
 ---
 
 ## Metadata
-- `Type:` [[%]]
 - `Tags:`
+- `Type:` [[%]]
 - `Podcast:`
 	- `Title:` [[<%tp.file.title%>]]
 	- `URL:`
 	- `Host:`
 	- `Guest:`
 - `Publish Date:`
-- `Reviewed Date:` [[<%tp.date.now()%>]]
+- `Creation Date:` `$= dv.current().file.ctime`
+- `Last Modified Date:` `$= dv.current().file.mtime`
 - `Reference:`
 
 ---
