@@ -30,6 +30,27 @@ status: 🟩
 
 ## Steps
 
+### 0. Setting up node/npm via nvm
+
+```bash
+# Check what node versions are out there
+nvm ls-remote
+
+# Intall the version
+nvm install 20.11.0
+
+# Use the version
+nvm use 20.11.0
+
+# Set the default node version across terminals
+nvm alias default 20.11.0
+
+# Check
+node -v
+npm --version
+```
+
+> **Note:** npm comes bundled with Node.js, so when you install a specific version of Node.js, it automatically includes a corresponding version of npm.
 ### 1. Install NPM Check Updates
 
 ```bash
